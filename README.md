@@ -1,2 +1,2 @@
 # Stellar-Minds
-EL GRAN PROYECTO
+EL GRAN PROYECTO de NASA
