@@ -2,9 +2,10 @@
 
 import type React from "react"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { useAPI } from "@/APIContext"
 
 interface Message {
   role: "user" | "assistant"
@@ -12,9 +13,13 @@ interface Message {
 }
 
 export function ChatInterface() {
+  const { chat } = useAPI()
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const [isInitializing, setIsInitializing] = useState(true)
+  const [chatUuid, setChatUuid] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
@@ -25,27 +30,66 @@ export function ChatInterface() {
     scrollToBottom()
   }, [messages])
 
+  const ensureChat = useCallback(async () => {
+    if (chatUuid) return chatUuid
+
+    setIsInitializing(true)
+    try {
+      const response = await chat.create()
+      const newUuid = response?.data?.chat_uuid
+      if (!newUuid) {
+        throw new Error("Chat service did not return an identifier.")
+      }
+      setChatUuid(newUuid)
+      setError(null)
+      return newUuid
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Unable to start the chat session."
+      setError(message)
+      throw err
+    } finally {
+      setIsInitializing(false)
+    }
+  }, [chat, chatUuid])
+
+  useEffect(() => {
+    ensureChat().catch((err) => {
+      console.error("Failed to initialise chat", err)
+    })
+  }, [ensureChat])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!input.trim() || isLoading) return
 
     const userMessage = input.trim()
     setInput("")
+    setError(null)
     setMessages((prev) => [...prev, { role: "user", content: userMessage }])
     setIsLoading(true)
 
-    // Simulate AI response
-    setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            "I'm the Space Biology Knowledge chatbot. I can help you explore research on microgravity effects, plant growth in space, radiation biology, and more. What would you like to know?",
-        },
-      ])
+    try {
+      const activeChatUuid = await ensureChat()
+      const response = await chat.sendMessage(activeChatUuid, {
+        message: userMessage,
+        metodo: "local",
+      })
+
+      const assistantReply = response?.data?.answer
+      if (typeof assistantReply !== "string" || assistantReply.trim().length === 0) {
+        throw new Error("The chat service returned an empty response.")
+      }
+
+      const cleanedAnswer = assistantReply.replace(/\\n/g, "\n")
+
+      setMessages((prev) => [...prev, { role: "assistant", content: cleanedAnswer }])
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Unable to fetch a response right now."
+      setError(message)
+      setMessages((prev) => [...prev, { role: "assistant", content: message }])
+    } finally {
       setIsLoading(false)
-    }, 1000)
+    }
   }
 
   const suggestedQuestions = [
@@ -86,7 +130,7 @@ export function ChatInterface() {
                 />
                 <Button
                   type="submit"
-                  disabled={!input.trim() || isLoading}
+                  disabled={!input.trim() || isLoading || isInitializing}
                   className="absolute right-2 top-1/2 -translate-y-1/2 font-mono gap-2"
                 >
                   Generate
@@ -94,6 +138,10 @@ export function ChatInterface() {
                 </Button>
               </div>
             </form>
+
+            {error ? (
+              <p className="text-sm font-mono text-red-300">{error}</p>
+            ) : null}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-3xl mt-8">
               {suggestedQuestions.map((question, index) => (
@@ -151,7 +199,7 @@ export function ChatInterface() {
                   />
                   <Button
                     type="submit"
-                    disabled={!input.trim() || isLoading}
+                    disabled={!input.trim() || isLoading || isInitializing}
                     className="absolute right-2 top-1/2 -translate-y-1/2 font-mono gap-2"
                   >
                     Send
@@ -159,6 +207,9 @@ export function ChatInterface() {
                   </Button>
                 </div>
               </form>
+              {error ? (
+                <p className="mt-3 text-center text-sm font-mono text-red-300">{error}</p>
+              ) : null}
             </div>
           </div>
         )}

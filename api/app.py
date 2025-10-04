@@ -6,13 +6,14 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse, StreamingResponse, JSONResponse
 
-from graphrag.store.base_store import ObjectNotFoundError
+from graphbot.store.base_store import ObjectNotFoundError
 from assay_finder.router import router as assay_router
 from gap_finder.router import router as gap_router
+from graphbot.chats.router import router as graph_chat_router
 
-from graphrag.chats.service import ChatService
-from graphrag.settings import settings
-from graphrag.factory import make_store, make_chatbot
+from graphbot.chats.service import ChatService
+from graphbot.settings import settings
+from graphbot.factory import make_store, make_chatbot
 
 load_dotenv(override=True)
 
@@ -54,8 +55,10 @@ app.add_middleware(CORSMiddleware,
 async def object_not_found_handler(request: Request, exc: ObjectNotFoundError):
     return JSONResponse(status_code=404, content={"detail": f"Object not found: {exc}"})
 
+
 app.include_router(assay_router)
 app.include_router(gap_router)
+app.include_router(graph_chat_router, prefix="/api/v1/chats")
 
 @app.get("/")
 def root():
