@@ -5,6 +5,11 @@ from fastapi import APIRouter, HTTPException, Query, Request
 import logging
 from ai import GetFilterPrompt
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -14,6 +19,8 @@ ASSAYS_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/assays/"
 META_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/"
 DATASET_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset"
 DEFAULT_FORMAT = "json.records"
+
+logger.info(f"OpenAI API Key: {os.getenv('OPENAI_API_KEY')}")
 
 @router.get("/assays/search")
 async def search_assays(
