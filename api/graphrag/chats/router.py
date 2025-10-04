@@ -9,7 +9,7 @@ from ..deps import Deps
 router = APIRouter(tags=["chats"])
 
 
-@router.get("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
 @rate_limit_create_chat
 def create_chat(
     request: Request,
@@ -19,12 +19,12 @@ def create_chat(
     
     new_chat = service.create_chat()
 
-    response.headers["Location"] = f"/api/v1/chats/{new_chat.uuid}"
+    response.headers["Location"] = f"/api/v1/chats/{new_chat.uuid}/messages"
 
     return CreateChatResponse(chat_uuid=new_chat.uuid)
 
 
-@router.get("/{chat_uuid}/messages", response_model=PromptAnswerResponse, status_code=status.HTTP_200_OK)
+@router.post("/{chat_uuid}/messages", response_model=PromptAnswerResponse, status_code=status.HTTP_200_OK)
 @rate_limit_send_message
 async def post_chat_message(
     request: Request,
@@ -34,7 +34,7 @@ async def post_chat_message(
 ) -> PromptAnswerResponse:
     
     try:
-        answer = await service.reply_to_user(chat_uuid, payload.message)
+        answer = await service.reply_to_user(chat_uuid, payload.message, payload.metodo)
 
         return PromptAnswerResponse(answer=answer)
     
