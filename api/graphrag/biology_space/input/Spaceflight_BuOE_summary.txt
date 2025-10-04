@@ -1,0 +1,102 @@
+Title: Spaceflight-Induced Gene Expression Profiles in the Mouse Brain Are Attenuated by Treatment with the Antioxidant BuOE
+
+Authors: Isaac Kremsky, Samir Ali, Seta Stanbouly, Jacob Holley, Stephen Justinen, Michael Pecaut, James Crapo, and Xiaowen Mao
+Affiliations: Loma Linda University School of Medicine, National Jewish Health, University of Colorado Denver
+
+Citation: International Journal of Molecular Sciences, 2023, Volume 24, Article 13569. DOI: 10.3390/ijms241713569
+
+--------------------------------------------------------------------
+ABSTRACT SUMMARY
+--------------------------------------------------------------------
+This study investigates how exposure to the spaceflight environment affects gene expression in specific regions of the mouse brain and whether the antioxidant MnTnBuOE-2-PyP5+ (BuOE) can mitigate these effects. Mice were exposed to 35 days of microgravity aboard the International Space Station (ISS). Using high-resolution digital spatial profiling (DSP), the researchers analyzed four brain regions—the Cortex (CT), Frontal Cortex (FCT), Cornu Ammonis 1 (CA1), and Dentate Gyrus (DG). They found that spaceflight caused substantial gene expression alterations related to oxidative stress, metabolism, apoptosis, and neuroinflammation. Importantly, BuOE treatment reduced or reversed many of these changes, suggesting its potential to mitigate CNS oxidative damage caused by spaceflight conditions.
+
+--------------------------------------------------------------------
+INTRODUCTION
+--------------------------------------------------------------------
+Spaceflight introduces unique physiological stressors, including cosmic radiation, microgravity, and isolation, which collectively affect multiple organ systems. The central nervous system (CNS) is particularly sensitive to these stressors, and previous animal studies have shown behavioral and cognitive impairments after radiation or simulated microgravity exposure. Long-duration missions to deep space may therefore increase the risk of neurodegenerative diseases or cognitive decline in astronauts.
+
+Previous research has documented protein and metabolic alterations in the mouse brain after spaceflight, with specific changes differing across regions such as grey and white matter. However, regional transcriptomic responses remain poorly understood. This study focuses on understanding how specific brain areas—especially those involved in cognition, memory, and emotional regulation—respond to spaceflight stress and whether antioxidant intervention can counteract the effects.
+
+The cortex (CT) and frontal cortex (FCT) are crucial for motor coordination, attention, memory, and behavior, while the hippocampus—comprising the CA1 and DG regions—is essential for learning, spatial memory, and neurogenesis. Evidence indicates that microgravity and radiation can negatively influence these regions, leading to structural and functional impairments.
+
+Oxidative stress is one of the primary mechanisms of spaceflight-induced cellular damage. BuOE, a superoxide dismutase (SOD) mimic, has demonstrated potent antioxidant and neuroprotective properties in previous radiation injury models. The study hypothesizes that BuOE may protect neural tissue by reducing oxidative gene expression changes induced by spaceflight.
+
+--------------------------------------------------------------------
+METHODS
+--------------------------------------------------------------------
+Animal Model and Spaceflight Conditions:
+- Male C57BL/6 mice (10 weeks old) were used.
+- Mice spent 35 days aboard the ISS at 26–28°C, under a 12-hour light/dark cycle.
+- Groups: Ground Control with Saline (GC-SAL), Ground Control with BuOE (GC-BuOE), Flight with Saline (FLT-SAL), and Flight with BuOE (FLT-BuOE).
+- BuOE (1 mg/kg) was administered subcutaneously once per week.
+- After return to Earth, mice were euthanized, and brains were sectioned for analysis.
+
+Digital Spatial Profiling (DSP):
+The NanoString GeoMx DSP platform was used to quantify spatially resolved gene expression. Tissue sections were hybridized with Mouse Whole Transcriptome Atlas probes. Four regions (CT, FCT, CA1, DG) were imaged and sequenced using Illumina NovaSeq. Reads were normalized (Q3 method) and analyzed for differential expression using t-tests with multiple-test correction.
+
+Statistical and Bioinformatics Analysis:
+- Principal Component Analysis (PCA) was applied to visualize transcriptomic shifts.
+- Differentially Expressed Genes (DEGs) were defined as those with |log2FC| > 0.585 and q < 0.05.
+- Pathway analysis used KEGG and Enrichr databases.
+- Disease association mapping utilized DisGeNET for neurological disease gene correlations.
+- Overlap analysis between spaceflight- and BuOE-induced DEGs tested by Fisher’s Exact Test and permutation testing (1000 iterations).
+
+--------------------------------------------------------------------
+RESULTS
+--------------------------------------------------------------------
+1. **General Transcriptomic Effects of Spaceflight**
+   Spaceflight exposure altered hundreds of genes in all four regions: 408 DEGs in CA1, 271 in DG, 189 in FCT, and 150 in CT. Each brain region exhibited unique transcriptional signatures, with limited overlap. PCA revealed that CA1 and DG were the most affected by spaceflight.
+
+2. **Top Differentially Expressed Genes (DEGs)**
+   Notable genes affected include Ptgds, Cpne7, Cdkn2d, Msrb1, Bsph1 (CA1); Sst, Crygc, Psrc1, Abtb2, Kcna4 (DG); Arc, Ptgds, Col6a1, Tshz2 (FCT); and Arc, Ptgds, Mobp, Apod (CT). These genes regulate apoptosis, mitochondrial stress, neurotransmission, and myelination.
+
+3. **Pathway Enrichment**
+   - CA1: VEGF signaling, glycolysis, and oxidative phosphorylation pathways altered.
+   - DG: Calcium and cAMP signaling dysregulated.
+   - FCT: FoxO signaling and CoA biosynthesis disrupted.
+   - CT: ECM-receptor and glycosphingolipid metabolism altered.
+   Oxidative stress-responsive pathways were consistently among the most affected.
+
+4. **Neurodegeneration Links**
+   Over 20 DEGs were linked to Alzheimer’s disease and other neurological disorders. Spaceflight may thus promote molecular signatures associated with neurodegeneration and aging, including dysregulation of metabolic and inflammatory pathways.
+
+5. **Effect of BuOE Treatment**
+   PCA revealed that BuOE shifted transcriptional profiles of flight mice toward those of ground controls, especially in CT and DG. BuOE significantly reversed expression trends in genes upregulated by spaceflight stress. Statistical tests showed that DEGs commonly changed in opposite directions under BuOE treatment (p < 10⁻⁵), confirming attenuation of spaceflight effects.
+
+6. **BuOE’s Mechanistic Action**
+   BuOE modulated genes within oxidative stress pathways:
+   - VEGF pathway: Normalization of Prkca in CA1.
+   - Calcium signaling: Restoration of Atp2b4 in DG.
+   - FoxO pathway: Downregulation of Homer1 in FCT.
+   - ECM pathway: Correction of Itga7 in CT.
+   BuOE also reversed several Alzheimer’s-associated gene alterations, indicating a protective effect against oxidative and neurodegenerative damage.
+
+--------------------------------------------------------------------
+DISCUSSION
+--------------------------------------------------------------------
+The results demonstrate that prolonged spaceflight induces widespread gene expression disturbances in the brain, predominantly in the hippocampal regions. These findings align with previous studies suggesting hippocampal vulnerability to radiation and microgravity. The transcriptional patterns point to oxidative stress, metabolic imbalance, and synaptic dysfunction as key contributors to neural impairment.
+
+BuOE treatment effectively counteracted many of these gene-level disruptions, especially those tied to oxidative damage and neurodegeneration. The antioxidant’s effect was region-specific, strongest in the cortex and weakest in the frontal cortex, implying differential regional sensitivities or antioxidant uptake dynamics.
+
+Importantly, alterations in circadian entrainment genes were observed, particularly in the DG region. This may help explain sleep–wake disturbances often reported during human spaceflight. These transcriptomic changes suggest systemic neurophysiological adaptations to disrupted circadian regulation.
+
+The data collectively indicate that oxidative stress management is crucial for maintaining CNS integrity during long-term space missions. BuOE or related antioxidants could serve as effective countermeasures for mitigating spaceflight-induced CNS dysfunction.
+
+--------------------------------------------------------------------
+CONCLUSION
+--------------------------------------------------------------------
+- Spaceflight induces significant, region-specific alterations in gene expression in mouse brains.
+- The hippocampus (CA1, DG) shows the highest vulnerability, particularly in pathways linked to oxidative stress and metabolism.
+- Several genes affected are associated with Alzheimer’s disease and other neurodegenerative disorders.
+- BuOE treatment attenuates many of these transcriptomic alterations, restoring expression of genes involved in stress response and neuronal health.
+- BuOE demonstrates promise as a potential neuroprotective countermeasure during space missions.
+
+--------------------------------------------------------------------
+FUNDING, DATA, AND ACKNOWLEDGMENTS
+--------------------------------------------------------------------
+Funding: NASA Space Biology (NNX15AB41G, 80NSSC18K0310) and Loma Linda University Department of Basic Sciences.
+Data Availability: GEO accession GSE239336, scripts available at https://github.com/ikremsky/Scripts-for-Kremsky-et-al.-GeoMx-DSP-mouse-spaceflight-study
+Acknowledgments: NASA Biospecimen Sharing Program and NanoString Technologies for DSP support.
+
+--------------------------------------------------------------------
+Keywords: spaceflight, oxidative stress, brain, hippocampus, cortex, BuOE, gene expression, neurodegeneration, antioxidants, digital spatial profiling, neuroprotection, MnTnBuOE-2-PyP5+.

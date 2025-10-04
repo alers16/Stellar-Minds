@@ -1,0 +1,88 @@
+Title: Spaceflight-Induced Vertebral Bone Loss in Ovariectomized Rats Is Associated with Increased Bone Marrow Adiposity and No Change in Bone Formation
+
+Authors: Jessica A. Keune, Kenneth A. Philbrick, Adam J. Branscum, Urszula T. Iwaniec, Russell T. Turner
+Journal: npj Microgravity (2016), 2, 16016 | DOI: 10.1038/npjmgrav.2016.16
+
+------------------------------------------------------
+ABSTRACT
+------------------------------------------------------
+This study examined how 14 days of spaceflight affected vertebral bone mass, marrow adipose tissue (MAT), and bone remodeling dynamics in ovariectomized (OVX) female rats. OVX simulates postmenopausal bone loss, making it a relevant model for evaluating skeletal adaptation to microgravity in estrogen-deficient conditions. The research aimed to test whether bone marrow adiposity during spaceflight antagonizes bone formation, potentially through competition between adipocytes and osteoblasts derived from mesenchymal stem cells.
+
+Twelve-week-old OVX Fischer 344 rats were divided into two groups: ground control (GC) and flight (FLT). Following spaceflight aboard Space Shuttle Columbia (STS-62), lumbar vertebrae were harvested for histological analysis. The study found that spaceflight decreased cancellous bone area by 32%, increased MAT by 306%, and raised both adipocyte number (224%) and size (26%). Bone formation parameters, including mineral apposition rate and osteoblast turnover, were unchanged, but osteoclast activity and bone resorption increased substantially. These results show that bone loss during spaceflight is due to increased bone resorption rather than decreased bone formation, despite elevated marrow adiposity.
+
+------------------------------------------------------
+INTRODUCTION
+------------------------------------------------------
+Bone mass maintenance depends on the balance between resorption (by osteoclasts) and formation (by osteoblasts). Spaceflight causes bone loss due to mechanical unloading and altered metabolism, generally marked by increased bone resorption without a corresponding increase in formation. However, the role of bone marrow adiposity in this imbalance is unclear.
+
+Bone marrow adipose tissue (MAT) has been proposed to antagonize bone formation because both adipocytes and osteoblasts originate from common mesenchymal progenitors. Increased MAT has been reported in rodents during spaceflight and in humans after prolonged bed rest. Thus, spaceflight may divert stromal cells toward adipocyte differentiation at the expense of osteoblast generation. Furthermore, adipocytes secrete cytokines such as IL-1β, which stimulate resorption and inhibit osteoblast function. This study examined whether increased MAT contributes to bone loss in ovariectomized rats flown in space, hypothesizing that microgravity would reduce osteoblast activity and promote adipogenesis.
+
+------------------------------------------------------
+RESULTS
+------------------------------------------------------
+
+1. **Bone Resorption Increased During Spaceflight**
+   - Spaceflight rats had 32% less cancellous bone area compared to ground controls.
+   - Fluorochrome label length decreased by 16%, indicating increased resorption of preflight bone.
+   - Osteoclast-lined bone perimeter increased by 229%, showing elevated bone resorption rates.
+   - These results confirm that spaceflight enhanced bone degradation in vertebral trabecular bone.
+
+2. **Osteoblast Kinetics Were Unchanged**
+   - Continuous bone formation (fluorochrome label with osteoblasts), ceased formation, and newly initiated formation were similar between GC and FLT groups.
+   - Mineral apposition rate (MAR) showed no significant difference.
+   - Therefore, spaceflight did not affect osteoblast lifespan, recruitment, or activity at the bone surface.
+
+3. **Bone Marrow Adiposity Increased Significantly**
+   - MAT area was 306% greater in FLT rats than in GC rats.
+   - Adipocyte number rose by 224%, and average adipocyte size increased by 26%.
+   - The increase in MAT was driven mainly by higher adipocyte differentiation rather than simple hypertrophy.
+   - These findings suggest that microgravity enhances adipogenesis within bone marrow.
+
+------------------------------------------------------
+DISCUSSION
+------------------------------------------------------
+Spaceflight induced substantial cancellous bone loss in lumbar vertebrae of OVX rats, primarily due to increased resorption rather than decreased formation. Elevated osteoclast activity explains much of this loss. Meanwhile, MAT expansion occurred concurrently, implying a shift in mesenchymal stem cell fate toward adipocyte differentiation. However, the study found no evidence that increased adiposity reduced osteoblast activity or mineralization rate.
+
+These findings align with prior research showing that spaceflight increases bone resorption markers without altering bone formation indices. OVX itself increases bone turnover, and spaceflight amplified the resorptive component without compensatory formation. The authors suggest that the absence of coupling between resorption and formation reflects defective osteoblast recruitment or altered differentiation signaling in microgravity.
+
+Interestingly, cytokines such as interferon gamma (IFNγ), which can promote osteoblastogenesis, were reported to be elevated in tibial bone from the same animals, potentially counteracting adipocyte-induced suppression. Thus, while MAT expansion occurred, osteoblast activity remained stable—possibly due to competing signaling pathways. In OVX rats, however, estrogen deficiency likely limits bone formation’s ability to match increased resorption, leading to net bone loss.
+
+When compared to hindlimb unloading (a terrestrial model of microgravity), similar trends emerge: OVX rats show enhanced resorption without increased formation, while intact females exhibit both increased resorption and reduced formation. Estrogen status appears to influence how skeletal tissue responds to unloading. This could have implications for postmenopausal women in space, where hormonal and mechanical changes may interact to accelerate bone loss.
+
+------------------------------------------------------
+MATERIALS AND METHODS
+------------------------------------------------------
+
+**Experimental Design:**
+- Twelve-week-old female Fischer 344 rats underwent ovariectomy (OVX) two weeks before launch.
+- Groups: Ground Control (GC) and Flight (FLT), 12 rats each.
+- Rats were flown aboard Space Shuttle Columbia (STS-62) for 14 days.
+- Preflight calcein injections (20 mg/kg) labeled mineralizing surfaces for dynamic histomorphometry.
+- After landing, second lumbar vertebrae were collected for histological analysis.
+- All animals had ad libitum access to food and water in identical housing modules.
+
+**Histological Analysis:**
+- Vertebral sections were embedded in methyl methacrylate, stained with toluidine blue, and examined using fluorescence microscopy.
+- Measurements included cancellous bone area, fluorochrome label length, osteoclast perimeter, and MAT parameters.
+- Bone formation indices were derived from labeled surfaces and osteoblast adjacency.
+
+**Statistical Analysis:**
+- Data were compared using t-tests (with Levene’s and Anderson–Darling tests for normality and variance).
+- Welch’s t-test or Wilcoxon tests were applied where appropriate.
+- Significance was accepted at p < 0.05 after Hochberg adjustment for multiple comparisons.
+
+------------------------------------------------------
+CONCLUSION
+------------------------------------------------------
+This study demonstrates that short-term spaceflight causes significant vertebral bone loss in OVX rats, accompanied by a dramatic increase in marrow adiposity. Despite this adipogenic shift, bone formation rates were unchanged, indicating that adipocyte expansion does not necessarily suppress osteoblast function under these conditions. Instead, bone loss results from enhanced osteoclastic resorption unbalanced by osteogenesis.
+
+The findings support a model where spaceflight alters mesenchymal stem cell differentiation and bone remodeling coupling, especially under estrogen-deficient conditions. These insights are critical for developing countermeasures to protect skeletal integrity during long-duration space missions, particularly for postmenopausal astronauts or individuals with low estrogen levels.
+
+------------------------------------------------------
+FUNDING AND ACKNOWLEDGEMENTS
+------------------------------------------------------
+Supported by NASA (NNX12AL24G) and the National Science Foundation (DGE-0956280).
+The authors declare no competing interests.
+Data collection and interpretation were conducted at Oregon State University’s Skeletal Biology Laboratory.
+
+Keywords: Spaceflight, bone resorption, adiposity, osteoblast, osteoclast, ovariectomy, bone loss, microgravity, estrogen deficiency, vertebrae, bone remodeling.

@@ -14,7 +14,7 @@ from graphrag.chats.service import ChatService
 from graphrag.settings import settings
 from graphrag.factory import make_store, make_chatbot
 
-load_dotenv()
+load_dotenv(override=True)
 
 FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
 

@@ -1,0 +1,123 @@
+Title: The Individual and Combined Effects of Spaceflight Radiation and Microgravity on Biologic Systems and Functional Outcomes
+
+Authors: Jeffrey S. Willey, Richard A. Britten, Elizabeth Blaber, Candice G.T. Tahimic, Jeffrey Chancellor, Marie Mortreux, Larry D. Sanford, Angela J. Kubik, Michael D. Delp, Xiao Wen Mao
+Journal: Journal of Environmental Science and Health, Part C: Toxicology and Carcinogenesis, 2021; 39(2):129–179. DOI: 10.1080/26896583.2021.1885283
+
+------------------------------------------------------------
+ABSTRACT
+------------------------------------------------------------
+Both microgravity and space radiation are major stressors affecting astronaut health and performance during spaceflight. This review synthesizes findings from animal and cellular models investigating individual and combined effects of simulated microgravity (via hind limb unloading and partial weight-bearing) and ionizing radiation (including protons, photons, and high-energy heavy ions) on biological systems. Key physiological systems evaluated include skeletal, ocular, central nervous, cardiovascular, and stem cell responses. The review emphasizes the need to study these hazards together, as astronauts experience them simultaneously during missions beyond low Earth orbit (LEO).
+
+------------------------------------------------------------
+INTRODUCTION
+------------------------------------------------------------
+Microgravity and radiation contribute to multisystem degeneration in astronauts. In microgravity, mechanical unloading leads to bone and muscle atrophy, fluid redistribution, cardiovascular adaptation, and neuro-ocular changes. Radiation adds oxidative stress, DNA damage, and degenerative tissue injury. Ground-based models, especially hind limb unloading (HLU), serve as surrogates to examine these effects. HLU mimics mechanical unloading and cephalic fluid shift similar to space conditions, while partial weight-bearing (PWB) enables graded simulation of reduced gravity.
+
+Radiation hazards arise primarily from Galactic Cosmic Rays (GCR) and Solar Particle Events (SPEs). GCR consists of high-energy, high-LET ions that penetrate spacecraft and cause widespread ionization, while SPEs generate bursts of high-dose protons. Even with shielding, astronauts beyond LEO may experience 2–3 mSv/day exposures. Understanding combined exposure to radiation and unloading is essential to develop effective countermeasures for missions to Mars or the Moon.
+
+------------------------------------------------------------
+SKELETAL RESPONSES
+------------------------------------------------------------
+Microgravity and radiation independently cause bone loss, but combined effects often exacerbate skeletal deficits.
+
+**Microgravity and HLU Findings:**
+- Loss of bone mineral density (BMD) up to 1–2% per month during ISS missions, most pronounced in weight-bearing bones (hip, femur, vertebrae).
+- Animal HLU studies show cancellous bone loss of 10–70% depending on duration and species.
+- Mechanisms include reduced osteoblast activity, increased osteoclast resorption, and decreased vascular perfusion.
+
+**Radiation Effects:**
+- Even low doses (<0.5 Gy) of protons or heavy ions reduce bone mass and trabecular integrity.
+- Osteoclast activity increases shortly after radiation, while osteoblast function declines later.
+- Space radiation induces both acute and chronic bone microarchitectural damage.
+
+**Combined Radiation and Microgravity:**
+- Additive bone loss is seen when HLU is combined with proton or 56Fe ion exposure.
+- Radiation and unloading impair endothelial NO signaling, affecting vascular support to bone.
+- Long-term effects may persist post-reloading, suggesting incomplete skeletal recovery.
+
+**Countermeasures:**
+- Antioxidant-rich diets (e.g., dried plum) and compounds like α-lipoic acid mitigate oxidative stress and bone loss.
+- Exercise remains a key countermeasure; pharmacological options (bisphosphonates, antioxidants) require further study.
+
+------------------------------------------------------------
+OCULAR RESPONSES
+------------------------------------------------------------
+Ocular disturbances such as Spaceflight-Associated Neuro-ocular Syndrome (SANS) occur in ~30% of long-duration astronauts, characterized by optic disc edema, retinal folds, and vision changes.
+
+**Microgravity:**
+- Fluid shifts cause intracranial pressure elevation, optic nerve swelling, and globe flattening.
+- Bed-rest analogues only partially replicate these effects.
+
+**Radiation:**
+- Low-dose proton and heavy-ion exposure induce apoptosis in retinal endothelial cells, oxidative stress, and microvascular rarefaction.
+- Long-term rodent studies show retinal degeneration persisting for years post-irradiation.
+
+**Combined Exposure:**
+- Mice subjected to HLU and 0.5 Gy proton radiation exhibited increased retinal cell death and vascular damage, suggesting synergistic effects.
+- Future work should integrate omics analyses to identify gene and protein pathways driving ocular degeneration.
+
+------------------------------------------------------------
+CENTRAL NERVOUS SYSTEM (CNS)
+------------------------------------------------------------
+CNS performance is critical to mission safety. Microgravity and radiation jointly influence brain structure, neural signaling, and cognition.
+
+**Microgravity Effects:**
+- Causes brain fluid shifts, altered CSF distribution, and reorganization of sensory-motor regions.
+- Cellular studies show mitochondrial dysfunction and lipid metabolism alterations in neural cells.
+
+**Radiation Effects:**
+- Ground-based studies reveal cognitive impairments in attention, flexibility, memory, and problem-solving following low-dose (≤0.25 Gy) exposures to protons or heavy ions.
+- Structural changes include dendritic simplification, synaptic loss, and reduced connectivity between brain regions.
+- Approximately 30% of irradiated animals exhibit severe deficits in cognitive flexibility, modeling potential astronaut variability.
+
+**Combined Stressors:**
+- Few studies exist, but combined radiation and HLU induce additive deficits in neural network integrity.
+- Sleep deprivation amplifies cognitive deficits caused by radiation, emphasizing interactive stressor effects.
+
+------------------------------------------------------------
+CARDIOVASCULAR RESPONSES
+------------------------------------------------------------
+Microgravity redistributes blood toward the head, alters arterial pressure gradients, and induces transient endothelial adaptations. Radiation poses a longer-term threat through oxidative vascular injury.
+
+**Microgravity:**
+- HLU reduces eNOS signaling and impairs vasodilation, particularly in cerebral and mesenteric arteries.
+- Short-term effects are reversible post-flight.
+
+**Radiation:**
+- High-LET radiation (e.g., 56Fe) causes persistent oxidative stress, endothelial dysfunction, and accelerated atherosclerosis in animal models.
+- Myocardial irradiation leads to fibrosis, DNA methylation, and impaired contractile performance.
+
+**Combined Exposure:**
+- HLU and 56Fe together produce synergistic endothelial dysfunction mediated by nitric oxide imbalance.
+- Radiation effects persist for months after exposure, while HLU-induced effects are transient.
+
+------------------------------------------------------------
+STEM CELL RESPONSES
+------------------------------------------------------------
+Stem and progenitor cells, crucial for tissue repair, are sensitive to both unloading and radiation.
+
+**Microgravity:**
+- Inhibits differentiation in embryonic and mesenchymal stem cells (MSCs), maintaining cells in an undifferentiated state.
+- Promotes shift of MSC lineage from osteogenic to adipogenic pathways, contributing to bone marrow fat accumulation.
+- Hematopoietic stem cells (HSCs) show reduced regeneration and immune cell output.
+
+**Radiation:**
+- Reduces neural stem cell proliferation and neurogenesis, potentially impairing cognition.
+- Induces DNA double-strand breaks and senescence in MSCs and HSCs.
+- Combined radiation and microgravity exacerbate DNA damage and disrupt differentiation potential.
+
+------------------------------------------------------------
+CONCLUSIONS AND FUTURE DIRECTIONS
+------------------------------------------------------------
+Combined exposure to microgravity and space radiation produces multisystem biological alterations greater than either factor alone. While short-term microgravity effects are reversible, radiation causes persistent molecular and structural damage, particularly in bone, vasculature, and CNS.
+
+Future research priorities include:
+1. Integrating multi-ion GCR simulation exposures for realism.
+2. Standardizing ground-based analogues (HLU, PWB) across studies.
+3. Expanding omics datasets for bone, brain, and vasculature.
+4. Developing antioxidant, pharmacologic, and exercise-based countermeasures.
+5. Investigating sex differences, circadian rhythm interactions, and combined environmental stressors.
+
+These findings are essential for safeguarding astronaut health during extended deep-space missions and for understanding terrestrial implications of radiation and disuse biology.
+
+Keywords: Spaceflight, microgravity, radiation, hind limb unloading, cardiovascular, bone loss, neurocognition, SANS, oxidative stress, stem cells.

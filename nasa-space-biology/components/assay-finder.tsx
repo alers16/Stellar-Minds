@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Loader2, Sparkles, Telescope } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { useAPI } from "@/APIContext"
 
 type AssayEntry = {
   dataset: string
@@ -156,10 +157,12 @@ const exampleData: AssayCategory[] = [
 
 
 export function AssayFinder() {
+  const { assays } = useAPI()
   const [prompt, setPrompt] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [results, setResults] = useState<AssayCategory[] | null>(null)
+  const [isSample, setIsSample] = useState(false)
 
   const totalAssays = useMemo(() => {
     if (!results) return 0
@@ -168,15 +171,36 @@ export function AssayFinder() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    if (!prompt.trim()) {
+      setError("Please enter a query to search for assays.")
+      setResults(null)
+      setIsSample(false)
+      return
+    }
+
     setError(null)
     setLoading(true)
+    setIsSample(false)
 
     try {
-      // TODO: replace with NASA Assay Finder API request
-      await new Promise((resolve) => setTimeout(resolve, 600))
-      setResults(exampleData)
+      const response = await assays.search<AssayCategory[]>(prompt.trim())
+      if (!response) {
+        setError("No response from the assay service.")
+        setResults(null)
+        return
+      }
+
+      const data = response.data ?? null
+      if (!data || !Array.isArray(data) || data.length === 0) {
+        setError("No assays were found for this search.")
+        setResults(null)
+        return
+      }
+
+      setResults(data)
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Unable to fetch assays right now.")
+      setError(err instanceof Error ? err.message : "Unable to fetch assay information.")
+      setResults(null)
     } finally {
       setLoading(false)
     }
@@ -186,6 +210,7 @@ export function AssayFinder() {
     setPrompt("Show me all RNA sequencing assays with flight and ground controls")
     setResults(exampleData)
     setError(null)
+    setIsSample(true)
   }
 
   return (
@@ -230,8 +255,8 @@ export function AssayFinder() {
 
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-slate-300/70">
-                The real implementation should call NASA&apos;s Open Science Data Repository. For now, we render the sample
-                payload so you can design the experience.
+                We call the `/assays/search` backend endpoint with your query. Use the sample button above if you want to
+                preview the example payload.
               </p>
               <button
                 type="submit"
@@ -272,7 +297,7 @@ export function AssayFinder() {
             <div>
               <h2 className="font-mono text-2xl font-semibold text-white">Results by Assay Technology</h2>
               <p className="text-sm text-slate-300/80">
-                {results.length} technology buckets · {totalAssays} assays surfaced · Showing sample data
+                {results.length} technology buckets · {totalAssays} assays surfaced · {isSample ? "Sample data" : "Live data"}
               </p>
             </div>
           </header>

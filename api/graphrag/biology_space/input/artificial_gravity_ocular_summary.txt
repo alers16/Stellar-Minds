@@ -1,0 +1,84 @@
+
+Artificial Gravity Attenuates the Transcriptomic Response to Spaceflight in the Optic Nerve and Retina
+
+Citation: Kremsky I., Pergerson R., Justinen S., Stanbouly S., Willey J., Fuller C.A., Takahashi S., Vitaterna M.H., Bouxsein M., Mao X.
+International Journal of Molecular Sciences, 2024, 25, 12041.
+
+---
+
+Abstract (Summary)
+Microgravity during spaceflight has adverse effects on ocular health, contributing to spaceflight-associated neuro-ocular syndrome (SANS). 
+This study examined transcriptomic changes in the optic nerve (ON) and retina (RTN) of mice subjected to microgravity (0 G) or artificial gravity (AG) 
+at 0.33 G, 0.67 G, and 1 G on the International Space Station (ISS) over a 30-day mission. RNA sequencing revealed that microgravity induced significant 
+transcriptional changes linked to oxidative stress, inflammation, apoptosis, and lipid metabolic stress. Artificial gravity attenuated these effects in a 
+dose-dependent manner, with the strongest protection at 1 G. Immunohistochemistry confirmed that AG reduced oxidative stress biomarker (4-HNE) levels. 
+These results suggest AG may be a viable countermeasure to protect ocular health during spaceflight.
+
+---
+
+Introduction
+Astronauts on long-duration spaceflight often develop ocular abnormalities grouped as SANS, including optic disc edema and retinal changes. 
+Past rodent studies demonstrated disruption of retinal structure and blood-retinal barrier integrity. Few studies have explored how AG counteracts 
+microgravity’s ocular effects. Using centrifugation on ISS, this study evaluated transcriptomic and oxidative stress responses of ON and RTN to 
+progressive levels of AG. The goal was to identify whether AG could mitigate microgravity-induced damage and determine the most effective 
+gravitational dose.
+
+---
+
+Methods
+- Model: 24 male C57BL/6J mice, launched on SpaceX CRS-27 for a 30-day ISS mission (MHU-8).
+- Groups: 0 G (microgravity), 0.33 G, 0.67 G, 1 G (centrifugation), plus habitat ground controls (HGC).
+- Tissues analyzed: Optic nerve and retina.
+- RNA sequencing: High-quality RNA extracted, libraries prepared with Illumina Ribo-Zero, sequenced on NovaSeq 6000.
+- Bioinformatics: Reads aligned with STAR, quantified with RSEM, normalized with DESeq2. Differentially expressed genes (DEGs) identified at |log2FC|>1, adj p<0.05.
+- Pathway analysis: Enrichment using KEGG pathways.
+- Oxidative stress: Immunofluorescence staining of 4-HNE in retinal layers.
+- Comparisons: Transcriptomic profiles between FLT and HGC, and effects of different AG levels.
+
+---
+
+Results
+1. **Spaceflight transcriptomic effects (0 G vs HGC):**
+   - 206 DEGs in ON, 285 in RTN.
+   - Pathways enriched: FoxO, PI3k-Akt, p53 (ON); PPAR and p53 (RTN).
+   - Transcriptomic overlap with optic nerve crush and glaucoma models suggests parallels with degenerative disease.
+
+2. **Effect of AG on transcriptome:**
+   - Increasing AG progressively reduced DEG numbers.
+   - At 1 G, gene expression closely resembled HGC patterns.
+   - 0.33 G ON group showed anomalies likely due to technical artifacts.
+
+3. **Pathway-specific attenuation:**
+   - FoxO, PI3k-Akt, p53 (ON) and PPAR, p53 (RTN) responses were attenuated by AG, strongest at 1 G.
+
+4. **Overlap analysis:**
+   - Comparison of FLT 0 G vs HGC DEGs with FLT 0 G vs FLT 1 G DEGs confirmed attenuation at 1 G.
+   - Example: Pdk4 expression in ON and Cdkn1a in RTN returned to HGC-like levels at 1 G.
+
+5. **Oxidative stress biomarker (4-HNE):**
+   - Elevated at 0 G and 0.33 G in ganglion cell layer of retina.
+   - Reduced to HGC-like levels at 0.67 G and 1 G.
+   - Suggests AG above 0.67 G effectively suppresses oxidative stress.
+
+---
+
+Discussion
+- Spaceflight triggers transcriptomic alterations in ON and RTN, associated with oxidative stress, inflammation, apoptosis, and lipid dysregulation.
+- Continuous AG counteracts these changes in a dose-dependent manner, strongest at 1 G.
+- The ON and RTN responded differently, reflecting distinct structural and vascular properties.
+- Pathway analysis highlights p53, FoxO, PI3k-Akt, and PPAR signaling as critical mediators of stress responses.
+- Oxidative stress reduction by AG suggests protective effects against retinal gliosis and Müller cell activation.
+- While microgravity is the main driver, other stressors (cosmic radiation, magnetic fields, hypergravity) may play minor roles, but their impact was limited in this 30-day mission.
+- Future research should explore longer missions, combined space stressors, and sex-specific responses (this study used only male mice).
+
+---
+
+Conclusion
+- Microgravity induces harmful transcriptomic and oxidative stress responses in optic nerve and retina.
+- Artificial gravity (≥0.67 G, especially 1 G) strongly attenuates these effects, restoring gene expression closer to ground controls.
+- AG represents a promising countermeasure to prevent or reduce ocular injury and SANS in astronauts during long-duration spaceflight.
+
+---
+
+Acknowledgments & Funding
+Supported by NASA, JAXA, and NIH. Data available at NASA OSDR (OSD-758, OSD-759). Analysis pipelines openly available on GitHub. 

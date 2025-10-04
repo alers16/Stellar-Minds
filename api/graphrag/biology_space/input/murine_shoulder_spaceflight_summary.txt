@@ -1,0 +1,103 @@
+
+Effects of Spaceflight on the Muscles of the Murine Shoulder
+
+Authors: Alix C. Deymier, Andrea G. Schwartz, Zhounghou Cai, Tyrone L. Daulton, Jill D. Pasteris,
+Guy M. Genin, Stavros Thomopoulos
+Journal: Acta Biomaterialia, 2019, 83:302–313. doi:10.1016/j.actbio.2018.10.024
+
+---
+
+Abstract (Summary)
+The musculoskeletal system depends on mechanical loading to maintain structural integrity.
+Disuse, paralysis, or microgravity can lead to bone and tendon deterioration, but little is known
+about effects at the tendon-bone interface (enthesis), which is prone to tears and injury. This study
+examined unloading effects on adult mouse shoulder entheses after 21 days of paralysis induced by
+botulinum toxin A. Unloading increased failure risk and caused multiscale structural changes: bone
+loss at the millimeter scale, smaller and less aligned mineral crystals at the micrometer scale, and
+compositional stiffening of mineral at the nanometer scale. These combined to elevate stress
+concentrations and reduce energy absorption capacity, increasing risk of injury.
+
+---
+
+Introduction
+Mechanical loading is critical for bone, tendon, and enthesis homeostasis. Loss of loading due to
+spaceflight or paralysis reduces bone mass, tendon stiffness, and overall musculoskeletal strength.
+The enthesis, where tendon attaches to bone, is highly specialized with gradients in mineral
+content and collagen orientation to dissipate stress. Previous work showed loading is essential for
+enthesis development, but effects of unloading on the mature enthesis remain unclear. This study
+hypothesized that unloading would compromise mechanics and induce structural changes across
+hierarchical scales (nano, micro, and macro).
+
+---
+
+Methods
+- Animal Model: 40 adult male CD-1 mice (30–34 weeks old).
+- Groups: Control (normal cage activity), and Botox-injected (left supraspinatus paralyzed, right
+injected with saline as control).
+- Duration: 21 days.
+- Analyses:
+  - μCT imaging for bone morphology.
+  - Uniaxial tensile testing for enthesis mechanics.
+  - Raman spectroscopy, synchrotron XRD/XRF, and TEM-EELS for mineral gradients and
+    nanostructure.
+- Outcome measures: mechanical strength, toughness, trabecular bone volume, mineral gradient
+width, mineral orientation, crystal size, carbonate substitution.
+
+---
+
+Results
+1. **Mechanical testing (millimeter scale):**
+   - Unloading did not alter stiffness or maximum force of enthesis.
+   - However, failure area increased and fracture toughness decreased with unloading.
+   - Strength trended lower in Botox group, suggesting greater vulnerability to failure.
+
+2. **Bone morphology (micrometer scale):**
+   - Bone volume fraction decreased ~40% with unloading (control BV/TV 0.44 → botox 0.27).
+   - Trabecular thickness reduced; spacing increased.
+   - Larger failure craters at attachment sites in unloaded samples.
+
+3. **Mineral gradient and structure:**
+   - XRF showed steeper Ca gradients and narrower mineral transition zone in Botox-treated
+     entheses (~8 µm vs ~15 µm in controls).
+   - Raman-based measurements of gradient width unchanged, but unloading altered mineral
+     alignment.
+
+4. **Nanostructural changes:**
+   - Mineral crystals smaller and less aligned in unloaded samples.
+   - Residual strain patterns altered, indicating compromised mechanical integration.
+   - RMS strain decreased, suggesting less heterogeneous mineral environments.
+   - Carbonate substitution reduced in botox-treated samples, known to increase mineral stiffness.
+
+5. **Compositional mapping (TEM-EELS):**
+   - Mineral deposition shifted from predominantly extrafibrillar to combined intra- and
+     extrafibrillar across gradient zones.
+   - Unloading did not change this transition, but mineral disorder increased.
+
+---
+
+Discussion
+- Unloading of shoulder entheses increased susceptibility to avulsion and failure, even though
+elastic properties and tendon structure remained unchanged.
+- Multiscale changes explained increased injury risk:
+  - **Macro-scale:** trabecular bone loss weakened structural support.
+  - **Micro-scale:** smaller, misaligned crystals decreased compliant zone energy dissipation.
+  - **Nano/atomic scale:** reduced carbonate content stiffened mineral, limiting energy absorption.
+- Findings align with clinical observations of rotator cuff avulsion injuries, especially in young
+adults, highlighting how enthesis health depends on loading.
+- Spaceflight unloading may similarly increase shoulder injury risk in astronauts.
+
+---
+
+Conclusion
+- Short-term unloading of adult mouse shoulder entheses caused significant structural and
+mechanical compromise across hierarchical scales.
+- Effects include bone loss, altered mineral gradients, reduced toughness, and stiffer mineral
+composition, together elevating risk of failure.
+- These findings provide insight into enthesis biology under unloading and inform therapeutic
+approaches for musculoskeletal injuries in disuse, paralysis, and spaceflight.
+
+---
+
+Acknowledgments
+Funded by NIH grants (R01 EB016422, R01 AR057836), NSBRI fellowship, and institutional
+support from Washington University and Columbia University.

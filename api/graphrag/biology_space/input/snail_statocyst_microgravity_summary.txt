@@ -1,0 +1,84 @@
+
+Functional Changes in the Snail Statocyst System Elicited by Microgravity
+
+Authors: Pavel M. Balaban, Aleksey Y. Malyshev, Victor N. Ierusalimsky, Nikolay Aseyev,
+Tania A. Korshunova, Natasha I. Bravarenko, M.S. Lemak, Matvey Roshchin, Igor S. Zakharov,
+Yekaterina Popova, Richard Boyle
+Journal: PLoS ONE, 2011, 6(3): e17710. doi:10.1371/journal.pone.0017710
+
+---
+
+Abstract (Summary)
+The mollusk statocyst, a gravity-sensing organ, has strong structural and functional similarities to vertebrate vestibular systems.
+This study used terrestrial snails (*Helix lucorum* and *Helix aspersa*) to assess the effects of 12- and 16-day spaceflights
+(Foton M-2 and M-3 missions). Analyses included: (i) whole-animal behavior (negative gravitaxis), (ii) statoreceptor
+electrophysiology, and (iii) neuropeptide gene expression (Helix pedal peptide, HPep; and FMRFamide). Results showed:
+- Faster gravitaxis response in postflight snails.
+- Enhanced sensitivity of statocyst responses to tilt, independent of direction, with larger firing magnitude postflight.
+- Increased expression of HPep gene in statocyst receptors, but no changes in FMRFamide expression.
+Overall, microgravity exposure upregulated statocyst function, paralleling vertebrate vestibular adaptations to spaceflight.
+
+---
+
+Introduction
+Gravity has been constant throughout evolution, shaping sensory systems across metazoans. The snail statocyst resembles
+vertebrate otolith organs in structure and function: statoconia (otoconia in mammals), supporting cells, and sensory hair
+cells. Spaceflight enables study of whether gravisensing systems adapt to altered gravitational states. This research examined
+behavioral, physiological, and molecular responses in snails exposed to microgravity, providing a simple invertebrate
+model for understanding general mechanisms of gravity sensing.
+
+---
+
+Methods
+- Missions: Foton M-2 (16 days) and Foton M-3 (12 days).
+- Animals: *Helix lucorum* (large snails) for behavioral/electrophysiological studies; *Helix aspersa* (small snails) for
+  gene expression.
+- Behavioral tests: negative gravitaxis (reorientation following sudden head-down pitch).
+- Electrophysiology: extracellular recordings from statocyst nerve during tilt at different angles and speeds.
+- Gene expression: in situ hybridization and immunohistochemistry for HPep and FMRFamide in CNS and statocysts.
+- Controls: asynchronous ground experiments simulating temperature and habitat conditions.
+
+---
+
+Results
+1. **Behavior (Negative gravitaxis):**
+   - Postflight snails reoriented faster than controls (significant differences at later phases of reorientation).
+   - Both Foton M-2 and M-3 missions confirmed enhanced negative gravitaxis postflight.
+
+2. **Electrophysiology:**
+   - Spontaneous firing rates unchanged between groups.
+   - Tilt responses significantly enhanced postflight: larger spike counts, increased sensitivity across tilt speeds.
+   - Directional preference (head-down > tail-down) seen in controls was absent in postflight snails, indicating loss of
+     orientation selectivity.
+
+3. **Gene Expression:**
+   - HPep gene expression upregulated in statocyst receptors postflight (50% of M-2, ~91% of M-3 statocysts stained).
+   - FMRFamide expression unchanged in postflight vs controls, suggesting it is not involved in adaptation.
+   - HPep upregulation likely linked to ciliary beating and mechanical transduction adjustments.
+
+---
+
+Discussion
+- Microgravity exposure enhanced statocyst sensitivity and behavioral performance in gravitaxis.
+- Loss of directional selectivity suggests functional re-tuning of gravisensing under altered gravity.
+- Upregulation of HPep implies molecular plasticity in mechanosensory hair cells adapting to new gravity states.
+- Parallels with vertebrate vestibular hypersensitivity after spaceflight suggest conserved mechanisms of gravisensing
+across evolution.
+- Potential mechanisms: structural changes in statoconia, synaptic remodeling, altered ionic channel dynamics, and efferent
+neural feedback regulation.
+
+---
+
+Conclusion
+- Snails exposed to microgravity showed faster behavioral responses, enhanced statocyst sensitivity, and increased HPep
+gene expression in statocyst receptors.
+- Adaptations resemble vertebrate vestibular changes post-spaceflight, underscoring fundamental principles of gravity
+sensing.
+- Snails provide a valuable, simple model for studying subcellular and systems-level adaptations of nervous systems to
+microgravity.
+
+---
+
+Acknowledgments
+Supported by Russian Academy of Sciences, Russian Foundation for Basic Research, NASA, and other grants.
+Special thanks to collaborators at NASA Ames Research Center and the Institute for Biomedical Problems.

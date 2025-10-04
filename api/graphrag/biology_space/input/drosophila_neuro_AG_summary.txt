@@ -1,0 +1,85 @@
+
+Artificial Gravity Partially Protects Space-Induced Neurological Deficits in Drosophila melanogaster
+
+Citation: Mhatre S.D., Iyer J., Petereit J., Dolling-Boreham R.M., Tyryshkina A., Paul A., Gilbert R., Jensen M., Woolsey R.J., Anand S., Sowa M.B., Quilici D.R., Costes S.V., Girirajan S., Bhattacharya S.
+Cell Reports, 2022, 40(10):111279. doi:10.1016/j.celrep.2022.111279.
+
+---
+
+Summary
+Spaceflight poses significant risks to the central nervous system (CNS). Using Drosophila melanogaster on the ISS, this study investigated how microgravity (SFμg) and artificial gravity (SF1g, via inflight centrifugation) influence CNS function, behavior, and molecular pathways. The results showed that microgravity induces neuronal loss, oxidative stress, apoptosis, glial alterations, and behavioral deficits. Artificial gravity partially protected against these adverse outcomes, though some long-term effects persisted even under AG.
+
+---
+
+Introduction
+Deep space missions expose astronauts to microgravity, ionizing radiation, elevated CO2, circadian disruption, and isolation. The CNS is particularly vulnerable due to high lipid content, energy demand, and weak antioxidant defenses. Spaceflight has been linked to deficits in locomotion, coordination, cognition, and spatial orientation. Animal models are necessary to understand mechanisms underlying CNS risks. Fruit flies are ideal due to their short lifespan, generational turnover, and genetic tools. This study (MVP-Fly-01 mission) tested whether artificial gravity could protect against microgravity-induced CNS damage.
+
+---
+
+Methods
+- Spaceflight: Flies launched aboard SpaceX-14, housed in Multi-use Variable-gravity Platform (MVP) for 34 days on ISS.
+- Groups: SFμg (microgravity), SF1g (artificial Earth gravity via centrifugation), and ground Earth controls (replicating ISS environment with elevated CO2 and sound).
+- Inflight Behavior: Automated image analysis of fly activity using maximum intensity projections from inflight video.
+- Postflight Tests: Climbing assays, immunohistochemistry (neuronal, glial, dopaminergic markers; apoptosis; oxidative DNA damage), and confocal imaging.
+- Molecular Studies: RNA sequencing and global proteomics from fly heads collected inflight.
+- Postflight Acclimation: Subsets aged 25 days on Earth to assess sustained CNS effects.
+
+---
+
+Results
+1. **Behavioral Activity in Space:**
+   - SFμg flies were significantly more active than SF1g during flight, indicating hyperactivity in microgravity.
+   - Hyperactivity diminished late in the mission due to crowding effects.
+
+2. **Postflight Climbing Assays:**
+   - SFμg flies (especially males) showed severe climbing deficits compared to Earth and SF1g.
+   - SF1g flies displayed moderate deficits, suggesting partial protection.
+
+3. **Neuronal and Glial Phenotypes:**
+   - SFμg brains showed reduced neuronal cortex and neuropil areas, neuronal loss, oxidative stress markers, and apoptosis.
+   - Dopaminergic (DA) neurons were reduced in SFμg, especially in males. Loss of DA neurons correlates with locomotor deficits.
+   - SF1g brains showed preservation of neuronal structures with only mild deficits.
+
+4. **Oxidative Stress and Apoptosis:**
+   - Elevated oxidative DNA damage (8-oxo-dG) and apoptosis (CC3) in SFμg.
+   - SF1g brains showed levels comparable to Earth, suggesting AG suppresses oxidative stress.
+
+5. **Glial Changes:**
+   - SFμg flies showed altered glial populations (sex-specific effects).
+   - SF1g flies showed intermediate phenotypes, again suggesting partial protection.
+
+6. **Transcriptomics and Proteomics:**
+   - SFμg: 1000+ genes and ~700 proteins differentially expressed, enriched in oxidative phosphorylation, metabolic stress, synaptic pathways.
+   - SF1g: Fewer DEGs/DEPs, but shared pathways included heat shock proteins, mitochondrial dynamics, and neurotransmission proteins.
+   - Key pathways affected: glycolysis, TCA cycle, fatty acid and amino acid metabolism, oxidative phosphorylation, synaptic vesicle cycle.
+
+7. **Stress-Response Proteins:**
+   - Heat shock proteins (HSP70, HSP26, HSP23, HSP27) upregulated under spaceflight conditions, indicating ROS-driven cellular stress.
+   - Synaptic proteins altered: downregulation of syntaxin, SNAP24, synaptotagmin; upregulation of vesicle transport proteins.
+
+8. **Persistent Postflight Effects (R+25 Days):**
+   - Both SFμg and SF1g flies showed progressive neuronal loss, apoptosis, and glial depletion after acclimation to Earth.
+   - SFμg phenotypes were more severe, but SF1g flies also developed glial aggregates ("rosettes"), suggesting delayed CNS effects even under AG.
+   - Long-term deficits indicate combined effects of radiation, CO2, and space stressors.
+
+---
+
+Discussion
+- Microgravity is a primary driver of acute CNS damage: hyperactivity, neuronal degeneration, oxidative stress, apoptosis, and behavioral impairment.
+- Artificial gravity provides significant short-term protection: preserved neuronal structures, reduced oxidative stress, and better behavioral outcomes.
+- However, AG did not fully prevent long-term degenerative phenotypes, likely due to radiation, elevated CO2, and other space stressors.
+- Findings align with rodent and human spaceflight studies, suggesting mitochondrial dysfunction and ROS as central mechanisms.
+- Sex-specific differences were evident, with males more vulnerable to DA neuron loss and locomotor decline.
+- Implications: AG may reduce immediate CNS risks in astronauts, but deeper countermeasures addressing radiation and combined space stressors are needed.
+
+---
+
+Conclusion
+- Microgravity causes CNS damage in Drosophila, including neuronal and glial loss, oxidative stress, apoptosis, and behavioral deficits.
+- Artificial gravity (SF1g) partially protects against these outcomes, especially acutely, but cannot fully mitigate long-term postflight neurological decline.
+- Effective countermeasures for human spaceflight must combine AG with strategies to reduce oxidative stress and radiation-induced injury.
+
+---
+
+Acknowledgments & Data Availability
+Study supported by NASA, with data deposited at NASA GeneLab. RNAseq and proteomic datasets, as well as behavioral analysis code, are openly available on GitHub (MVP-inflight-behavior).
