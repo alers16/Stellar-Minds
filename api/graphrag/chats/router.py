@@ -3,14 +3,12 @@ from fastapi import APIRouter, Request, Response, status, Depends, HTTPException
 
 from .schemas import PromptAnswerResponse, MessageRequest, CreateChatResponse
 from .service import ChatService, ChatBusyError
-from ..limiter import rate_limit_create_chat, rate_limit_send_message
 from ..deps import Deps
 
 router = APIRouter(tags=["chats"])
 
 
-@router.post("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
-@rate_limit_create_chat
+@router.get("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
 def create_chat(
     request: Request,
     response: Response,
@@ -24,8 +22,7 @@ def create_chat(
     return CreateChatResponse(chat_uuid=new_chat.uuid)
 
 
-@router.post("/{chat_uuid}/messages", response_model=PromptAnswerResponse, status_code=status.HTTP_200_OK)
-@rate_limit_send_message
+@router.get("/{chat_uuid}/messages", response_model=PromptAnswerResponse, status_code=status.HTTP_200_OK)
 async def post_chat_message(
     request: Request,
     chat_uuid: UUID,
