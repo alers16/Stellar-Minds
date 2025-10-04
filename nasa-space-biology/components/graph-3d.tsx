@@ -105,6 +105,38 @@ const planetGeometry = new THREE.SphereGeometry(1, 48, 48)
 
 const ringGeometry = new THREE.TorusGeometry(1.35, 0.08, 16, 60)
 
+const EXTRA_PATTERNS: PlanetPreset["pattern"][] = ["bands", "spots", "swirl", "storm"]
+
+function hslToHex(h: number, s: number, l: number): string {
+  const color = new THREE.Color()
+  color.setHSL((h % 360) / 360, Math.min(Math.max(s, 0), 100) / 100, Math.min(Math.max(l, 0), 100) / 100)
+  return `#${color.getHexString()}`
+}
+
+function generatePlanetPreset(index: number): PlanetPreset {
+  const hue = (index * 137.508) % 360
+  const accentHue = (hue + 25) % 360
+  const ambientHue = (hue + 330) % 360
+
+  const base = hslToHex(hue, 70, 45)
+  const accent = hslToHex(accentHue, 75, 60)
+  const ambient = hslToHex(ambientHue, 65, 35)
+  const pattern = EXTRA_PATTERNS[index % EXTRA_PATTERNS.length]
+  const hasRing = index % 5 === 0
+  const ringColor = hasRing ? hslToHex((hue + 180) % 360, 50, 75) : undefined
+
+  return {
+    name: `Orbital-${index + 1}`,
+    icon: "🪐",
+    base,
+    accent,
+    ambient,
+    pattern,
+    hasRing,
+    ringColor,
+  }
+}
+
 function mixColor(colorA: string, colorB: string, amount: number) {
   const a = new THREE.Color(colorA)
   const b = new THREE.Color(colorB)
@@ -282,9 +314,29 @@ export function Graph3D({ graph }: Graph3DProps) {
 
   const [planetAssets, setPlanetAssets] = useState<PlanetAsset[]>([])
 
+  const communityIds = useMemo(() => {
+    const unique = new Set<number>()
+    for (const node of graph.nodes) {
+      unique.add(node.community ?? -1)
+    }
+    return Array.from(unique)
+  }, [graph])
+
   useEffect(() => {
-    setPlanetAssets(PLANET_PRESETS.map((preset) => createPlanetAsset(preset)))
-  }, [])
+    const required = Math.max(communityIds.length, PLANET_PRESETS.length)
+    setPlanetAssets((current) => {
+      let updated = current.length ? [...current] : PLANET_PRESETS.map((preset) => createPlanetAsset(preset))
+
+      if (updated.length < required) {
+        for (let index = updated.length; index < required; index++) {
+          const preset = generatePlanetPreset(index)
+          updated.push(createPlanetAsset(preset))
+        }
+      }
+
+      return updated.length === current.length ? current : updated
+    })
+  }, [communityIds.length])
 
   const { data, legend } = useMemo(() => {
     const communityRegistry = new Map<number, { assetIndex: number; count: number; label: number }>()
@@ -292,7 +344,7 @@ export function Graph3D({ graph }: Graph3DProps) {
     const nodes: VisualNode[] = graph.nodes.map((node) => {
       const group = node.community ?? -1
       if (!communityRegistry.has(group)) {
-        const assignedIndex = planetAssets.length > 0 ? communityRegistry.size % planetAssets.length : 0
+        const assignedIndex = planetAssets.length > 0 ? Math.min(communityRegistry.size, planetAssets.length - 1) : 0
         communityRegistry.set(group, {
           assetIndex: assignedIndex,
           count: 0,

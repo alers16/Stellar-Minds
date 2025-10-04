@@ -209,9 +209,9 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
   }
 
   const chatAPI: ChatAPI = {
-    create: () => apiMethods.get(`https://glial-fallon-ultrastructural.ngrok-free.app/api/v1/chats`),
+    create: () => apiMethods.get(`http://localhost:8000/api/v1/chats`),
     sendMessage: (chatUuid, body) =>
-      apiMethods.post(`https://glial-fallon-ultrastructural.ngrok-free.app/api/v1/chats/${chatUuid}/messages`, body),
+      apiMethods.post(`http://localhost:8000/api/v1/chats/${chatUuid}/messages`, body),
   }
 
   return (

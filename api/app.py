@@ -19,7 +19,7 @@ from ai import OpenAIProvider
 
 load_dotenv(override=True)
 
-FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
+FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # Se mantiene por compatibilidad, actualmente sin uso
 
 def key_func(request: Request) -> str:
     fwd = request.headers.get("x-forwarded-for")
@@ -47,8 +47,10 @@ app = FastAPI(
 )
 
 
-app.add_middleware(CORSMiddleware,
-    allow_origins=[o.strip() for o in FRONTEND_URLS.split(",") if o.strip()] or ["*"],
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[],
+    allow_origin_regex=".*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
