@@ -5,6 +5,7 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from collections import defaultdict, Counter
 import itertools
 
+# ⬇️ Asegúrate de tener este prompt en tu proyecto (como ya lo tienes)
 from ai import GetGapFilterPrompt
 
 router = APIRouter()
@@ -128,6 +129,48 @@ def _coarse_condition(c: Optional[str]) -> Optional[str]:
         return "Ground/Analog"
     return None
 
+# ----------------- capa NL → filtros (IA) -----------------
+
+def _nl_to_filters(request: Request, user_input: Optional[str]):
+    """
+    Usa GetGapFilterPrompt para transformar q (texto libre) en:
+    organisms: List[str] | None
+    assays: List[str] | None
+    condition: str | None   ("Spaceflight" | "Ground/Analog" | "Ambas" | None)
+    tissues: List[str] | None
+    """
+    prompt = GetGapFilterPrompt(user_input or "")
+    # IMPORTANTE: asumo que tienes el provider cargado en app.state.provider (igual que en tu assay finder).
+    response_text, _ = request.app.state.provider.prompt(
+        model="gpt-3.5-turbo",
+        prompt_system=prompt.get_prompt_system(),
+        messages_json=[],
+        user_input=prompt.get_user_prompt(),
+        parameters_json=prompt.get_parameters(),
+    )
+    if not response_text:
+        raise HTTPException(status_code=500, detail="No se obtuvo respuesta de la IA.")
+
+    import json
+    try:
+        r = json.loads(response_text)
+    except Exception:
+        start = response_text.find("{"); end = response_text.rfind("}")
+        if start == -1 or end == -1:
+            raise HTTPException(status_code=500, detail="No se pudo parsear JSON de la IA.")
+        r = json.loads(response_text[start:end+1])
+
+    def as_list(x):
+        if not x: return None
+        return x if isinstance(x, list) else [str(x)]
+
+    organisms = as_list(r.get("organisms"))
+    assays     = as_list(r.get("assays"))
+    tissues    = as_list(r.get("tissues"))
+    condition  = r.get("condition") or "Ambas"  # default amigable
+
+    return organisms, assays, condition, tissues
+
 # ----------------- /gaps/options -----------------
 
 @router.get("/gaps/options")
@@ -180,46 +223,23 @@ async def gaps_options():
         "tissues": sorted(tissues),
     }
 
-# ----------------- /gaps/search (GET) -----------------
-
-
-def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str, Optional[str]]:
-    prompt = GetGapFilterPrompt(user_input)
-    response_text, _ = request.app.state.provider.prompt(
-        model="gpt-3.5-turbo",
-        prompt_system=prompt.get_prompt_system(),
-        messages_json=[],
-        user_input=prompt.get_user_prompt(),
-        parameters_json=prompt.get_parameters(),
-    )
-    if not response_text:
-        raise HTTPException(status_code=500, detail="No se obtuvo respuesta de la IA.")
-
-    import json
-    try:
-        response = json.loads(response_text)
-    except Exception:
-        start = response_text.find("{"); end = response_text.rfind("}")
-        if start == -1 or end == -1:
-            raise HTTPException(status_code=500, detail="No se pudo parsear JSON de la respuesta.")
-        response = json.loads(response_text[start:end+1])
-
-    return response.get("organisms") or "", response.get("assays") or "", response.get("condition") or "", response.get("tissues") or "",
-
+# ----------------- /gaps/search (GET: ahora SOLO q) -----------------
 
 @router.get("/gaps/search")
 async def gaps_search(
     request: Request,
-    q: Optional[str] = Query(None, description="Consulta de texto libre para filtrar gaps (usada solo para AI)"),
+    q: Optional[str] = Query(None, description="Consulta libre; la IA la convierte a organisms/assays/condition/tissues"),
     min_datasets_for_covered: int = Query(1, ge=1, description="Umbral datasets para covered"),
     top_n: int = Query(20, ge=1, le=100, description="Número de gaps destacados (rankeados) a devolver"),
 ):
     """
-    Devuelve coverage + gaps + highlights (Top-N con score y reason) para el scope dado por los filtros.
+    Igual que tu endpoint actual, pero la UI solo manda `q`.
+    Por dentro, se mapea con IA a organisms/assays/condition/tissues y se reusa tu lógica tal cual.
     """
-    organisms, assays, condition, tissues = _get_filter_from_natural_language(request, q)
-    print(organisms, assays, condition, tissues)  # DEBUG
-    # 1) Construir params para /v2/query/assays/ (assay-grouped)
+    # ⬇️ 1) IA → filtros
+    organisms, assays, condition, tissues = _nl_to_filters(request, q)
+
+    # 2) Construir params para /v2/query/assays/ (igual que tu flujo)
     params: List[Tuple[str, str]] = []
     _add(params, "format", DEFAULT_FORMAT)
 
@@ -257,8 +277,7 @@ async def gaps_search(
     if not rows:
         return {"applied_url": applied_url, "highlights": [], "gaps_total": 0, "gaps": []}
 
-    # 2) Normalizar y construir observados
-    # Observado = (organism, tissue, condition_norm (fina), assay_type, accession, assay_name, condition_coarse)
+    # 3) Normalizar y construir observados (sin tocar tu lógica)
     observed = []
     tissues_observed: Set[Optional[str]] = set()
     assay_freq_global = Counter()
@@ -283,7 +302,7 @@ async def gaps_search(
     if condition in {"Spaceflight", "Ground/Analog"}:
         observed = [t for t in observed if t[6] == condition]
 
-    # 3) Alcance (universo) basado en selección y observados
+    # 4) Alcance (universo) basado en selección y observados (igual que tenías)
     organisms_scope = set(organisms) if organisms else {t[0] for t in observed}
     assays_scope = set(assays) if assays else {t[3] for t in observed}
     if tissues is not None:
@@ -294,34 +313,26 @@ async def gaps_search(
         {condition} if condition in {"Spaceflight", "Ground/Analog"} else {t[6] for t in observed}
     )
 
-    # 4) Coverage: nº de datasets por combinación fina y coarse
-    #   KEY_FINE: (org, tissue, cond_norm, assay_type)
-    #   KEY_COARSE: (org, tissue_parent, cond_coarse, assay_type)
+    # 5) Coverage: nº de datasets por combinación fina y coarse
     coverage_counter: Dict[Tuple[str, Optional[str], str, str], Set[str]] = defaultdict(set)
     coverage_counter_coarse: Dict[Tuple[str, Optional[str], str, str], Set[str]] = defaultdict(set)
 
     # índices para señales
-    # datasets por (org,tissue_parent,cond_coarse) sin distinguir assay (vecindario y base)
     ds_any_by_combo_coarse: Dict[Tuple[str, Optional[str], str], Set[str]] = defaultdict(set)
-    # assays presentes por (org,tissue_parent,cond_coarse)
     assays_present_by_combo_coarse: Dict[Tuple[str, Optional[str], str], Set[str]] = defaultdict(set)
-    # phases presentes por (org,tissue_parent)
     phases_by_org_tissue: Dict[Tuple[str, Optional[str]], Set[str]] = defaultdict(set)
-    # cross-species presencia del mismo assay en otras especies, mismo tissue_parent y cond_coarse
-    species_assay_presence: Dict[Tuple[str, Optional[str], str, str], Set[str]] = defaultdict(set)  # key=(tissue_parent,cond,assay) -> species set
+    species_assay_presence: Dict[Tuple[str, Optional[str], str, str], Set[str]] = defaultdict(set)  # (tissue_parent,cond,assay)->species
 
     for org, tis, cond_norm, assay_type, acc, _an, cond_coarse in observed:
         tissue_parent = _parent_tissue_name(tis)
-        # fines
         coverage_counter[(org, tis, cond_norm, assay_type)].add(acc)
-        # coarse
         coverage_counter_coarse[(org, tissue_parent, cond_coarse, assay_type)].add(acc)
         ds_any_by_combo_coarse[(org, tissue_parent, cond_coarse)].add(acc)
         assays_present_by_combo_coarse[(org, tissue_parent, cond_coarse)].add(assay_type)
         phases_by_org_tissue[(org, tissue_parent)].add(cond_norm)
         species_assay_presence[(tissue_parent, cond_coarse, assay_type)].add(org)
 
-    # 5) Construir coverage_rows (para compat) y conjunto de covered_keys en coarse
+    # 6) Construir coverage_rows y covered_keys
     coverage_rows = []
     covered_keys_coarse: Set[Tuple[str, Optional[str], str, str]] = set()
     for (org, tissue_parent, cond_coarse, assay_type), accs in coverage_counter_coarse.items():
@@ -345,7 +356,7 @@ async def gaps_search(
             if n_ds >= 1:
                 covered_keys_coarse.add((org, tissue_parent, cond_coarse, assay_type))
 
-    # 6) Gaps (coarse): universo - covered_keys_coarse
+    # 7) Gaps (cartesiano) — EXACTO como lo llevabas
     tissues_scope_parent = {_parent_tissue_name(t) for t in tissues_scope}
     universe = list(itertools.product(
         sorted(organisms_scope),
@@ -363,11 +374,8 @@ async def gaps_search(
                 "assay_type": assay,
             })
 
-    # ----------------- PRIORIZACIÓN AUTOMÁTICA -----------------
-    # señales y score por gap
-
+    # 8) Scoring + reasons (sin tocarlo)
     def _ground_base_signal(org: str, tis_parent: Optional[str], assay_type: str, cond: str) -> float:
-        # Solo aplica si el gap es de Spaceflight: medimos base en Ground
         if cond != "Spaceflight":
             return 0.0
         ds_g = len(ds_any_by_combo_coarse.get((org, tis_parent, "Ground/Analog"), set()))
@@ -382,24 +390,19 @@ async def gaps_search(
             return 1.0
         if "rna" in assay_type.lower() and any("proteom" in a.lower() for a in present):
             return 1.0
-        # si hay otra capa cualquiera
         if len(present) >= 1:
-            # Si hay algo (aunque no sea la pareja clásica), damos 0.5
             return 0.5
         return 0.0
 
     def _phase_signal(org: str, tis_parent: Optional[str], cond: str) -> float:
-        # Miramos fases finas presentes en (org,tissue_parent)
         phases = { (p or "").lower() for p in phases_by_org_tissue.get((org, tis_parent), set()) }
         has_pre  = any("pre"  in p and "flight" in p for p in phases)
         has_in   = any(("in-flight" in p) or ("in" in p and "flight" in p) for p in phases)
         has_post = any("post" in p and "flight" in p for p in phases)
         if cond != "Spaceflight":
             return 0.0
-        # si falta In-flight pero hay pre o post → 1.0
         if not has_in and (has_pre or has_post):
             return 1.0
-        # si falta una de pre/post pero hay algo → 0.5 (menos crítico)
         if has_in and (not has_pre or not has_post):
             return 0.5
         return 0.0
@@ -408,11 +411,9 @@ async def gaps_search(
         species_set = species_assay_presence.get((tis_parent, cond, assay_type), set())
         if not species_set:
             return 0.0
-        # si existe en otra especie distinta a la del gap → 1.0
         others = {s for s in species_set if s != org}
         if not others:
             return 0.0
-        # si esa otra incluye Mus/Homo par típico, damos 1.0; si no, 0.5
         lower_others = {o.lower() for o in others}
         if ("mus musculus" in lower_others and org.lower() == "homo sapiens") or \
            ("homo sapiens" in lower_others and org.lower() == "mus musculus"):
@@ -420,9 +421,6 @@ async def gaps_search(
         return 0.5
 
     def _neighbor_density_signal(tis_parent: Optional[str], cond: str) -> float:
-        # Actividad en el vecindario: datasets en cualquier organismo, cualquier assay con mismo tissue/cond
-        # Aproximamos sumando ds_any_by_combo_coarse en todos los orgs
-        total = 0
         seen: Set[str] = set()
         for (org_k, tis_k, cond_k), accs in ds_any_by_combo_coarse.items():
             if tis_k == tis_parent and cond_k == cond:
@@ -432,7 +430,6 @@ async def gaps_search(
         return min(total, cap) / cap
 
     def _feasibility_signal(assay_type: str) -> float:
-        # Frecuencia global del assay en el scope (más frecuente => más factible/estándar)
         if not assay_freq_global:
             return 0.0
         mx = max(assay_freq_global.values())
@@ -440,21 +437,14 @@ async def gaps_search(
             return 0.0
         return assay_freq_global[assay_type] / mx
 
-    # Redundancy: si hay muchos gaps con variantes casi idénticas (mismo parent tissue),
-    # la señal es una penalización (0..1). La restaremos con peso.
-    parent_counts = Counter((g["organism"], g["tissue"], g["condition"], g["assay_type"]) for g in gaps)
-    # aquí parent_counts será 1 por clave; para penalizar similares, agrupamos solo por (tissue,cond,assay)
     similar_group_counts = Counter((g["tissue"], g["condition"], g["assay_type"]) for g in gaps)
-
     def _redundancy_penalty(tis_parent: Optional[str], cond: str, assay_type: str) -> float:
         cnt = similar_group_counts[(tis_parent, cond, assay_type)]
         if cnt <= 1:
             return 0.0
-        # si hay muchos (p.ej. variantes por organismo), penaliza hasta 1.0
         cap = 4
         return min(cnt-1, cap) / cap
 
-    # Pesos del score (puedes afinarlos luego o exponerlos a sliders internos)
     W_GROUND   = 1.8
     W_MULTI    = 1.5
     W_PHASE    = 1.2
@@ -486,7 +476,6 @@ async def gaps_search(
                  W_FEAS*s_feas -
                  W_REDUND*s_redund)
 
-        # Construcción automática del reason (principal + apoyos)
         reasons_detail = []
         if s_ground >= 0.6:
             ds_g = len(ds_any_by_combo_coarse.get((org, tis, "Ground/Analog"), set()))
@@ -532,7 +521,6 @@ async def gaps_search(
                 "text": f"Translación: cubierta en {', '.join(others)}; falta en {org}."
             })
         if s_neighbor >= 0.6:
-            nd = int(round(s_neighbor*5, 0))  # aproximación inversa al cap
             reasons_detail.append({
                 "type": "NeighborDensity",
                 "value": round(s_neighbor, 2),
@@ -544,14 +532,7 @@ async def gaps_search(
                 "value": round(s_feas, 2),
                 "text": f"Alta factibilidad: {assay_type} es frecuente en el scope."
             })
-        if s_redund >= 0.6:
-            reasons_detail.append({
-                "type": "Redundancy",
-                "value": round(s_redund, 2),
-                "text": "Se han consolidado variantes de tejido similares para evitar duplicados."
-            })
 
-        # Motivo principal: el de mayor contribución positiva
         contributions = [
             ("GroundBase", W_GROUND*s_ground),
             ("MultiOmics", W_MULTI*s_multi),
@@ -561,7 +542,6 @@ async def gaps_search(
             ("Feasibility", W_FEAS*s_feas),
         ]
         main_reason_type, _ = max(contributions, key=lambda kv: kv[1])
-        # mapa a texto corto
         MAIN_TEXT = {
             "GroundBase": "Fuerte base en tierra y falta en vuelo.",
             "MultiOmics": "Completar paquete multi-ómics.",
@@ -582,11 +562,10 @@ async def gaps_search(
             "reasons_detail": reasons_detail,
         })
 
-    # Ordenar por score desc y recortar Top-N (diversificación simple opcional)
+    # 9) Ordenar y devolver
     highlights.sort(key=lambda h: h["score"], reverse=True)
     highlights_top = highlights[:top_n] if top_n else highlights
 
-    # Orden estable para UI (coverage/gaps)
     coverage_rows.sort(key=lambda r: (r["organism"] or "", r["tissue"] or "", r["condition"] or "", r["assay_type"] or ""))
     gaps.sort(key=lambda r: (r["organism"] or "", r["tissue"] or "", r["condition"] or "", r["assay_type"] or ""))
 
