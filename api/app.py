@@ -15,6 +15,8 @@ from graphbot.chats.service import ChatService
 from graphbot.settings import settings
 from graphbot.factory import make_store, make_chatbot
 
+from ai import OpenAIProvider
+
 load_dotenv(override=True)
 
 FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
@@ -31,6 +33,7 @@ async def lifespan(app: FastAPI):
     chatbot = make_chatbot(settings)
 
     app.state.chat_service = ChatService(store, chatbot)
+    app.state.provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 
     yield
 
