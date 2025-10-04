@@ -15,11 +15,9 @@ from graphbot.chats.service import ChatService
 from graphbot.settings import settings
 from graphbot.factory import make_store, make_chatbot
 
-from ai import OpenAIProvider
-
 load_dotenv(override=True)
 
-FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # Se mantiene por compatibilidad, actualmente sin uso
+FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
 
 def key_func(request: Request) -> str:
     fwd = request.headers.get("x-forwarded-for")
@@ -33,7 +31,6 @@ async def lifespan(app: FastAPI):
     chatbot = make_chatbot(settings)
 
     app.state.chat_service = ChatService(store, chatbot)
-    app.state.provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 
     yield
 
@@ -47,10 +44,8 @@ app = FastAPI(
 )
 
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[],
-    allow_origin_regex=".*",
+app.add_middleware(CORSMiddleware,
+    allow_origins=[o.strip() for o in FRONTEND_URLS.split(",") if o.strip()] or ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
