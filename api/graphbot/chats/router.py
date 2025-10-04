@@ -8,7 +8,7 @@ from ..deps import Deps
 router = APIRouter(tags=["chats"])
 
 
-@router.post("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
+@router.get("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
 def create_chat(
     request: Request,
     response: Response,
