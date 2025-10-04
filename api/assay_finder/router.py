@@ -2,8 +2,11 @@ import httpx
 from typing import Optional, List, Tuple, Any, Dict
 from urllib.parse import quote
 from fastapi import APIRouter, HTTPException, Query, Request
-
+import logging
 from ai import GetFilterPrompt
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -20,12 +23,15 @@ async def search_assays(
     limit_per_tech: int = Query(3, ge=1, le=50, description="Max assays per technology group"),
     exclude_na: bool = Query(True, description="Hide 'Not Applicable' conditions in groups")
 ):
+    logger.info("Searching assays with parameters: %s", locals())
     # 1) NL -> filtros
     params = _get_filter_from_natural_language(request, q)
 
     # 2) Fetch OSDR
     osdr_query_params = _build_params(**params)
     data = await _fetch_assays(osdr_query_params)
+
+    logger.info("Fetched OSDR data: %s", data)
 
     async with httpx.AsyncClient() as c:
         applied_url = str(c.build_request("GET", ASSAYS_BASE, params=osdr_query_params).url)
