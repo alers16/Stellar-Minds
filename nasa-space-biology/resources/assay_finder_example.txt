@@ -1,0 +1,1103 @@
+[
+  {
+    "technology": "RNA Sequencing",
+    "count": 75,
+    "assays": [
+      {
+        "dataset": "OSD-100",
+        "assay_name": "OSD-100_transcription-profiling_rna-sequencing-(rna-seq)",
+        "organism": "Mus musculus",
+        "assay_technology": "RNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-100&id.assay%20name=OSD-100_transcription-profiling_rna-sequencing-%28rna-seq%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-100/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-101",
+        "assay_name": "OSD-101_transcription-profiling_rna-sequencing-(rna-seq)_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "RNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-101&id.assay%20name=OSD-101_transcription-profiling_rna-sequencing-%28rna-seq%29_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-101/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-102",
+        "assay_name": "OSD-102_transcription-profiling_rna-sequencing-(rna-seq)_Illumina HiSeq 4000",
+        "organism": "Mus musculus",
+        "assay_technology": "RNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-102&id.assay%20name=OSD-102_transcription-profiling_rna-sequencing-%28rna-seq%29_Illumina%20HiSeq%204000&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-102/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "DNA microarray",
+    "count": 14,
+    "assays": [
+      {
+        "dataset": "OSD-111",
+        "assay_name": "OSD-111_transcription-profiling_dna-microarray_affymetrix",
+        "organism": "Mus musculus",
+        "assay_technology": "DNA microarray",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-111&id.assay%20name=OSD-111_transcription-profiling_dna-microarray_affymetrix&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-111/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-135",
+        "assay_name": "OSD-135_transcription-profiling_dna-microarray_affymetrix",
+        "organism": "Mus musculus",
+        "assay_technology": "DNA microarray",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-135&id.assay%20name=OSD-135_transcription-profiling_dna-microarray_affymetrix&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-135/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-21",
+        "assay_name": "OSD-21_transcription-profiling_dna-microarray_affymetrix",
+        "organism": "Mus musculus",
+        "assay_technology": "DNA microarray",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-21&id.assay%20name=OSD-21_transcription-profiling_dna-microarray_affymetrix&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-21/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Atomic Force Microscopy",
+    "count": 2,
+    "assays": [
+      {
+        "dataset": "OSD-702",
+        "assay_name": "OSD-702_mechanical-tests_atomic-force-microscopy_JPK NanoWizard 4a NanoScience Atomic Force Microscope (Bruker)",
+        "organism": "Mus musculus",
+        "assay_technology": "Atomic Force Microscopy",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-702&id.assay%20name=OSD-702_mechanical-tests_atomic-force-microscopy_JPK%20NanoWizard%204a%20NanoScience%20Atomic%20Force%20Microscope%20%28Bruker%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-702/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-718",
+        "assay_name": "OSD-718_mechanical-tests_atomic-force-microscopy_JPK NanoWizard 4a NanoScience Atomic Force Microscope (Bruker)",
+        "organism": "Mus musculus",
+        "assay_technology": "Atomic Force Microscopy",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-718&id.assay%20name=OSD-718_mechanical-tests_atomic-force-microscopy_JPK%20NanoWizard%204a%20NanoScience%20Atomic%20Force%20Microscope%20%28Bruker%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-718/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Contractility",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-662",
+        "assay_name": "OSD-662_muscle-contraction_contractility_Aurora Scientific",
+        "organism": "Mus musculus",
+        "assay_technology": "Contractility",
+        "conditions": [],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-662&id.assay%20name=OSD-662_muscle-contraction_contractility_Aurora%20Scientific&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-662/?format=html",
+        "has_flight": false,
+        "has_ground": true,
+        "has_both_flight_ground": false
+      }
+    ]
+  },
+  {
+    "technology": "Dual-Energy X-Ray Absorptiometry",
+    "count": 2,
+    "assays": [
+      {
+        "dataset": "OSD-663",
+        "assay_name": "OSD-663_bone-microstructure_dual-energy-x-ray-absorptiometry_osteosys insight",
+        "organism": "Mus musculus",
+        "assay_technology": "Dual-Energy X-Ray Absorptiometry",
+        "conditions": [
+          "Cohort Control 1",
+          "Cohort Control 2",
+          "Ground Control",
+          "Hindlimb Unloaded",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-663&id.assay%20name=OSD-663_bone-microstructure_dual-energy-x-ray-absorptiometry_osteosys%20insight&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-663/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-654",
+        "assay_name": "OSD-654_bone-microstructure_dual-energy-x-ray-absorptiometry_osteosys insight",
+        "organism": "Mus musculus",
+        "assay_technology": "Dual-Energy X-Ray Absorptiometry",
+        "conditions": [
+          "Hindlimb Unloaded"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-654&id.assay%20name=OSD-654_bone-microstructure_dual-energy-x-ray-absorptiometry_osteosys%20insight&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-654/?format=html",
+        "has_flight": false,
+        "has_ground": false,
+        "has_both_flight_ground": false
+      }
+    ]
+  },
+  {
+    "technology": "ECLIA",
+    "count": 3,
+    "assays": [
+      {
+        "dataset": "OSD-738",
+        "assay_name": "OSD-738_immunoassay_eclia_MESO-QuickPlex SQ-120MM",
+        "organism": "Mus musculus",
+        "assay_technology": "ECLIA",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-738&id.assay%20name=OSD-738_immunoassay_eclia_MESO-QuickPlex%20SQ-120MM&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-738/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-751",
+        "assay_name": "OSD-751_immunoassay_eclia_MESO-QuickPlex SQ-120MM",
+        "organism": "Mus musculus",
+        "assay_technology": "ECLIA",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-751&id.assay%20name=OSD-751_immunoassay_eclia_MESO-QuickPlex%20SQ-120MM&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-751/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-752",
+        "assay_name": "OSD-752_immunoassay_eclia_MESO-QuickPlex SQ-120MM",
+        "organism": "Mus musculus",
+        "assay_technology": "ECLIA",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-752&id.assay%20name=OSD-752_immunoassay_eclia_MESO-QuickPlex%20SQ-120MM&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-752/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Gait",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-478",
+        "assay_name": "OSD-478_behavior_gait_digigait-system-(mouse-specifics)",
+        "organism": "Mus musculus",
+        "assay_technology": "Gait",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-478&id.assay%20name=OSD-478_behavior_gait_digigait-system-%28mouse-specifics%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-478/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Immunostaining",
+    "count": 2,
+    "assays": [
+      {
+        "dataset": "OSD-557",
+        "assay_name": "OSD-557_molecular-cellular-imaging_immunostaining_4-HNE",
+        "organism": "Mus musculus",
+        "assay_technology": "Immunostaining",
+        "conditions": [
+          "Cohort Control 1",
+          "Cohort Control 2",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-557&id.assay%20name=OSD-557_molecular-cellular-imaging_immunostaining_4-HNE&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-557/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-557",
+        "assay_name": "OSD-557_molecular-cellular-imaging_immunostaining_PNA",
+        "organism": "Mus musculus",
+        "assay_technology": "Immunostaining",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-557&id.assay%20name=OSD-557_molecular-cellular-imaging_immunostaining_PNA&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-557/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Light Microscopy",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-557",
+        "assay_name": "OSD-557_histological-assay_light-microscopy_Inverted fluorescence microscope",
+        "organism": "Mus musculus",
+        "assay_technology": "Light Microscopy",
+        "conditions": [
+          "Cohort Control 1",
+          "Cohort Control 2",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-557&id.assay%20name=OSD-557_histological-assay_light-microscopy_Inverted%20fluorescence%20microscope&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-557/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Micro-Computed Tomography",
+    "count": 6,
+    "assays": [
+      {
+        "dataset": "OSD-486",
+        "assay_name": "OSD-486_bone-microstructure_micro-computed-tomography_skyscan 1076 micro-computed tomography scanner (kontich, belgium)",
+        "organism": "Mus musculus",
+        "assay_technology": "Micro-Computed Tomography",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-486&id.assay%20name=OSD-486_bone-microstructure_micro-computed-tomography_skyscan%201076%20micro-computed%20tomography%20scanner%20%28kontich%2C%20belgium%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-486/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-489",
+        "assay_name": "OSD-489_bone-microstructure_micro-computed-tomography_bruker skyscan",
+        "organism": "Mus musculus",
+        "assay_technology": "Micro-Computed Tomography",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-489&id.assay%20name=OSD-489_bone-microstructure_micro-computed-tomography_bruker%20skyscan&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-489/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-557",
+        "assay_name": "OSD-557_bone-microstructure_micro-computed-tomography_SkyScan_1272_desktop_micro-CT_system",
+        "organism": "Mus musculus",
+        "assay_technology": "Micro-Computed Tomography",
+        "conditions": [
+          "Cohort Control 1",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-557&id.assay%20name=OSD-557_bone-microstructure_micro-computed-tomography_SkyScan_1272_desktop_micro-CT_system&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-557/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Microscopy",
+    "count": 7,
+    "assays": [
+      {
+        "dataset": "OSD-137",
+        "assay_name": "OSD-137_molecular-cellular-imaging_microscopy_pannoramic scan (3d histech)",
+        "organism": "Mus musculus",
+        "assay_technology": "Microscopy",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-137&id.assay%20name=OSD-137_molecular-cellular-imaging_microscopy_pannoramic%20scan%20%283d%20histech%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-137/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-47",
+        "assay_name": "OSD-47_molecular-cellular-imaging_microscopy_ pannoramic scan (3d histech)",
+        "organism": "Mus musculus",
+        "assay_technology": "Microscopy",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-47&id.assay%20name=OSD-47_molecular-cellular-imaging_microscopy_%20pannoramic%20scan%20%283d%20histech%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-47/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-48",
+        "assay_name": "OSD-48_molecular-cellular-imaging_microscopy_pannoramic scan (3d histech)",
+        "organism": "Mus musculus",
+        "assay_technology": "Microscopy",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-48&id.assay%20name=OSD-48_molecular-cellular-imaging_microscopy_pannoramic%20scan%20%283d%20histech%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-48/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Reduced-Representation Bisulfite Sequencing",
+    "count": 2,
+    "assays": [
+      {
+        "dataset": "OSD-397",
+        "assay_name": "OSD-397_dna-methylation-profiling_reduced-representation-bisulfite-sequencing_illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Reduced-Representation Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-397&id.assay%20name=OSD-397_dna-methylation-profiling_reduced-representation-bisulfite-sequencing_illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-397/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-793",
+        "assay_name": "OSD-793_dna-methylation-profiling_reduced-representation-bisulfite-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Reduced-Representation Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-793&id.assay%20name=OSD-793_dna-methylation-profiling_reduced-representation-bisulfite-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-793/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Spectrofluorimetric Assay",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-488",
+        "assay_name": "OSD-488_calcium-uptake_spectrofluorimetric-assay_Molecular Devices M2 plate reader",
+        "organism": "Mus musculus",
+        "assay_technology": "Spectrofluorimetric Assay",
+        "conditions": [
+          "Cohort Control #1",
+          "Cohort Control #2",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-488&id.assay%20name=OSD-488_calcium-uptake_spectrofluorimetric-assay_Molecular%20Devices%20M2%20plate%20reader&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-488/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Spectrophotometry",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-691",
+        "assay_name": "OSD-691_atpase-activity_spectrophotometry_molecular devices spectramax m2",
+        "organism": "Mus musculus",
+        "assay_technology": "Spectrophotometry",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-691&id.assay%20name=OSD-691_atpase-activity_spectrophotometry_molecular%20devices%20spectramax%20m2&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-691/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Tonometry",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-583",
+        "assay_name": "OSD-583_intraocular-pressure_tonometry_tonolab-icare",
+        "organism": "Mus musculus",
+        "assay_technology": "Tonometry",
+        "conditions": [
+          "Cohort Control 1",
+          "Cohort Control 2",
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-583&id.assay%20name=OSD-583_intraocular-pressure_tonometry_tonolab-icare&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-583/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Western Blot",
+    "count": 27,
+    "assays": [
+      {
+        "dataset": "OSD-488",
+        "assay_name": "OSD-488_protein-quantification_western-blot_BioRad ChemiDoc",
+        "organism": "Mus musculus",
+        "assay_technology": "Western Blot",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-488&id.assay%20name=OSD-488_protein-quantification_western-blot_BioRad%20ChemiDoc&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-488/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-488",
+        "assay_name": "OSD-488_protein-quantification_western-blot_BioRad ChemiDoc-1",
+        "organism": "Mus musculus",
+        "assay_technology": "Western Blot",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-488&id.assay%20name=OSD-488_protein-quantification_western-blot_BioRad%20ChemiDoc-1&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-488/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-488",
+        "assay_name": "OSD-488_protein-quantification_western-blot_BioRad ChemiDoc-2",
+        "organism": "Mus musculus",
+        "assay_technology": "Western Blot",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-488&id.assay%20name=OSD-488_protein-quantification_western-blot_BioRad%20ChemiDoc-2&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-488/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Whole Genome Bisulfite Sequencing",
+    "count": 11,
+    "assays": [
+      {
+        "dataset": "OSD-100",
+        "assay_name": "OSD-100_dna-methylation-profiling_whole-genome-bisulfite-sequencing",
+        "organism": "Mus musculus",
+        "assay_technology": "Whole Genome Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-100&id.assay%20name=OSD-100_dna-methylation-profiling_whole-genome-bisulfite-sequencing&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-100/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-101",
+        "assay_name": "OSD-101_dna-methylation-profiling_whole-genome-bisulfite-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Whole Genome Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-101&id.assay%20name=OSD-101_dna-methylation-profiling_whole-genome-bisulfite-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-101/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-102",
+        "assay_name": "OSD-102_dna-methylation-profiling_whole-genome-bisulfite-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Whole Genome Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-102&id.assay%20name=OSD-102_dna-methylation-profiling_whole-genome-bisulfite-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-102/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "Whole Transcriptome Bisulfite Sequencing",
+    "count": 5,
+    "assays": [
+      {
+        "dataset": "OSD-101",
+        "assay_name": "OSD-101_rna-methylation-profiling_whole-transcriptome-bisulfite-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Whole Transcriptome Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-101&id.assay%20name=OSD-101_rna-methylation-profiling_whole-transcriptome-bisulfite-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-101/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-102",
+        "assay_name": "OSD-102_rna-methylation-profiling_whole-transcriptome-bisulfite-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Whole Transcriptome Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-102&id.assay%20name=OSD-102_rna-methylation-profiling_whole-transcriptome-bisulfite-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-102/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-103",
+        "assay_name": "OSD-103_rna-methylation-profiling_whole-transcriptome-bisulfite-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "Whole Transcriptome Bisulfite Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-103&id.assay%20name=OSD-103_rna-methylation-profiling_whole-transcriptome-bisulfite-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-103/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "mass spectrometry",
+    "count": 20,
+    "assays": [
+      {
+        "dataset": "OSD-101",
+        "assay_name": "OSD-101_protein-expression-profiling_mass-spectrometry_Orbitrap Fusion(Thermo Scientific)",
+        "organism": "Mus musculus",
+        "assay_technology": "mass spectrometry",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-101&id.assay%20name=OSD-101_protein-expression-profiling_mass-spectrometry_Orbitrap%20Fusion%28Thermo%20Scientific%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-101/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-102",
+        "assay_name": "OSD-102_protein-expression-profiling_mass-spectrometry_LTQ Orbitrap Fusion (Thermo Scientific)",
+        "organism": "Mus musculus",
+        "assay_technology": "mass spectrometry",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-102&id.assay%20name=OSD-102_protein-expression-profiling_mass-spectrometry_LTQ%20Orbitrap%20Fusion%20%28Thermo%20Scientific%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-102/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-103",
+        "assay_name": "OSD-103_protein-expression-profiling_mass-spectrometry_LTQ Orbitrap Fusion (Thermo Scientific)",
+        "organism": "Mus musculus",
+        "assay_technology": "mass spectrometry",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-103&id.assay%20name=OSD-103_protein-expression-profiling_mass-spectrometry_LTQ%20Orbitrap%20Fusion%20%28Thermo%20Scientific%29&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-103/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "miRNA Sequencing",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-426",
+        "assay_name": "OSD-426_transcription-profiling_mirna-sequencing_illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "miRNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-426&id.assay%20name=OSD-426_transcription-profiling_mirna-sequencing_illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-426/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "microarray",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-232",
+        "assay_name": "glds232_transcription_profiling_microarray",
+        "organism": "Mus musculus",
+        "assay_technology": "microarray",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-232&id.assay%20name=glds232_transcription_profiling_microarray&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-232/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "nucleotide sequencing",
+    "count": 5,
+    "assays": [
+      {
+        "dataset": "OSD-161",
+        "assay_name": "rr3_adr_DNA_methylation_profiling_nucleotide_sequencing",
+        "organism": "Mus musculus",
+        "assay_technology": "nucleotide sequencing",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-161&id.assay%20name=rr3_adr_DNA_methylation_profiling_nucleotide_sequencing&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-161/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-163",
+        "assay_name": "OSD-163_dna-methylation-profiling_nucleotide-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "nucleotide sequencing",
+        "conditions": [
+          "Basal Control",
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-163&id.assay%20name=OSD-163_dna-methylation-profiling_nucleotide-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-163/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-84",
+        "assay_name": "OSD-84_genome-sequencing_nucleotide-sequencing_oxford nanopore technologies",
+        "organism": "Mus musculus",
+        "assay_technology": "nucleotide sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-84&id.assay%20name=OSD-84_genome-sequencing_nucleotide-sequencing_oxford%20nanopore%20technologies&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-84/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "protein microarray",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-342",
+        "assay_name": "OSD-342_protein-expression-profiling_protein-microarray_SomaScan",
+        "organism": "Mus musculus",
+        "assay_technology": "protein microarray",
+        "conditions": [
+          "Ground Control",
+          "Space Flight",
+          "Vivarium Control"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-342&id.assay%20name=OSD-342_protein-expression-profiling_protein-microarray_SomaScan&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-342/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "real time PCR",
+    "count": 1,
+    "assays": [
+      {
+        "dataset": "OSD-116",
+        "assay_name": "OSD-116_transcription-profiling_real-time-pcr_rt2 profiler pcr array",
+        "organism": "Mus musculus",
+        "assay_technology": "real time PCR",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-116&id.assay%20name=OSD-116_transcription-profiling_real-time-pcr_rt2%20profiler%20pcr%20array&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-116/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "single-cell ATAC-seq",
+    "count": 3,
+    "assays": [
+      {
+        "dataset": "OSD-352",
+        "assay_name": "OSD-352_chromatin-accessibility_single-cell-atac-seq_illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell ATAC-seq",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-352&id.assay%20name=OSD-352_chromatin-accessibility_single-cell-atac-seq_illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-352/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-612",
+        "assay_name": "OSD-612_chromatin-accessibility_single-cell-atac-seq_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell ATAC-seq",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-612&id.assay%20name=OSD-612_chromatin-accessibility_single-cell-atac-seq_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-612/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-613",
+        "assay_name": "OSD-613_chromatin-accessibility_single-cell-atac-seq_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell ATAC-seq",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-613&id.assay%20name=OSD-613_chromatin-accessibility_single-cell-atac-seq_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-613/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "single-cell RNA Sequencing",
+    "count": 4,
+    "assays": [
+      {
+        "dataset": "OSD-402",
+        "assay_name": "OSD-402_transcription-profiling_single-cell-rna-sequencing",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell RNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-402&id.assay%20name=OSD-402_transcription-profiling_single-cell-rna-sequencing&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-402/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-403",
+        "assay_name": "OSD-403_transcription-profiling_single-cell-rna-sequencing",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell RNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-403&id.assay%20name=OSD-403_transcription-profiling_single-cell-rna-sequencing&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-403/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-404",
+        "assay_name": "OSD-404_transcription-profiling_single-cell-rna-sequencing",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell RNA Sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-404&id.assay%20name=OSD-404_transcription-profiling_single-cell-rna-sequencing&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-404/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "single-cell RNA sequencing",
+    "count": 3,
+    "assays": [
+      {
+        "dataset": "OSD-352",
+        "assay_name": "OSD-352_transcription-profiling_single-cell-rna-sequencing_illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell RNA sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-352&id.assay%20name=OSD-352_transcription-profiling_single-cell-rna-sequencing_illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-352/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-612",
+        "assay_name": "OSD-612_transcription-profiling_single-cell-rna-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell RNA sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-612&id.assay%20name=OSD-612_transcription-profiling_single-cell-rna-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-612/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-613",
+        "assay_name": "OSD-613_transcription-profiling_single-cell-rna-sequencing_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "single-cell RNA sequencing",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-613&id.assay%20name=OSD-613_transcription-profiling_single-cell-rna-sequencing_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-613/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  },
+  {
+    "technology": "spatial transcriptomics",
+    "count": 10,
+    "assays": [
+      {
+        "dataset": "OSD-270",
+        "assay_name": "OSD-270_transcription-profiling_spatial-transcriptomics_illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "spatial transcriptomics",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-270&id.assay%20name=OSD-270_transcription-profiling_spatial-transcriptomics_illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-270/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-352",
+        "assay_name": "OSD-352_transcription-profiling_spatial-transcriptomics_illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "spatial transcriptomics",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-352&id.assay%20name=OSD-352_transcription-profiling_spatial-transcriptomics_illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-352/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      },
+      {
+        "dataset": "OSD-561",
+        "assay_name": "OSD-561_transcription-profiling_spatial-transcriptomics_Illumina",
+        "organism": "Mus musculus",
+        "assay_technology": "spatial transcriptomics",
+        "conditions": [
+          "Ground Control",
+          "Space Flight"
+        ],
+        "link": "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/?id.accession=OSD-561&id.assay%20name=OSD-561_transcription-profiling_spatial-transcriptomics_Illumina&study.characteristics&study.factor%20value&assay.parameter%20value&file.data%20type&format=html",
+        "dataset_link": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-561/?format=html",
+        "has_flight": true,
+        "has_ground": true,
+        "has_both_flight_ground": true
+      }
+    ]
+  }
+]

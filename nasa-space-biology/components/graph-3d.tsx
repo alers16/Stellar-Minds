@@ -11,6 +11,7 @@ type ForceGraph3DComponent = typeof import("react-force-graph-3d").default
 type VisualNode = GraphNode & {
   name: string
   group: number
+  displayGroup: number
   val: number
   planetIndex: number
 }
@@ -40,7 +41,7 @@ type PlanetPreset = {
 type PlanetAsset = {
   name: string
   icon: string
-  preview: string
+  preview: string | null
   createObject: (scale: number) => THREE.Object3D
   accent: string
 }
@@ -112,13 +113,21 @@ function mixColor(colorA: string, colorB: string, amount: number) {
 
 function drawPlanetTexture(preset: PlanetPreset) {
   const size = 256
-  const canvas = document.createElement("canvas")
+
+  const canvas = typeof document !== "undefined" ? document.createElement("canvas") : null
+  if (!canvas) {
+    const texture = new THREE.Texture()
+    return {
+      texture,
+      preview: null,
+    }
+  }
   canvas.width = canvas.height = size
   const ctx = canvas.getContext("2d")
   if (!ctx) {
     return {
       texture: new THREE.CanvasTexture(canvas),
-      preview: "",
+      preview: null,
     }
   }
 
@@ -205,7 +214,7 @@ function drawPlanetTexture(preset: PlanetPreset) {
   texture.needsUpdate = true
   return {
     texture,
-    preview: canvas.toDataURL(),
+    preview: typeof canvas.toDataURL === "function" ? canvas.toDataURL() : null,
   }
 }
 
@@ -271,16 +280,24 @@ export function Graph3D({ graph }: Graph3DProps) {
   const graphRef = useRef<ForceGraph3DInstance | null>(null)
   const [hoveredLink, setHoveredLink] = useState<VisualEdge | null>(null)
 
-  const planetAssets = useMemo(() => PLANET_PRESETS.map((preset) => createPlanetAsset(preset)), [])
+  const [planetAssets, setPlanetAssets] = useState<PlanetAsset[]>([])
+
+  useEffect(() => {
+    setPlanetAssets(PLANET_PRESETS.map((preset) => createPlanetAsset(preset)))
+  }, [])
 
   const { data, legend } = useMemo(() => {
-    const communityRegistry = new Map<number, { assetIndex: number; count: number }>()
+    const communityRegistry = new Map<number, { assetIndex: number; count: number; label: number }>()
 
     const nodes: VisualNode[] = graph.nodes.map((node) => {
       const group = node.community ?? -1
       if (!communityRegistry.has(group)) {
-        const assignedIndex = Math.min(communityRegistry.size, Math.max(planetAssets.length - 1, 0))
-        communityRegistry.set(group, { assetIndex: assignedIndex, count: 0 })
+        const assignedIndex = planetAssets.length > 0 ? communityRegistry.size % planetAssets.length : 0
+        communityRegistry.set(group, {
+          assetIndex: assignedIndex,
+          count: 0,
+          label: communityRegistry.size + 1,
+        })
       }
 
       const entry = communityRegistry.get(group)!
@@ -290,6 +307,7 @@ export function Graph3D({ graph }: Graph3DProps) {
         ...node,
         name: node.label,
         group,
+        displayGroup: entry.label,
         val: Math.max(1, node.degree ?? 1),
         planetIndex: entry.assetIndex,
       }
@@ -316,13 +334,15 @@ export function Graph3D({ graph }: Graph3DProps) {
     const legendEntries = Array.from(communityRegistry.entries())
       .sort((a, b) => b[1].count - a[1].count)
       .map(([group, info]) => {
-        const asset = planetAssets[info.assetIndex % planetAssets.length]
+        const asset = planetAssets.length ? planetAssets[info.assetIndex % planetAssets.length] : undefined
+        const presetFallback = PLANET_PRESETS.length ? PLANET_PRESETS[(info.label - 1) % PLANET_PRESETS.length] : undefined
         return {
           group,
-          planetName: asset?.name ?? "",
-          icon: asset?.icon ?? "🪐",
-          preview: asset?.preview ?? "",
-          accent: asset?.accent ?? "#38bdf8",
+          label: info.label,
+          planetName: asset?.name ?? presetFallback?.name ?? "",
+          icon: asset?.icon ?? presetFallback?.icon ?? "🪐",
+          preview: asset?.preview ?? null,
+          accent: asset?.accent ?? presetFallback?.accent ?? "#38bdf8",
           count: info.count,
         }
       })
@@ -408,25 +428,25 @@ export function Graph3D({ graph }: Graph3DProps) {
             nodeOpacity={0.95}
             nodeColor={(node) => {
               const visual = node as VisualNode
-              const asset = planetAssets[visual.planetIndex % planetAssets.length]
+              const asset = planetAssets.length ? planetAssets[visual.planetIndex % planetAssets.length] : undefined
               return asset?.accent ?? "#38bdf8"
             }}
             nodeVal={(node) => (node as VisualNode).val}
             nodeLabel={(node) => {
               const n = node as VisualNode
-              const asset = planetAssets[n.planetIndex % planetAssets.length]
-              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${escapeHtml(n.name)}</strong><br/>Comunidad: ${n.group}<br/>Planeta: ${asset?.name ?? "Sin definir"}</div>`
+              const asset = planetAssets.length ? planetAssets[n.planetIndex % planetAssets.length] : undefined
+              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${escapeHtml(n.name)}</strong><br/>Community: ${n.displayGroup}<br/>Planet: ${asset?.name ?? "Unknown"}</div>`
             }}
             nodeThreeObject={(node) => {
               const visual = node as VisualNode
-              const asset = planetAssets[visual.planetIndex % planetAssets.length]
+              const asset = planetAssets.length ? planetAssets[visual.planetIndex % planetAssets.length] : undefined
               const scale = 1.6 + Math.log2((visual.val ?? 1) + 1)
               return asset?.createObject(scale) ?? undefined
             }}
             nodeThreeObjectExtend={false}
             linkColor={(link) => {
               const edge = link as VisualEdge
-              const asset = planetAssets[edge.source.planetIndex % planetAssets.length]
+              const asset = planetAssets.length ? planetAssets[edge.source.planetIndex % planetAssets.length] : undefined
               return `${asset?.accent ?? "#38bdf8"}55`
             }}
             linkOpacity={0.35}
@@ -436,14 +456,14 @@ export function Graph3D({ graph }: Graph3DProps) {
             linkDirectionalParticleWidth={1.25}
             linkDirectionalParticleColor={(link) => {
               const edge = link as VisualEdge
-              const asset = planetAssets[edge.target.planetIndex % planetAssets.length]
+              const asset = planetAssets.length ? planetAssets[edge.target.planetIndex % planetAssets.length] : undefined
               return asset?.accent ?? "rgba(255,255,255,0.8)"
             }}
             linkCurveRotation={0}
             linkLabel={(link) => {
               const edge = link as VisualEdge
               const description = edge.description ? `<br/><span>${escapeHtml(edge.description)}</span>` : ""
-              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${escapeHtml(edge.source.name)} ➜ ${escapeHtml(edge.target.name)}</strong><br/>Peso: ${edge.weight?.toFixed(2) ?? "1.00"}${description}</div>`
+              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${escapeHtml(edge.source.name)} ➜ ${escapeHtml(edge.target.name)}</strong><br/>Weight: ${edge.weight?.toFixed(2) ?? "1.00"}${description}</div>`
             }}
             onNodeHover={(node) => {
               setHoveredNode((node as VisualNode) ?? null)
@@ -462,14 +482,14 @@ export function Graph3D({ graph }: Graph3DProps) {
           />
         ) : (
           <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-            Cargando grafo 3D...
+            Loading 3D graph...
           </div>
         )}
       </div>
 
       {hoveredNode ? (
         (() => {
-          const asset = planetAssets[hoveredNode.planetIndex % planetAssets.length]
+          const asset = planetAssets.length ? planetAssets[hoveredNode.planetIndex % planetAssets.length] : undefined
           return (
             <div className="pointer-events-none absolute right-6 top-6 max-w-xs rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
               <div className="flex items-center gap-3">
@@ -478,16 +498,16 @@ export function Graph3D({ graph }: Graph3DProps) {
                 </span>
                 <div>
                   <p className="font-mono text-sm font-semibold text-foreground">{hoveredNode.label}</p>
-                  <p className="text-xs text-muted-foreground">{asset?.name ?? "Sin asignar"}</p>
+                  <p className="text-xs text-muted-foreground">{asset?.name ?? "Unassigned"}</p>
                 </div>
               </div>
               <dl className="mt-3 space-y-2 text-xs text-muted-foreground">
                 <div className="flex justify-between">
-                  <dt>Comunidad</dt>
-                  <dd>#{hoveredNode.group}</dd>
+                  <dt>Community</dt>
+                  <dd>#{hoveredNode.displayGroup}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt>Grado</dt>
+                  <dt>Degree</dt>
                   <dd>{hoveredNode.degree?.toFixed(0) ?? "–"}</dd>
                 </div>
               </dl>
@@ -498,19 +518,19 @@ export function Graph3D({ graph }: Graph3DProps) {
 
       {hoveredLink ? (
         <div className="pointer-events-none absolute left-6 bottom-6 max-w-sm rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">Relación</p>
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">Connection</p>
           <p className="mt-2 font-mono text-sm font-semibold text-foreground">
             {hoveredLink.source.name} ➜ {hoveredLink.target.name}
           </p>
           <dl className="mt-3 space-y-2 text-xs text-muted-foreground">
             <div className="flex justify-between">
-              <dt>Peso</dt>
+              <dt>Weight</dt>
               <dd>{hoveredLink.weight?.toFixed(2) ?? "1.00"}</dd>
             </div>
             <div className="flex flex-col gap-1">
-              <dt>Descripción</dt>
+              <dt>Description</dt>
               <dd className="text-muted-foreground/80">
-                {hoveredLink.description ?? "Sin detalles adicionales"}
+                {hoveredLink.description ?? "No additional details"}
               </dd>
             </div>
           </dl>
@@ -518,7 +538,7 @@ export function Graph3D({ graph }: Graph3DProps) {
       ) : null}
 
       <div className="mt-6 grid gap-2 rounded-xl border border-border/40 bg-card/60 p-4 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-3">
-        {legend.map(({ group, planetName, icon, preview, count }) => (
+        {legend.map(({ group, label, planetName, icon, preview, accent, count }) => (
           <div key={group} className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
             <div className="flex items-center gap-3">
               <span
@@ -527,17 +547,18 @@ export function Graph3D({ graph }: Graph3DProps) {
                   backgroundImage: preview ? `url(${preview})` : undefined,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  backgroundColor: accent,
                 }}
                 aria-hidden
               />
               <div>
-                <p className="font-mono text-foreground">Comunidad #{group}</p>
+                <p className="font-mono text-foreground">Community #{label}</p>
                 <p className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   {icon} {planetName}
                 </p>
               </div>
             </div>
-            <span>{count} nodos</span>
+            <span>{count} nodes</span>
           </div>
         ))}
       </div>
