@@ -1,11 +1,15 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "api/**/*.py": {
-      "runtime": "python3.12"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
     }
-  },
-  "env": {
-    "FASTAPI_ROOT_PATH": "/api"
-  }
+  ],
+  "routes": [
+    {
+      "src": "(.*)",
+      "dest": "app.py"
+    }
+  ]
 }
