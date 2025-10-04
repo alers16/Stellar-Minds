@@ -49,6 +49,14 @@ interface AssaysAPI {
   search: <T = unknown>(query: string) => Promise<AxiosResponse<T> | undefined>
 }
 
+interface ChatAPI {
+  create: () => Promise<AxiosResponse<{ chat_uuid: string }> | undefined>
+  sendMessage: (
+    chatUuid: string,
+    body: { message: string; metodo: string },
+  ) => Promise<AxiosResponse<{ answer: string }> | undefined>
+}
+
 export interface APIContextValue {
   wikis: EndpointGroup
   articles: EndpointGroup
@@ -58,6 +66,7 @@ export interface APIContextValue {
   users: EndpointGroup
   authAPI: AuthAPI
   assays: AssaysAPI
+  chat: ChatAPI
   axios: ApiMethods
 }
 
@@ -199,6 +208,12 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
     search: (query) => apiMethods.get(`/assays/search?q=${encodeURIComponent(query)}`),
   }
 
+  const chatAPI: ChatAPI = {
+    create: () => apiMethods.post(`${BASE_URL}/api/v1/chats`, {}),
+    sendMessage: (chatUuid, body) =>
+      apiMethods.post(`${BASE_URL}/api/v1/chats/${chatUuid}/messages`, body),
+  }
+
   return (
     <APIContext.Provider
       value={{
@@ -210,6 +225,7 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
         users: usersAPI,
         authAPI,
         assays: assaysAPI,
+        chat: chatAPI,
         axios: apiMethods,
       }}
     >
