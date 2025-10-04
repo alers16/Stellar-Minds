@@ -9,7 +9,6 @@ router = APIRouter(tags=["chats"])
 
 
 @router.get("", response_model=CreateChatResponse, status_code=status.HTTP_201_CREATED)
-@rate_limit_create_chat
 def create_chat(
     request: Request,
     response: Response,
@@ -24,7 +23,6 @@ def create_chat(
 
 
 @router.get("/{chat_uuid}/messages", response_model=PromptAnswerResponse, status_code=status.HTTP_200_OK)
-@rate_limit_send_message
 async def post_chat_message(
     request: Request,
     chat_uuid: UUID,
