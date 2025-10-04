@@ -30,48 +30,8 @@ class OpenAIProvider(APIProvider):
         }
 
         response = self.client.chat.completions.create(model=model, messages=messages, **final_parameters)
-        
+
         return response.choices[0].message.content, model
         
     def get_active_models(self):
         return [m.value for m in MODELS]
-
-import os
-from dotenv import load_dotenv
-if __name__ == "__main__":
-    load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise RuntimeError(
-            "Falta OPENAI_API_KEY en el entorno. Exporta la variable o pásala desde tu gestor de secretos."
-        )
-
-    provider = OpenAIProvider(api_key=api_key)
-
-    # Puedes sustituir esto por tu objeto PromptSystem real si lo tienes.
-    prompt_system = "Eres un asistente conciso que responde en español."
-
-    # Historial opcional (dejamos vacío en la demo)
-    messages_json = []
-
-    # Entrada de usuario de ejemplo
-    user_input = "Escribe un haiku corto sobre calistenia y constancia."
-
-    # Parámetros opcionales (como JSON)
-    parameters_json = json.dumps({"temperature": 0.2, "max_tokens": 100})
-
-    print("→ Probando llamada a OpenAIProvider.prompt()...\n")
-    try:
-        text, used_model = provider.prompt(
-            model=MODELS.GPT_4O,  # o None para usar el default
-            prompt_system=prompt_system,
-            messages_json=messages_json,
-            user_input=user_input,
-            parameters_json=parameters_json,
-        )
-        print(f"[Modelo] {used_model}\n")
-        print("[Respuesta]")
-        print(text)
-    except Exception as e:
-        print("❌ Error durante la prueba:", repr(e))
-        raise
