@@ -132,6 +132,9 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
+            <Button size="lg" variant="outline" className="font-mono text-base bg-transparent">
+              Access Knowledge Graph
+            </Button>
           </div>
 
           <div className="mt-12 grid grid-cols-2 gap-8 border-t border-border/50 pt-8">

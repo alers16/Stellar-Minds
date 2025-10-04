@@ -1,0 +1,100 @@
+# --- Python bytecode y cachés ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Extensiones nativas compiladas ---
+*.so
+*.pyd
+*.dll
+
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+ENV/
+.conda/
+conda-env/
+pip-wheel-metadata/
+
+# --- Herramientas y gestores ---
+.poetry-cache/
+.poetry/
+.pdm.toml
+.pdm.lock
+.pyenv/
+.python-version
+
+# --- Dependencias generadas por build ---
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+*.egg
+*.manifest
+*.spec  # PyInstaller
+
+# --- Cobertura y pruebas ---
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# --- Tipado y linters ---
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+.pyright/
+.dmypy.json
+
+# --- Jupyter / IPython ---
+.ipynb_checkpoints/
+profile_default/
+.ipython/
+
+# --- Frameworks web (opcional común) ---
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Flask
+instance/
+.webassets-cache
+
+# FastAPI / Starlette (archivos de ejecución local)
+*.pid
+
+# --- Configuración / IDEs ---
+.vscode/
+.idea/
+*.iml
+.ropeproject/
+.spyproject/
+
+# --- Archivos de entorno y secretos ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# --- Otros temporales ---
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# --- Documentación generada ---
+site/
+docs/_build/
