@@ -184,6 +184,7 @@ export function AssayFinder() {
 
     try {
       const response = await assays.search<AssayCategory[]>(prompt.trim())
+      console.log("Search response:", response)
       if (!response) {
         setError("No response from the assay service.")
         setResults(null)

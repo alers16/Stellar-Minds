@@ -209,9 +209,9 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
   }
 
   const chatAPI: ChatAPI = {
-    create: () => apiMethods.get(`http://localhost:8000/api/v1/chats`),
+    create: () => apiMethods.get(`${BASE_URL}/api/v1/chats`),
     sendMessage: (chatUuid, body) =>
-      apiMethods.post(`http://localhost:8000/api/v1/chats/${chatUuid}/messages`, body),
+      apiMethods.post(`${BASE_URL}/api/v1/chats/${chatUuid}/messages`, body),
   }
 
   return (
