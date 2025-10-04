@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
+import * as THREE from "three"
 
 import type { GraphData, GraphNode, GraphEdge } from "@/lib/graph-data"
 import type { ForceGraph3DInstance } from "react-force-graph-3d"
@@ -11,56 +12,286 @@ type VisualNode = GraphNode & {
   name: string
   group: number
   val: number
-  color: string
+  planetIndex: number
 }
 
 type VisualEdge = Omit<GraphEdge, "source" | "target"> & {
   source: VisualNode
   target: VisualNode
   value: number
+  description: string | null
 }
 
 type Graph3DProps = {
   graph: GraphData
 }
 
-const PALETTE = [
-  "#38bdf8",
-  "#a855f7",
-  "#f97316",
-  "#22d3ee",
-  "#facc15",
-  "#f472b6",
-  "#34d399",
-  "#c084fc",
-  "#2dd4bf",
-  "#f87171",
+type PlanetPreset = {
+  name: string
+  icon: string
+  base: string
+  accent: string
+  ambient: string
+  pattern: "bands" | "spots" | "swirl" | "storm"
+  hasRing?: boolean
+  ringColor?: string
+}
+
+type PlanetAsset = {
+  name: string
+  icon: string
+  preview: string
+  createObject: (scale: number) => THREE.Object3D
+  accent: string
+}
+
+const PLANET_PRESETS: PlanetPreset[] = [
+  {
+    name: "Aqua Atlas",
+    icon: "🌊",
+    base: "#2563eb",
+    accent: "#38bdf8",
+    ambient: "#1d4ed8",
+    pattern: "bands",
+  },
+  {
+    name: "Crimson Forge",
+    icon: "🔥",
+    base: "#ef4444",
+    accent: "#f97316",
+    ambient: "#991b1b",
+    pattern: "spots",
+  },
+  {
+    name: "Verdant Bloom",
+    icon: "🌿",
+    base: "#22c55e",
+    accent: "#34d399",
+    ambient: "#166534",
+    pattern: "swirl",
+  },
+  {
+    name: "Solar Halo",
+    icon: "🌟",
+    base: "#f59e0b",
+    accent: "#facc15",
+    ambient: "#b45309",
+    pattern: "storm",
+    hasRing: true,
+    ringColor: "#fde68a",
+  },
+  {
+    name: "Aurora Drift",
+    icon: "💫",
+    base: "#8b5cf6",
+    accent: "#c084fc",
+    ambient: "#5b21b6",
+    pattern: "bands",
+  },
+  {
+    name: "Mist Opal",
+    icon: "🪶",
+    base: "#0ea5e9",
+    accent: "#67e8f9",
+    ambient: "#075985",
+    pattern: "spots",
+    hasRing: true,
+    ringColor: "#bae6fd",
+  },
 ]
+
+const planetGeometry = new THREE.SphereGeometry(1, 48, 48)
+
+const ringGeometry = new THREE.TorusGeometry(1.35, 0.08, 16, 60)
+
+function mixColor(colorA: string, colorB: string, amount: number) {
+  const a = new THREE.Color(colorA)
+  const b = new THREE.Color(colorB)
+  return `#${a.lerp(b, amount).getHexString()}`
+}
+
+function drawPlanetTexture(preset: PlanetPreset) {
+  const size = 256
+  const canvas = document.createElement("canvas")
+  canvas.width = canvas.height = size
+  const ctx = canvas.getContext("2d")
+  if (!ctx) {
+    return {
+      texture: new THREE.CanvasTexture(canvas),
+      preview: "",
+    }
+  }
+
+  const gradient = ctx.createRadialGradient(size / 2, size / 2, size * 0.15, size / 2, size / 2, size * 0.52)
+  gradient.addColorStop(0, mixColor(preset.base, "#ffffff", 0.35))
+  gradient.addColorStop(1, mixColor(preset.ambient, "#000000", 0.2))
+  ctx.fillStyle = gradient
+  ctx.fillRect(0, 0, size, size)
+
+  ctx.save()
+  ctx.translate(size / 2, size / 2)
+  ctx.rotate((Math.PI / 180) * -18)
+
+  ctx.strokeStyle = mixColor(preset.accent, "#000000", 0.3)
+  ctx.fillStyle = preset.accent
+  ctx.lineWidth = size * 0.04
+
+  switch (preset.pattern) {
+    case "bands": {
+      const bandCount = 6
+      for (let i = -bandCount; i <= bandCount; i++) {
+        const y = (i / bandCount) * (size / 2)
+        ctx.globalAlpha = 0.5 + Math.random() * 0.25
+        ctx.beginPath()
+        ctx.ellipse(0, y, size * 0.52, size * 0.48, 0, 0, Math.PI * 2)
+        ctx.stroke()
+      }
+      break
+    }
+    case "spots": {
+      const spots = 28
+      for (let i = 0; i < spots; i++) {
+        const angle = Math.random() * Math.PI * 2
+        const radius = Math.random() * (size * 0.48)
+        const spotSize = size * (0.04 + Math.random() * 0.05)
+        const x = Math.cos(angle) * radius * 0.5
+        const y = Math.sin(angle) * radius * 0.35
+        ctx.globalAlpha = 0.35 + Math.random() * 0.3
+        ctx.beginPath()
+        ctx.ellipse(x, y, spotSize, spotSize * 0.8, angle, 0, Math.PI * 2)
+        ctx.fill()
+      }
+      break
+    }
+    case "swirl": {
+      ctx.globalAlpha = 0.45
+      ctx.lineWidth = size * 0.05
+      const paths = 5
+      for (let i = 0; i < paths; i++) {
+        ctx.beginPath()
+        const startY = -size * 0.45 + i * (size * 0.18)
+        ctx.moveTo(-size * 0.6, startY)
+        for (let x = -size * 0.6; x <= size * 0.6; x += size * 0.08) {
+          const y = startY + Math.sin(x / size * Math.PI * 2 + i) * size * 0.07
+          ctx.lineTo(x, y)
+        }
+        ctx.stroke()
+      }
+      break
+    }
+    case "storm": {
+      ctx.globalAlpha = 0.25
+      for (let i = 0; i < 7; i++) {
+        const angle = (i / 7) * Math.PI * 2
+        const radius = size * 0.3
+        const centerX = Math.cos(angle) * radius * 0.4
+        const centerY = Math.sin(angle) * radius * 0.45
+        const swirlGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, size * 0.22)
+        swirlGradient.addColorStop(0, mixColor(preset.accent, "#ffffff", 0.2))
+        swirlGradient.addColorStop(1, "rgba(255,255,255,0)")
+        ctx.fillStyle = swirlGradient
+        ctx.beginPath()
+        ctx.arc(centerX, centerY, size * 0.22, 0, Math.PI * 2)
+        ctx.fill()
+      }
+      break
+    }
+  }
+
+  ctx.restore()
+
+  const texture = new THREE.CanvasTexture(canvas)
+  texture.anisotropy = 4
+  texture.needsUpdate = true
+  return {
+    texture,
+    preview: canvas.toDataURL(),
+  }
+}
+
+function createPlanetAsset(preset: PlanetPreset): PlanetAsset {
+  const { texture, preview } = drawPlanetTexture(preset)
+  const material = new THREE.MeshStandardMaterial({
+    map: texture,
+    roughness: 0.5,
+    metalness: 0.15,
+    emissive: mixColor(preset.ambient, preset.accent, 0.55),
+    emissiveIntensity: 0.35,
+  })
+
+  const ringMaterial = preset.hasRing
+    ? new THREE.MeshStandardMaterial({
+        color: preset.ringColor ?? mixColor(preset.base, "#ffffff", 0.6),
+        emissive: mixColor(preset.ringColor ?? preset.base, "#ffffff", 0.2),
+        emissiveIntensity: 0.25,
+        transparent: true,
+        opacity: 0.85,
+      })
+    : null
+
+  return {
+    name: preset.name,
+    icon: preset.icon,
+    preview,
+    accent: preset.accent,
+    createObject: (scale: number) => {
+      const group = new THREE.Group()
+      const sphere = new THREE.Mesh(planetGeometry, material)
+      sphere.castShadow = false
+      sphere.receiveShadow = false
+      group.add(sphere)
+
+      if (preset.hasRing && ringMaterial) {
+        const ring = new THREE.Mesh(ringGeometry, ringMaterial)
+        ring.rotation.x = Math.PI / 2.15
+        ring.rotation.y = Math.PI / 4
+        ring.scale.setScalar(1.2)
+        group.add(ring)
+      }
+
+      group.scale.setScalar(scale)
+      return group
+    },
+  }
+}
+
+function escapeHtml(value: string | null | undefined) {
+  if (!value) return ""
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+}
 
 export function Graph3D({ graph }: Graph3DProps) {
   const [hoveredNode, setHoveredNode] = useState<VisualNode | null>(null)
   const [ForceGraphComponent, setForceGraphComponent] = useState<ForceGraph3DComponent | null>(null)
   const graphRef = useRef<ForceGraph3DInstance | null>(null)
+  const [hoveredLink, setHoveredLink] = useState<VisualEdge | null>(null)
+
+  const planetAssets = useMemo(() => PLANET_PRESETS.map((preset) => createPlanetAsset(preset)), [])
 
   const { data, legend } = useMemo(() => {
-    const communitySet = new Map<number, { color: string; count: number }>()
+    const communityRegistry = new Map<number, { assetIndex: number; count: number }>()
 
-    const nextColor = (index: number) => PALETTE[index % PALETTE.length]
-
-    const nodes: VisualNode[] = graph.nodes.map((node, index) => {
+    const nodes: VisualNode[] = graph.nodes.map((node) => {
       const group = node.community ?? -1
-      if (!communitySet.has(group)) {
-        communitySet.set(group, { color: nextColor(communitySet.size), count: 0 })
+      if (!communityRegistry.has(group)) {
+        const assignedIndex = Math.min(communityRegistry.size, Math.max(planetAssets.length - 1, 0))
+        communityRegistry.set(group, { assetIndex: assignedIndex, count: 0 })
       }
-      const entry = communitySet.get(group)
-      if (entry) entry.count += 1
+
+      const entry = communityRegistry.get(group)!
+      entry.count += 1
 
       return {
         ...node,
         name: node.label,
         group,
         val: Math.max(1, node.degree ?? 1),
-        color: communitySet.get(group)?.color ?? nextColor(index),
+        planetIndex: entry.assetIndex,
       }
     })
 
@@ -77,23 +308,35 @@ export function Graph3D({ graph }: Graph3DProps) {
         source: sourceNode,
         target: targetNode,
         weight: edge.weight,
+        description: edge.description ?? null,
         value: Math.max(1, edge.weight ?? 1),
       })
     }
 
-    const legendEntries = Array.from(communitySet.entries())
+    const legendEntries = Array.from(communityRegistry.entries())
       .sort((a, b) => b[1].count - a[1].count)
-      .map(([group, info]) => ({
-        group,
-        color: info.color,
-        count: info.count,
-      }))
+      .map(([group, info]) => {
+        const asset = planetAssets[info.assetIndex % planetAssets.length]
+        return {
+          group,
+          planetName: asset?.name ?? "",
+          icon: asset?.icon ?? "🪐",
+          preview: asset?.preview ?? "",
+          accent: asset?.accent ?? "#38bdf8",
+          count: info.count,
+        }
+      })
 
     return {
       data: { nodes, links: edges },
       legend: legendEntries,
     }
-  }, [graph])
+  }, [graph, planetAssets])
+
+  useEffect(() => {
+    setHoveredNode(null)
+    setHoveredLink(null)
+  }, [data])
 
   useEffect(() => {
     let mounted = true
@@ -161,22 +404,59 @@ export function Graph3D({ graph }: Graph3DProps) {
             ref={graphRef}
             graphData={data}
             backgroundColor="#020617"
-            nodeRelSize={7}
+            nodeRelSize={6}
             nodeOpacity={0.95}
-            nodeColor={(node) => (node as VisualNode).color}
+            nodeColor={(node) => {
+              const visual = node as VisualNode
+              const asset = planetAssets[visual.planetIndex % planetAssets.length]
+              return asset?.accent ?? "#38bdf8"
+            }}
             nodeVal={(node) => (node as VisualNode).val}
             nodeLabel={(node) => {
               const n = node as VisualNode
-              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${n.name}</strong><br/>Comunidad: ${n.group}</div>`
+              const asset = planetAssets[n.planetIndex % planetAssets.length]
+              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${escapeHtml(n.name)}</strong><br/>Comunidad: ${n.group}<br/>Planeta: ${asset?.name ?? "Sin definir"}</div>`
             }}
-            linkColor={() => "rgba(56,189,248,0.35)"}
-            linkOpacity={0.25}
+            nodeThreeObject={(node) => {
+              const visual = node as VisualNode
+              const asset = planetAssets[visual.planetIndex % planetAssets.length]
+              const scale = 1.6 + Math.log2((visual.val ?? 1) + 1)
+              return asset?.createObject(scale) ?? undefined
+            }}
+            nodeThreeObjectExtend={false}
+            linkColor={(link) => {
+              const edge = link as VisualEdge
+              const asset = planetAssets[edge.source.planetIndex % planetAssets.length]
+              return `${asset?.accent ?? "#38bdf8"}55`
+            }}
+            linkOpacity={0.35}
             linkWidth={(link) => Math.log2(((link as VisualEdge).value ?? 1) + 1)}
             linkDirectionalParticles={2}
             linkDirectionalParticleSpeed={0.004}
             linkDirectionalParticleWidth={1.25}
+            linkDirectionalParticleColor={(link) => {
+              const edge = link as VisualEdge
+              const asset = planetAssets[edge.target.planetIndex % planetAssets.length]
+              return asset?.accent ?? "rgba(255,255,255,0.8)"
+            }}
             linkCurveRotation={0}
-            onNodeHover={(node) => setHoveredNode((node as VisualNode) ?? null)}
+            linkLabel={(link) => {
+              const edge = link as VisualEdge
+              const description = edge.description ? `<br/><span>${escapeHtml(edge.description)}</span>` : ""
+              return `<div style="font-family:monospace;padding:0.25rem 0.5rem"><strong>${escapeHtml(edge.source.name)} ➜ ${escapeHtml(edge.target.name)}</strong><br/>Peso: ${edge.weight?.toFixed(2) ?? "1.00"}${description}</div>`
+            }}
+            onNodeHover={(node) => {
+              setHoveredNode((node as VisualNode) ?? null)
+              if (node) {
+                setHoveredLink(null)
+              }
+            }}
+            onLinkHover={(link) => {
+              setHoveredLink((link as VisualEdge) ?? null)
+              if (link) {
+                setHoveredNode(null)
+              }
+            }}
             enableNavigationControls
             showNavInfo={false}
           />
@@ -188,27 +468,74 @@ export function Graph3D({ graph }: Graph3DProps) {
       </div>
 
       {hoveredNode ? (
-        <div className="pointer-events-none absolute right-6 top-6 max-w-xs rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
-          <p className="font-mono text-sm font-semibold text-foreground">{hoveredNode.label}</p>
-          <dl className="mt-2 space-y-1 text-xs text-muted-foreground">
-            <div className="flex justify-between">
-              <dt>Comunidad</dt>
-              <dd>#{hoveredNode.group}</dd>
+        (() => {
+          const asset = planetAssets[hoveredNode.planetIndex % planetAssets.length]
+          return (
+            <div className="pointer-events-none absolute right-6 top-6 max-w-xs rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
+              <div className="flex items-center gap-3">
+                <span className="text-xl" aria-hidden>
+                  {asset?.icon ?? "🪐"}
+                </span>
+                <div>
+                  <p className="font-mono text-sm font-semibold text-foreground">{hoveredNode.label}</p>
+                  <p className="text-xs text-muted-foreground">{asset?.name ?? "Sin asignar"}</p>
+                </div>
+              </div>
+              <dl className="mt-3 space-y-2 text-xs text-muted-foreground">
+                <div className="flex justify-between">
+                  <dt>Comunidad</dt>
+                  <dd>#{hoveredNode.group}</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt>Grado</dt>
+                  <dd>{hoveredNode.degree?.toFixed(0) ?? "–"}</dd>
+                </div>
+              </dl>
             </div>
+          )
+        })()
+      ) : null}
+
+      {hoveredLink ? (
+        <div className="pointer-events-none absolute left-6 bottom-6 max-w-sm rounded-lg border border-border/60 bg-background/90 p-4 shadow-lg backdrop-blur-md">
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">Relación</p>
+          <p className="mt-2 font-mono text-sm font-semibold text-foreground">
+            {hoveredLink.source.name} ➜ {hoveredLink.target.name}
+          </p>
+          <dl className="mt-3 space-y-2 text-xs text-muted-foreground">
             <div className="flex justify-between">
-              <dt>Grado</dt>
-              <dd>{hoveredNode.degree?.toFixed(0) ?? "–"}</dd>
+              <dt>Peso</dt>
+              <dd>{hoveredLink.weight?.toFixed(2) ?? "1.00"}</dd>
+            </div>
+            <div className="flex flex-col gap-1">
+              <dt>Descripción</dt>
+              <dd className="text-muted-foreground/80">
+                {hoveredLink.description ?? "Sin detalles adicionales"}
+              </dd>
             </div>
           </dl>
         </div>
       ) : null}
 
       <div className="mt-6 grid gap-2 rounded-xl border border-border/40 bg-card/60 p-4 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-3">
-        {legend.map(({ group, color, count }) => (
-          <div key={group} className="flex items-center justify-between text-xs text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-full" style={{ backgroundColor: color }} />
-              <span className="font-mono text-foreground">Comunidad #{group}</span>
+        {legend.map(({ group, planetName, icon, preview, count }) => (
+          <div key={group} className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <span
+                className="h-8 w-8 overflow-hidden rounded-full border border-border/40"
+                style={{
+                  backgroundImage: preview ? `url(${preview})` : undefined,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+                aria-hidden
+              />
+              <div>
+                <p className="font-mono text-foreground">Comunidad #{group}</p>
+                <p className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {icon} {planetName}
+                </p>
+              </div>
             </div>
             <span>{count} nodos</span>
           </div>

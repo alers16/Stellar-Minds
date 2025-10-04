@@ -15,6 +15,7 @@ const GraphEdgeSchema = z.object({
   source: z.string(),
   target: z.string(),
   weight: z.number().nullable(),
+  description: z.string().nullable().optional(),
 })
 
 const GraphDataSchema = z.object({
@@ -35,5 +36,8 @@ export const graphData: GraphData = {
     degree: node.degree ?? 0,
     community: node.community ?? -1,
   })),
-  edges: parsedGraph.edges,
+  edges: parsedGraph.edges.map((edge) => ({
+    ...edge,
+    description: edge.description ?? null,
+  })),
 }
