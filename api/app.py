@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from assay_finder.router import router as assay_router
+from gap_finder.router import router as gap_router
 
 FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
 ROOT_PATH = os.getenv("FASTAPI_ROOT_PATH", "/api")  # como el proyecto sirve bajo /api
@@ -21,6 +22,7 @@ app.add_middleware(
 )
 
 app.include_router(assay_router)
+app.include_router(gap_router)
 
 @app.get("/")
 def root():
