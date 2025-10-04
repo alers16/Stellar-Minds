@@ -7,6 +7,7 @@ class CreateChatResponse(BaseModel):
 
 class MessageRequest(BaseModel):
     message: str = Field(example="¡Hola! ¿Qué tal?")
+    metodo: str = Field(example="local")
 
 class PromptAnswerResponse(BaseModel):
     answer: str = Field(example="No puedo ayudarte con eso.")

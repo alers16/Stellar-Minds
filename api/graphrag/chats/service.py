@@ -44,7 +44,7 @@ class ChatService:
     def count_messages(self, chat_uuid: UUID) -> int:
         return len(self.require_chat(chat_uuid).messages)
 
-    async def reply_to_user(self, chat_uuid: UUID, user_text: str) -> str:
+    async def reply_to_user(self, chat_uuid: UUID, user_text: str, method: str) -> str:
         lock = self._locks[chat_uuid]
 
         if lock.locked():
@@ -54,7 +54,7 @@ class ChatService:
             chat = self.require_chat(chat_uuid)
             chat_history = to_chatbot_messages(chat.messages)
 
-            assistant_answer = await self.chatbot.reply(user_text, chat_history)
+            assistant_answer = await self.chatbot.reply(user_text, chat_history, method)
 
             self.add_message(chat_uuid, ROLE.USER, user_text)
             self.add_message(chat_uuid, ROLE.ASSISTANT, assistant_answer)

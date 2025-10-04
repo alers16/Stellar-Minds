@@ -12,7 +12,6 @@ from gap_finder.router import router as gap_router
 
 from graphrag.chats.service import ChatService
 from graphrag.settings import settings
-from graphrag.limiter import limiter, rate_limit_test
 from graphrag.factory import make_store, make_chatbot
 
 load_dotenv()
@@ -26,7 +25,6 @@ def key_func(request: Request) -> str:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.settings = settings
-    app.state.limiter = limiter
 
     store = make_store(settings)
     chatbot = make_chatbot(settings)
