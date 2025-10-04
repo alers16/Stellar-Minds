@@ -1,0 +1,65 @@
+
+Effects of Space Flight on Inflammasome Activation in the Brain of Mice
+
+Authors: Roy U., Hadad R., Rodriguez A.A., Saju A., Roy D., Gil M., Keane R.W., Scott R.T., Mao X.W., de Rivero Vaccari J.P.
+Journal: Cells (2025), 14:417. doi:10.3390/cells14060417
+
+---
+
+Abstract (Summary)
+Spaceflight imposes physiological stressors (microgravity, radiation, circadian disruption, altered CO2) that disrupt immunity. This study analyzed inflammasome activation in brains of female C57BL/6 mice flown for 37 days on the ISS (NASA Rodent Research-1 mission, SpaceX CRS-4). Brain tissues (cortex, hippocampus, and other regions) were examined via immunoblotting for inflammasome proteins (caspase-1, ASC, IL-1β) and by electrochemiluminescence immunoassay (ECLIA) for cytokines. Results showed a decreas...
+
+---
+
+Introduction
+The immune system is highly sensitive to spaceflight stressors, raising risks of infection and chronic disease during missions and after return to Earth. Inflammasomes, multi-protein complexes (NLRP3, ASC, caspase-1), regulate innate immunity by activating IL-1β, IL-18, and pyroptosis. Their dysregulation contributes to neurodegenerative diseases (MS, Parkinson’s, Alzheimer’s) and inflammaging, all relevant for spaceflight health risks. Previous data show radiation impairs cognition and activates inflammas...
+
+---
+
+Methods
+- Animals: 16-week-old female C57BL/6 mice (Jackson Labs). Groups: flight (ISS, 37 days), ground control (simulated ISS habitat), vivarium (standard housing), and baseline (sacrificed at launch).
+- Conditions: Flight and ground groups experienced similar temperature and CO2 (with transient higher CO2 in-flight). Radiation exposure on ISS averaged 0.20 mGy/day.
+- Brain dissections: Cortex, hippocampus, and other brain tissue collected within 4 h of splashdown.
+- Assays: Immunoblotting for caspase-1, ASC, IL-1β; ECLIA for cytokines (TNF-α, IL-2, IFN-γ, IL-5, IL-6, IL-12p70, IL-10).
+- Analysis: GraphPad Prism; t-tests or non-parametric tests, p<0.05 considered significant.
+
+---
+
+Results
+1. **Whole-brain regions (non-cortex/hippocampus):**
+   - Flight mice showed significantly reduced caspase-1, ASC, and IL-1β compared to ground controls.
+   - Protein levels in flight were similar to baseline mice (sacrificed at launch), suggesting suppression/stalling of inflammasome activation.
+
+2. **Cortex and hippocampus:**
+   - Both regions showed reduced inflammasome protein levels in flight vs ground controls.
+   - Baseline mice also had low levels, resembling flight group; vivarium mice had higher expression.
+
+3. **Cytokine profiles (whole brain regions):**
+   - No significant changes between flight and ground controls.
+   - Trend toward lower TNF-α and IL-12p70 in baseline mice.
+   - Cortex and hippocampus cytokine analysis inconclusive (N=2 per group), but suggested region-specific patterns.
+
+---
+
+Discussion
+- Spaceflight led to suppressed inflammasome activation in mouse brains, contrasting with peripheral immune activation seen in other studies.
+- Findings suggest a stall in normal inflammaging processes, as flight animals resembled baseline rather than ground controls.
+- Possible contributors: CO2 fluctuations, microgravity stress, and low-dose radiation. Elevated CO2 may transiently increase inflammasome activity, but levels stabilized. Radiation exposure (7.17 mGy/day total) is much lower than doses known to induce inflammasome activation on Earth.
+- Similarities with other RR-1 findings: altered metabolism in fat, liver, and muscle, plus younger epigenetic age and slowed aging signatures in spaceflight animals.
+- Results align with human data (NASA Twins Study: longer telomeres in-flight), suggesting CNS aging may slow in space.
+- Brain immune responses differ from peripheral immunity due to blood-brain barrier protection and region-specific immune regulation.
+
+---
+
+Conclusion
+- Spaceflight for 37 days decreased inflammasome proteins (caspase-1, ASC, IL-1β) in cortex, hippocampus, and other brain regions of mice.
+- Cytokine expression showed no major changes, though region-specific differences were hinted.
+- Findings suggest suppression/stalling of brain inflammaging in space, not outright weakening of innate immunity.
+- Future directions: assess sex differences, larger sample sizes, comparisons across missions, and link to astronaut biomarkers.
+
+---
+
+Acknowledgments
+Supported by NASA (MUREP) and UTRGV. Data deposited in NASA OSDR (OSD-738, OSD-751, OSD-752). Figures created with BioRender.
+
+Conflicts of Interest: Two authors are co-founders of InflamaCORE LLC and serve on advisory boards related to inflammasome-targeting therapeutics.

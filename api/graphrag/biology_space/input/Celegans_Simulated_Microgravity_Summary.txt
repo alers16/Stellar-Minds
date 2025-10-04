@@ -1,0 +1,109 @@
+Title: Transcriptomic Signature of the Simulated Microgravity Response in *Caenorhabditis elegans* and Comparison to Spaceflight Experiments
+
+Authors: İrem Çelen, Aroshan Jayasinghe, Jung H. Doh, Chandran R. Sabanayagam
+Journal: *Cells* (2023), 12, 270. DOI: 10.3390/cells12020270
+
+------------------------------------------------------------
+ABSTRACT
+------------------------------------------------------------
+This study explores how simulated microgravity influences gene expression in *Caenorhabditis elegans* (C. elegans) and compares these findings with previous spaceflight experiments. Using RNA-sequencing and mass spectrometry, the authors found that simulated microgravity induces extensive changes in gene expression — notably in longevity-related pathways like insulin/IGF-1 and sphingolipid signaling. Roughly 75% of gene expression changes persisted for four days after the worms’ return to normal gravity, but most were reversed by twelve days. Moreover, 118 genes were shared between simulated microgravity and real spaceflight conditions, suggesting a conserved “microgravity-responsive” transcriptomic signature.
+
+------------------------------------------------------------
+INTRODUCTION
+------------------------------------------------------------
+Spaceflight exposes organisms to microgravity and radiation, both of which disrupt physiology. *C. elegans* is a powerful model organism for studying these effects due to its short lifespan, well-mapped genetics, and physiological similarity to humans. Previous space missions (ICE-First, CERISE, Shenzhou-8, etc.) have demonstrated major changes in metabolism, reproduction, and neuromuscular function. However, most used liquid culture systems that may introduce stress unrelated to microgravity. This study aims to isolate the specific effects of simulated microgravity using clinostat rotation, a ground-based system that continuously rotates samples to average the gravitational vector.
+
+------------------------------------------------------------
+METHODS
+------------------------------------------------------------
+**Organism and Conditions:** Wild-type *C. elegans* (strain N2) were grown in CeHR axenic liquid medium at 21°C. After a three-week acclimation period, worms were subjected to clinostat rotation (1 rad/s, ~10 RPM) for four days—representing exposure to simulated microgravity.
+
+**Experimental Groups:**
+- **MG:** Worms exposed to microgravity for 4 days.
+- **R1-GC:** Returned to normal gravity for 4 days.
+- **R2-GC:** Returned for 8 days.
+- **R3-GC:** Returned for 12 days.
+
+**Analysis Techniques:**
+- RNA-seq performed using Illumina HiSeq 2500.
+- Gene expression analyzed via Tuxedo pipeline and DESeq2, with FDR < 0.05 and log2FC > 2.
+- Functional enrichment via DAVID, KEGG, and WormBase tools.
+- Lipid quantification performed by LC/MS/MS to measure ceramide and sphingolipid levels.
+- Comparison with prior spaceflight data (CERISE) from NASA GeneLab.
+
+------------------------------------------------------------
+RESULTS
+------------------------------------------------------------
+**1. Broad Gene Expression Changes:**
+Hundreds of genes were differentially expressed in simulated microgravity. After returning to ground conditions, 75% of these differences persisted for four days, 16% after twelve days. Downregulated genes were primarily in neuronal, epithelial, and intestinal tissues; upregulated genes were enriched in reproductive tissues.
+
+**2. Sustained Gene Expression Effects:**
+Even after 12 days in normal gravity (three worm generations), transcriptomic profiles remained distinct from controls, showing long-lasting effects of simulated microgravity.
+
+**3. Biological Processes Affected:**
+- Upregulated pathways: Dorso-ventral axis formation, reproduction, chitin metabolism.
+- Downregulated pathways: Lysosome function, cuticle development, defense response, and locomotion.
+Neuropeptide signaling genes (flp, nlp families) were notably downregulated, implying neuromuscular and behavioral impacts.
+
+**4. Noncoding RNAs and Transcription Factors:**
+Simulated microgravity triggered changes in noncoding RNAs, with 126 ncRNAs induced and 16 silenced. Small nucleolar RNAs (snoRNAs) and long noncoding RNAs (lincRNAs) were particularly responsive. Twenty transcription factors (e.g., tbx-43, daf-16 targets) were upregulated, many maintaining their activity for over a week post-return.
+
+------------------------------------------------------------
+LONGEVITY-RELATED PATHWAYS
+------------------------------------------------------------
+Microgravity altered genes involved in the insulin/IGF-1 and DAF-16/FOXO signaling pathways, both central to longevity regulation in *C. elegans*.
+
+- 11 genes in the KEGG “Longevity Regulating Pathway” were differentially expressed.
+- Downregulated genes included sod-3, ctl-1, and lips-17 — typically DAF-16 targets associated with stress resistance and lifespan extension.
+- Despite these downstream effects, DAF-16 and pqm-1 transcripts were unchanged, suggesting post-translational regulation (e.g., nuclear translocation).
+
+Statistical enrichment showed that 144 DAF-16–induced genes were downregulated, indicating that simulated microgravity broadly suppresses the DAF-16 longevity network. These data imply that altered stress response and metabolic signaling contribute to potential lifespan modulation in space conditions.
+
+------------------------------------------------------------
+SPHINGOLIPID SIGNALING AND CERAMIDE METABOLISM
+------------------------------------------------------------
+The sphingolipid signaling pathway was strongly suppressed. Key enzymes—*gba-4* and *asm-3*—were downregulated, reducing ceramide biosynthesis and degradation. LC/MS/MS data confirmed metabolic shifts:
+- Total ceramide ↓ 1.5×
+- Hexosylceramide ↓ 3.6×
+- Sphingosine ↓ 1.4×
+- Lactosylceramide ↑ 27× (p < 0.05)
+
+These lipid changes imply reduced sphingolipid turnover and potentially increased longevity, as ceramide depletion is linked to lifespan extension. Long-chain ceramides (C24, C24:1) decreased, while medium-chain ceramides (C20, C22) increased, consistent with enhanced resistance to hypoxia and stress responses.
+
+------------------------------------------------------------
+COMPARISON WITH SPACEFLIGHT DATA
+------------------------------------------------------------
+When compared to the CERISE ISS experiment (4-day flight), 134 differentially expressed genes overlapped, 118 of which showed consistent directional changes. These “microgravity-responsive genes” were enriched for:
+- Collagen and cuticle structural proteins
+- Locomotion and morphogenesis pathways
+- Calpain protease domains (implicated in muscle atrophy)
+
+Human orthologs (64 genes) of these worm genes shared functions related to cytoskeletal regulation, stress response, and metabolism, underscoring cross-species conservation of microgravity effects.
+
+------------------------------------------------------------
+DISCUSSION
+------------------------------------------------------------
+Simulated microgravity induced transcriptomic and metabolic profiles resembling those from real spaceflight. The downregulation of sphingolipid and collagen-related genes suggests broad alterations in structural integrity, stress response, and aging pathways.
+
+Key insights include:
+- **Persistent effects:** 75% of microgravity-induced transcriptomic changes persisted after return.
+- **Longevity signaling:** Altered insulin/IGF-1 and sphingolipid pathways indicate metabolic reprogramming toward longevity adaptation.
+- **Immune and neuropeptide response:** Downregulation of defense and neuromuscular genes may explain space-induced immune suppression and motility changes.
+- **Human relevance:** Homologous gene pathways overlap with those linked to telomere maintenance and oxidative stress responses in astronauts (e.g., NASA Twins Study).
+
+------------------------------------------------------------
+CONCLUSIONS
+------------------------------------------------------------
+1. Simulated microgravity produces widespread and lasting transcriptomic reprogramming in *C. elegans*.
+2. Longevity-related signaling (insulin/IGF-1, sphingolipid) and structural pathways (collagen, locomotion) are significantly altered.
+3. Effects persist across generations but largely revert after 12 days on Earth.
+4. Many of these molecular signatures parallel those observed in spaceflight, validating the clinostat as a model for studying gravitational biology.
+
+------------------------------------------------------------
+DATA AND FUNDING
+------------------------------------------------------------
+Data: GEO accession GSE122125 (NCBI).
+Funding: NASA grants NNX12AR59G, NNX10AN63H, NNX13AM08G; Sigma Xi Grant G2016100191301836.
+Acknowledgements: Supported by Delaware INBRE and EPSCoR programs; sequencing via University of Delaware Genomics Core.
+
+Keywords: *Caenorhabditis elegans*, microgravity, RNA-seq, longevity, sphingolipid signaling, ceramide, DAF-16, clinostat, space biology.

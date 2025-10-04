@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
+from pathlib import Path
 
 
 class AppSettings(BaseSettings):
@@ -16,5 +17,7 @@ class AppSettings(BaseSettings):
     rate_limits_enabled: bool = Field(True)
     rate_create_chat: str = Field("3/minute;30/hour;100/day")
     rate_send_message: str = Field("5/10second;60/minute;1000/day")
+
+    graphrag_root: Path = Field(default=Path(""), env="GRAPHRAG_ROOT")
 
 settings = AppSettings()

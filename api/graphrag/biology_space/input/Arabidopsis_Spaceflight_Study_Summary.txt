@@ -1,0 +1,110 @@
+Title: Spaceflight Induces Novel Regulatory Responses in Arabidopsis Seedlings as Revealed by Combined Proteomic and Transcriptomic Analyses
+
+Authors: Colin P. S. Kruse, Alexander D. Meyers, Proma Basu, Sarahann Hutchinson, Darron R. Luesse, and Sarah E. Wyatt
+Published in: BMC Plant Biology, 2020 | DOI: 10.1186/s12870-020-02392-6
+
+------------------------------------------------------------
+ABSTRACT SUMMARY
+------------------------------------------------------------
+This study integrates transcriptomic (RNA-seq) and proteomic (iTRAQ LC-MS/MS) analyses to characterize how spaceflight affects gene and protein expression in Arabidopsis thaliana seedlings. Three-day-old, etiolated seedlings were grown aboard the International Space Station (ISS) and compared to Earth-grown controls. Researchers identified 968 differentially expressed transcripts, 210 differentially abundant proteins (107 soluble, 103 membrane-associated), and 16 altered phosphorylation events.
+
+Spaceflight disrupted cellular processes related to post-transcriptional regulation, cell wall biosynthesis, redox balance, and plastid gene transcription. The integration of RNA and protein datasets revealed extensive post-transcriptional control and poor correlation between transcript and protein levels—highlighting the need for combined analyses to understand plant adaptation in microgravity.
+
+------------------------------------------------------------
+INTRODUCTION
+------------------------------------------------------------
+Plants sense and respond to gravity through gravitropic mechanisms controlling orientation and growth. In microgravity, these mechanisms are absent, causing changes in gene expression, metabolism, and cellular organization. Previous transcriptomic studies revealed altered expression of gravity-responsive genes; however, protein-level changes and post-translational modifications remained largely unexplored.
+
+This study’s main goal was to comprehensively characterize the Arabidopsis spaceflight response by pairing high-throughput RNA sequencing with proteomic and phosphoproteomic analysis. Such combined ‘omics approaches provide deeper insight into plant physiological regulation and adaptation under the unique stress of microgravity.
+
+------------------------------------------------------------
+METHODS
+------------------------------------------------------------
+**Experimental Setup:**
+Arabidopsis thaliana (Columbia-0) seeds were grown for 3 days aboard the ISS using Biological Research in Canisters (BRIC-20 experiment). Identical ground control samples were maintained under matched temperature and humidity conditions. After 76 hours, seedlings were fixed in RNAlater and stored at −80°C.
+
+**Transcriptomic Analysis:**
+- RNA-seq performed using Illumina HiSeq 2500 (paired-end 2 × 101 bp reads)
+- Data mapped to TAIR10 genome using STAR aligner
+- Differential expression assessed with EdgeR (|log2FC| ≥ 1, FDR ≤ 0.05)
+
+**Proteomic Analysis:**
+- Soluble and membrane fractions were analyzed separately
+- iTRAQ labeling and LC-MS/MS used for protein quantification
+- Post-translational modifications (PTMs) including phosphorylation were identified
+- Significant changes defined by |log2FC| ≥ 0.2 and p ≤ 0.05
+
+**Subcellular Localization & GO Analysis:**
+SUBA4 database and Gene Ontology (GO) enrichment were used to determine affected pathways and cellular compartments.
+
+------------------------------------------------------------
+RESULTS
+------------------------------------------------------------
+**1. Global Expression Patterns**
+- 968 transcripts (480 upregulated, 488 downregulated) were significantly altered by spaceflight.
+- 107 soluble and 103 membrane proteins showed differential abundance.
+- 16 peptides were differentially phosphorylated.
+- Plastid-localized transcripts were notably overrepresented (>25% of upregulated genes), indicating dysregulation of plastid transcription.
+
+**2. Post-Transcriptional Regulation and mRNA-Protein Correlation**
+Only 17 genes were differentially expressed at both mRNA and protein levels; 12 of these showed consistent directionality. The remaining 5 were inversely correlated, revealing major post-transcriptional control. For example, TIP3.2 protein abundance increased while its transcript decreased fourfold.
+
+**3. Translation and mRNA Turnover**
+Multiple ribosomal subunit genes were upregulated in space, suggesting altered translational machinery. Proteins involved in mRNA decay and silencing—such as DCP5 and AGO4—were more abundant in microgravity, indicating enhanced RNA turnover and silencing.
+
+**4. Alternative Splicing and Phosphorylation Events**
+Splicing factors GRP7 and GRP8 exhibited differential phosphorylation, implying altered splicing activity. A total of 24 genes displayed alternative transcript isoform ratios in space-grown seedlings, confirming post-transcriptional adaptation.
+
+**5. Protein Degradation and Ubiquitin Pathways**
+Several E3 ubiquitin ligases (ATL9, BRG2, RHA2B) and F-box proteins were differentially expressed. Proteasomal subunits were downregulated, suggesting adjustments in protein degradation capacity.
+
+**6. Cell Wall Modification and Auxin Pathways**
+Microgravity strongly affected genes related to cell wall organization and auxin signaling:
+- Increased expression of UDP-D-Xylose synthases and β-glucanases.
+- Phosphorylation of AHA2 (plasma membrane proton ATPase) and CESA1 (cellulose synthase) altered, implying modified cell wall elongation and deposition.
+- Tubulin α isoforms were less phosphorylated, likely stabilizing microtubules and supporting structural integrity under microgravity.
+
+Auxin-related genes (PIN transporters, ARFs, SAURs) exhibited mixed up- and down-regulation, reflecting disrupted hormone signaling and reorientation in the absence of gravity.
+
+**7. Plastid Function and Transcription**
+Despite dark growth, transcripts involved in chlorophyll biosynthesis, protein import, and plastid organization were upregulated. This “wasteful” activation suggests disrupted plastid regulation rather than a functional response.
+
+**8. Redox Regulation and Reactive Oxygen Species (ROS) Signaling**
+Spaceflight induced extensive redox changes:
+- Increased transcription of antioxidant enzymes (ascorbate oxidase, peroxidase, monodehydroascorbate reductase)
+- Downregulation of NADPH oxidases (RBOHB, RBOHI)
+- Proteomic evidence of increased oxidation in membrane proteins and decreased oxidation in soluble proteins
+This indicates oxidative stress localized to membranes and altered ROS homeostasis, possibly affecting cytoskeletal stability.
+
+------------------------------------------------------------
+DISCUSSION
+------------------------------------------------------------
+The combined ‘omics data reveal that spaceflight disrupts plant regulation at multiple biological levels—transcriptional, translational, and post-translational. The poor correlation between RNA and protein abundance underscores that transcriptomic data alone cannot capture the full molecular response.
+
+Key findings include:
+- Dysregulated plastid gene expression, suggesting impaired feedback in light-related and gravity-related signaling.
+- Shifts in redox balance and ROS signaling linked to microtubule dynamics, supporting a compensatory mechanism to maintain cell structure.
+- Altered phosphorylation of AHA2 and CESA1 reduces cell wall acidification and cellulose synthesis, potentially explaining reduced growth in space.
+- Increased mRNA turnover and altered translation machinery indicate systemic post-transcriptional remodeling in microgravity.
+
+------------------------------------------------------------
+CONCLUSIONS
+------------------------------------------------------------
+Spaceflight causes broad molecular reprogramming in Arabidopsis seedlings, involving:
+1. Enhanced post-transcriptional regulation and mRNA decay mechanisms.
+2. Dysregulated plastid gene expression, especially in light- and translation-related genes.
+3. Altered cell wall synthesis through phosphorylation control of AHA2, CESA1, and SHOU4.
+4. Redox imbalance tied to microtubule stabilization.
+5. Extensive protein modification and turnover changes.
+
+These findings identify new targets—particularly in redox, cytoskeletal, and cell wall pathways—for engineering plants better suited for microgravity environments and long-term space agriculture.
+
+------------------------------------------------------------
+DATA, FUNDING, AND ACKNOWLEDGEMENTS
+------------------------------------------------------------
+- Data available via NASA GeneLab dataset GLDS-38.
+- Funded by NASA (Grant #NNX13AM48G) with supplemental GeneLab support.
+- Proteomics conducted at the Donald Danforth Plant Science Center; RNA-seq at Washington University’s Genome Technology Access Center.
+- Authors thank NASA flight and hardware teams at Kennedy Space Center for logistical support.
+
+Keywords: Spaceflight, Arabidopsis, transcriptomics, proteomics, phosphorylation, microgravity, post-transcriptional regulation, redox homeostasis, plastid gene expression, cell wall synthesis, auxin signaling.

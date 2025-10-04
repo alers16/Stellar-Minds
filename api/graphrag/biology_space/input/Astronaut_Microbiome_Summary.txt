@@ -1,0 +1,104 @@
+Title: Understanding the Complexities and Changes of the Astronaut Microbiome for Successful Long-Duration Space Missions
+
+Authors: Donatella Tesei, Anna Jewczynko, Anne M. Lynch, Camilla Urbaniak
+Journal: Life (MDPI), 2022, 12(4):495. DOI: 10.3390/life12040495
+
+------------------------------------------------------------
+ABSTRACT AND OVERVIEW
+------------------------------------------------------------
+This comprehensive review examines how spaceflight conditions—particularly microgravity, cosmic radiation, confinement, and altered diets—affect the human microbiome and consequently astronaut health. The microbiome, a complex ecosystem of bacteria, fungi, viruses, and archaea within the human body, plays a critical role in immunity, metabolism, cognition, and overall physiological balance. Disruptions to this system (dysbiosis) during long-term missions could contribute to disease risk and impair mission s...
+
+The review integrates evidence from human space missions (ISS, Skylab, Apollo) and analog experiments (MARS500, Lunar Palace 1) to describe changes in the microbiome at different body sites (gut, skin, nasal, oral) and the implications for immunity, nutrition, bone, and mental health. It also explores microbial adaptations to microgravity and radiation, including increased virulence, biofilm formation, and antibiotic resistance, and discusses countermeasures for maintaining astronaut health.
+
+------------------------------------------------------------
+THE HUMAN MICROBIOME
+------------------------------------------------------------
+Humans host trillions of microorganisms—bacteria, fungi, archaea, and viruses—roughly equal to the number of human cells. These microbes inhabit diverse niches (gut, skin, mouth, vagina, respiratory tract) and are essential for processes such as nutrient absorption, vitamin synthesis, immune system regulation, and pathogen defense. The gut microbiome alone contains over 1000 bacterial species and millions of non-redundant genes.
+
+When the microbiome’s equilibrium is disturbed, diseases such as inflammatory bowel disease, obesity, asthma, diabetes, and even neurological disorders can emerge. Maintaining microbial diversity and stability is vital to physiological resilience—something that becomes especially challenged in space.
+
+------------------------------------------------------------
+SPACEFLIGHT STRESSORS AND MICROBIOME DISRUPTION
+------------------------------------------------------------
+**1. Radiation:**  
+Astronauts in low Earth orbit (LEO) and beyond are exposed to Galactic Cosmic Rays (GCR) and Solar Particle Events (SPEs), which emit highly energetic ions that penetrate spacecraft shielding. Radiation doses range from 30–120 mGy (ISS) to ~450 mGy on a Mars mission. Chronic exposure causes DNA damage, oxidative stress, and inflammation, potentially altering microbial growth and gene expression.
+
+**2. Microgravity:**  
+Microgravity affects fluid distribution, bone and muscle density, neurovestibular balance, and immune function. It can also modify microbial physiology—altering bacterial growth rates, biofilm formation, and gene regulation.
+
+**3. Psychological Stress and Confinement:**  
+Isolation, limited privacy, altered circadian rhythms, and sleep deprivation can shift immune function and influence the gut–brain–microbiome axis. These psychosocial stressors may amplify physiological vulnerabilities during spaceflight.
+
+**4. Additional Risks:**  
+Limited access to medical care, close crew quarters, and recycling of air and water increase infection risk. Immune dysregulation and microbial adaptations under stress may enhance pathogen virulence and antibiotic resistance.
+
+------------------------------------------------------------
+MICROBIOME RESPONSES TO SPACEFLIGHT
+------------------------------------------------------------
+Studies across missions (ISS, Skylab, MARS500) consistently demonstrate microbiome changes during and after flight:
+
+**Gut Microbiome:**  
+- Astronaut gut microbial diversity tends to decline during flight, though composition varies.  
+- Increases in Firmicutes-to-Bacteroidetes ratio and loss of beneficial taxa like *Akkermansia* are common.  
+- SCFA-producing bacteria (e.g., *Faecalibacterium prausnitzii*) decrease, potentially reducing anti-inflammatory capacity.  
+- Short missions (<1 month) still produce significant microbial shifts, which usually revert after return to Earth.  
+- Long-term missions (6–12 months) cause convergence among astronauts’ gut microbiomes—suggesting environmental homogenization aboard the ISS.
+
+**Skin, Oral, and Nasal Microbiomes:**  
+- Skin microbial diversity fluctuates; Proteobacteria often decline, while Staphylococcus and Streptococcus species increase.  
+- Saliva samples reveal temporary drops in microbial diversity and increased abundance of *Prevotella* and *Alloprevotella*, which may promote oral inflammation.  
+- Nasal microbiota show increased *Staphylococcus* and *Corynebacterium*, with changes persisting months post-flight.  
+- These shifts can heighten susceptibility to skin irritation, rhinitis, and opportunistic infections.
+
+**Environmental Exchange:**  
+Microbial transfer between crew members and spacecraft surfaces is well documented. The spacecraft environment selects for hardy, biofilm-forming species with higher resistance to desiccation and antimicrobials.
+
+------------------------------------------------------------
+MICROGRAVITY AND MICROBIAL PHYSIOLOGY
+------------------------------------------------------------
+Microgravity significantly modifies microbial behavior:  
+- Enhanced growth and mutation rates.  
+- Increased virulence and biofilm formation (e.g., *Salmonella typhimurium*, *Candida albicans*).  
+- Altered gene expression through the Hfq pathway, linked to stress response.  
+- Higher frequency of horizontal gene transfer (HGT), accelerating antibiotic resistance gene spread.  
+- Microbes isolated from the ISS often carry more mobile genetic elements than Earth-based equivalents.  
+
+These findings suggest that in the space environment, pathogenic traits can become amplified while antibiotic efficacy may decrease. Overprescription or contamination events could rapidly propagate resistant strains in confined habitats.
+
+------------------------------------------------------------
+DIET, MICROBIOME, AND METABOLISM IN SPACE
+------------------------------------------------------------
+Diet is one of the most influential factors in shaping the microbiome. Astronaut diets—typically processed, low-fiber, and shelf-stable—limit microbial diversity and alter metabolism. Reduced intake of fresh produce lowers prebiotic fiber levels, decreasing beneficial bacteria like *Bifidobacterium* and *Lactobacillus*.
+
+Findings from analog missions (e.g., Lunar Palace 1) demonstrate that plant-rich, high-fiber diets help sustain microbial diversity and anti-inflammatory taxa. Conversely, calorie restriction and nutrient imbalance, common during space missions, lead to enrichment of pro-inflammatory taxa and decreased SCFA production.
+
+Proposed countermeasures include:  
+- Implementing bioregenerative life-support systems (BLSS) for fresh food supply.  
+- Personalized nutrition based on microbiome profiles.  
+- Supplementation with probiotics (*Akkermansia*, *Faecalibacterium*, *Bifidobacterium*) and postbiotics (SCFAs).
+
+------------------------------------------------------------
+MICROBIOME AND IMMUNE FUNCTION
+------------------------------------------------------------
+The immune system and microbiome are tightly interlinked. Spaceflight induces immune dysregulation—manifested as reduced T-cell activation, cytokine imbalances, and latent viral reactivation (e.g., herpesviruses). Dysbiosis further amplifies immune instability, weakening defense against opportunistic infections. Monitoring microbiome composition may serve as an early biomarker of immune decline.
+
+------------------------------------------------------------
+MICROBIOME AND COGNITIVE / MENTAL HEALTH
+------------------------------------------------------------
+Alterations in gut microbial composition influence neurochemical pathways through the gut–brain axis. Reduced SCFA production and changes in tryptophan metabolism could contribute to anxiety, depression, or cognitive deficits in astronauts. Maintaining microbial balance is thus integral to sustaining psychological well-being during isolation and extended missions.
+
+------------------------------------------------------------
+COUNTERMEASURES AND FUTURE DIRECTIONS
+------------------------------------------------------------
+1. **Routine Microbiome Monitoring:** Longitudinal metagenomic sampling before, during, and after missions.  
+2. **Diet Optimization:** Fresh produce and high-fiber meals integrated into closed-loop life-support systems.  
+3. **Probiotics and Postbiotics:** Targeted microbial supplementation tailored to astronaut-specific microbiome profiles.  
+4. **Environmental Control:** Enhanced air and surface filtration, humidity regulation, and microbial biosensors.  
+5. **Integrated “Omics” Data:** Coupling metagenomics with metabolomics and immune profiling to predict dysbiosis and guide interventions.  
+
+------------------------------------------------------------
+CONCLUSION
+------------------------------------------------------------
+The astronaut microbiome is a dynamic and critical component of space health. Spaceflight alters microbial communities in the gut, skin, oral cavity, and respiratory tract through combined physical, dietary, and psychological stressors. While many changes are reversible, long-term missions beyond low Earth orbit may induce lasting dysbiosis with immune and metabolic consequences. Managing these interactions through microbiome-informed nutrition, hygiene, and environmental engineering will be key to ensuring astronaut...
+
+Keywords: microbiome, spaceflight, astronaut health, gut-brain axis, immunity, probiotics, dysbiosis, radiation, microgravity, long-duration missions.

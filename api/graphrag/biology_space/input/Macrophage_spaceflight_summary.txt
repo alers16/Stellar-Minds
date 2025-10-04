@@ -1,0 +1,80 @@
+Influence of the Spaceflight Environment on Macrophage Lineages
+------------------------------------------------------------------
+This review examines how the spaceflight environment—including microgravity, radiation, isolation, and altered atmospheric conditions—affects macrophages, a central immune cell population bridging innate and adaptive immunity. Macrophages regulate inflammation, tissue repair, and host defense. Understanding their alterations in space is critical for astronaut health during long-duration missions.
+
+Introduction
+-------------
+Spaceflight exposes humans to unique stressors: cosmic radiation, altered gravity, isolation, confined environments, and limited medical intervention. These stressors impact multiple physiological systems, including the immune system. Astronauts frequently show altered leukocyte counts, chronic low-grade inflammation, oxidative damage, and accelerated aging. Macrophages, as versatile immune regulators, are key to understanding these dysfunctions.
+
+Macrophage Immunobiology in Spaceflight
+----------------------------------------
+Studies of crew members, rodents, and in vitro systems reveal significant changes:
+• **Monocyte counts**: Humans often show elevated monocyte counts post-flight, while rodents frequently exhibit reductions.  
+• **Cytokine profiles**: Crew display in-flight increases in IL-12, CXCL-8, IL-1β, TNF-α, and IL-6. Post-flight, markers like CCL2, IL-10, and CRP spike.  
+• **Phagocytic activity**: Reduced in both astronauts and rodents immediately after flight, impairing debris clearance and tissue repair.  
+• **Polarization**: Spaceflight and simulated microgravity impair differentiation of progenitors into macrophages and disrupt balance of M1 (pro-inflammatory) and M2 (anti-inflammatory) subtypes.  
+• **Adaptive immunity link**: Macrophage dysfunction contributes to impaired T cell responses and antigen presentation, raising risks of inappropriate immune activation.
+
+Tissue-Specific Macrophage Lineages
+------------------------------------
+Macrophages in specialized tissues show spaceflight-associated disruptions:  
+• **Osteoclasts (bone)**: Increased bone resorption during flight, resembling osteoporosis.  
+• **Microglia (CNS)**: Activated by cosmic radiation, leading to neuroinflammation and cognitive deficits. Depleting microglia protects against some effects.  
+• **Kupffer cells (liver)**: Reduced after spaceflight, possibly compromising liver immune tolerance.  
+• **Other tissues**: Pancreas, kidney, adrenal macrophages remain understudied but may link to space-associated risks like insulin resistance, kidney stones, and circadian disruption.
+
+Influence of Microgravity
+--------------------------
+Terrestrial analogs (hindlimb unloading, clinostats, rotary bioreactors) mimic aspects of microgravity. Findings include:  
+• Actin cytoskeleton reorganization and impaired signaling pathways (FAK-ERK, NF-κB, STAT3, Rho/ROCK).  
+• Altered mechanosensitivity, suggesting macrophages sense unloading through cytoskeletal and Piezo ion channel pathways.  
+• Impaired migration and adhesion via altered ICAM-1 regulation.  
+These changes suggest macrophages are highly responsive to mechanical unloading, requiring in-flight validation.
+
+Cosmic Radiation
+-----------------
+Deep space exposes crews to galactic cosmic rays (GCR), solar particle events, and X-rays. Effects include:  
+• Macrophages relatively radioresistant, but microglia mediate cognitive deficits after GCR exposure.  
+• Radiation elevates monocyte counts in mice, linked to impaired learning.  
+• Cellular response often depends on bystander signals (e.g., fibroblast supernatants).  
+• Cancer radiotherapy studies suggest macrophage polarization under radiation may promote or suppress inflammation depending on context.  
+Space radiation thus destabilizes macrophage differentiation and inflammatory balance.
+
+Isolation, Confinement, and Extreme Environments
+-------------------------------------------------
+Spaceflight isolation disrupts circadian rhythms, social interactions, and neuroendocrine balance. Implications include:  
+• Circadian misalignment alters macrophage clock genes and cytokine expression.  
+• Glucocorticoid hormone rhythms affect macrophage polarization.  
+• Isolation analogs (Mars500, Antarctica, NEEMO) reveal altered immune phenotypes, linked to microbial environment differences.  
+Neuroimmune and circadian interactions likely underlie macrophage-related dysfunctions in ICE environments.
+
+Hypercapnia (High CO2)
+------------------------
+Elevated CO2 aboard the ISS can cause hypercapnia. Consequences for macrophages include:  
+• Suppressed cytokine production (TNF, IL-6), impaired antiviral responses.  
+• Increased apoptosis and reduced phagocytosis.  
+• Enhanced viral replication (influenza A) due to Akt signaling changes.  
+These findings highlight CO2 as an overlooked immune risk factor on long missions.
+
+Macrophages and Lunar Dust Exposure
+------------------------------------
+Future lunar missions face hazards from dust inhalation:  
+• Lunar dust simulants impair macrophage phagocytosis, increase iNOS expression, and promote inflammation.  
+• Rodent studies show reduced alveolar macrophages and lung damage after dust exposure.  
+Dust thus represents a direct immunotoxic risk requiring countermeasures.
+
+Summary and Future Outlook
+---------------------------
+Macrophages and monocytes show broad dysfunction in spaceflight, including:  
+• Altered counts and cytokine profiles.  
+• Impaired phagocytosis and antigen presentation.  
+• Disrupted differentiation and polarization.  
+• Tissue-specific pathologies (bone loss, neuroinflammation, liver dysfunction).  
+
+Future research priorities:  
+• Study combined stressors (microgravity + radiation + hypercapnia).  
+• Characterize tissue-resident macrophage responses in pancreas, kidney, adrenal glands.  
+• Develop countermeasures targeting circadian alignment, mechanotransduction, and anti-inflammatory balance.  
+• Translate findings from analogs to human missions on the Moon and Mars.  
+
+Conclusion: Macrophages are central to astronaut health. Their dysfunction under spaceflight stressors contributes to inflammation, impaired immunity, and tissue damage. Targeted countermeasures are needed to safeguard crew health in future exploration beyond low Earth orbit.

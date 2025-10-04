@@ -1,0 +1,83 @@
+
+37-Day Microgravity Exposure in Female C57BL/6J Mice: Summary
+
+Title: 37-Day Microgravity Exposure in 16-Week Female C57BL/6J Mice is Associated with Bone Loss Specific to Weight-Bearing Skeletal Sites
+
+Authors: Cahill R., Blaber E.A., Juran C.M., Cheng-Campbell M., Alwood J.S., Shirazi-Fard Y., Almeida E.A.C.
+
+Publication: PLOS ONE, March 2025
+
+---
+
+Abstract (Summary)
+Spaceflight in Low Earth Orbit exposes organisms to microgravity and radiation. This study examined how 37 days of microgravity affected bone in young adult female C57BL/6J mice. The major finding was that bone loss occurred specifically at weight-bearing skeletal sites (femur), while non-weight-bearing sites (lumbar vertebrae) showed little or no effect. The results suggest microgravity-induced mechanical unloading, rather than systemic stressors or radiation, is the primary cause of bone loss. Additionally, microgravity accelerated femoral head ossification, indicating premature skeletal maturation.
+
+---
+
+Introduction
+Bone health is a key concern for long-duration spaceflight. Previous studies in rodents and humans show variable site-specific bone loss, but the underlying mechanisms remain unclear. This study tested the hypothesis that mechanical unloading in microgravity leads to localized bone loss at weight-bearing skeletal sites, rather than systemic effects such as space radiation. The femur was chosen as the main site of interest due to its role in weight-bearing, while the L2 vertebra was chosen as a non-weight-bearing comparison.
+
+---
+
+Methods
+- Animal Model: Female C57BL/6J mice, 16 weeks old at launch, housed in NASA’s Rodent Research Habitat (RH) on the ISS for 37 days.
+- Groups: Spaceflight (FL), ground control in RH (GC), standard vivarium housing (VIV), and baseline controls (BL).
+- Sample Collection: Bones collected and analyzed using microcomputed tomography (µCT) and histology.
+- Sites Analyzed: Femoral head, femoral neck, femoral midshaft, distal femoral epiphysis, and L2 vertebra.
+- Measurements: Trabecular and cortical parameters (BV/TV, trabecular thickness, separation, connectivity, cortical thickness, etc.).
+- Statistics: ANOVA, t-tests, and paired comparisons between sites.
+
+---
+
+Results
+1. **Femoral Head (cancellous bone):**
+   - Significant bone loss in spaceflight compared to all controls.
+   - Decreased trabecular number and thickness, increased separation and pattern factor.
+   - Suggests strong atrophy after 37 days of microgravity.
+
+2. **Distal Femoral Epiphysis:**
+   - Major bone loss in both VIV and FL groups compared to GC.
+   - Loss of trabecular number and connectivity density in FL mice.
+   - RH housing mitigated some bone loss compared to vivarium housing.
+
+3. **Femoral Neck and Midshaft (cortical bone):**
+   - Spaceflight reduced cortical bone area and thickness compared to controls.
+   - Enlarged marrow cavity in the femoral neck after spaceflight.
+   - Suggests cortical erosion in weight-bearing bones.
+
+4. **L2 Vertebrae:**
+   - No statistically significant changes across groups.
+   - Indicates non-weight-bearing sites are resistant to microgravity bone loss.
+
+5. **Comparisons Across Sites:**
+   - Paired analyses showed strong, consistent bone loss in femoral regions but not in vertebrae.
+   - Supports weight-bearing unloading as the main driver of degeneration.
+
+6. **Secondary Endochondral Ossification (SEO):**
+   - Accelerated in femoral head during spaceflight.
+   - Microgravity promoted premature ossification compared to aging or ground controls.
+   - Suggests early skeletal maturation linked to mechanical unloading.
+
+---
+
+Discussion
+- Bone loss in microgravity is site-specific and localized to weight-bearing skeletal regions (femur).
+- The lack of vertebral bone loss implies systemic factors (radiation, oxidative stress, hormonal effects) are less important in this context.
+- Radiation dose on the ISS (7.4 mGy over 37 days) was far too low to account for observed bone changes.
+- Housing type also played a role: RH controls retained healthier bone compared to standard vivarium controls, likely due to increased mechanical stimulation in enriched environments.
+- Accelerated ossification in the femoral head is a novel finding, suggesting premature closure of growth plates in microgravity, which may impact skeletal development in young organisms.
+
+---
+
+Conclusion
+- Mechanical unloading in microgravity is the main effector of bone loss in weight-bearing skeletal sites of female C57BL/6J mice.
+- Space radiation and systemic stress factors did not significantly contribute within the 37-day timeframe in Low Earth Orbit.
+- Accelerated secondary ossification may indicate a risk of premature skeletal maturation during long-duration spaceflight.
+- Rodent Habitat housing provided partial protection against bone loss compared to vivarium housing.
+- These findings have important implications for human spaceflight, particularly regarding fracture risk, bone health, and developmental biology in microgravity environments.
+
+---
+
+Acknowledgments
+Supported by NASA Space Biology programs and research teams from NASA Ames, Blue Marble Institute, and collaborating universities.
+

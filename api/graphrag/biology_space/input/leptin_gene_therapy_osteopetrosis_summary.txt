@@ -1,0 +1,64 @@
+
+Effects of Hypothalamic Leptin Gene Therapy on Osteopetrosis in Leptin-Deficient Mice
+
+Authors: Kenneth A. Philbrick, Stephen A. Martin, Amy R. Colagiovanni, Adam J. Branscum, Russell T. Turner, and Urszula T. Iwaniec
+Published in: Journal of Endocrinology, 2018 (final edited form: 236(2):57–68)
+
+---
+
+Abstract (Summary)
+Leptin-deficient ob/ob mice exhibit mild osteopetrosis due to impaired cartilage resorption during endochondral ossification. This study investigated (1) whether the condition is self-limiting, and (2) whether it can be reversed by leptin restoration. Histological analysis of femurs from wild-type (WT) and ob/ob mice at 2, 4, and 6 months revealed persistent cartilage in ob/ob mice, showing the phenotype is not fully self-limiting. Hypothalamic leptin gene therapy using recombinant AAV (rAAV-Lep) in 2-mont...
+
+---
+
+Introduction
+Leptin, a hormone secreted by adipose tissue, regulates energy balance and influences skeletal metabolism. ob/ob mice, lacking leptin, have reduced bone mass, shorter bones, increased marrow adiposity, and abnormal bone quality. They also display retention of cartilage within bone compartments, resembling a mild form of osteopetrosis, an illness characterized by impaired bone resorption. Osteopetrosis can be osteoclast-poor (lack of osteoclast formation) or osteoclast-rich (impaired osteoclast activity). In ob...
+
+---
+
+Materials and Methods
+- Animals: Male WT (C57BL/6J) and leptin-deficient ob/ob mice from Jackson Labs.
+- Study 1: Histomorphometric analysis of femurs at 2, 4, and 6 months to determine cartilage persistence with age in WT and ob/ob mice.
+- Study 2: Two-month-old ob/ob mice randomized into 3 groups: untreated, rAAV-Lep, and rAAV-GFP (control). After 7 months, femoral bone/cartilage analyzed.
+- rAAV vectors: rAAV-Lep encoding rat leptin cDNA; rAAV-GFP encoding green fluorescent protein.
+- Vector delivery: Intracerebroventricular injection into the hypothalamus.
+- Tissue analyses: Histology (TRAP, Von Kossa), evaluation of cartilage, osteoclast and osteoblast perimeters.
+- Statistics: ANOVA, covariance, and nonparametric tests as needed, with FDR correction.
+
+---
+
+Results
+**Study 1 (WT vs ob/ob, effects of age):**
+- WT mice lost cartilage in all femoral compartments by 6 months.
+- ob/ob mice retained cartilage in epiphysis, metaphysis, and diaphysis even at skeletal maturity (6 months).
+- Bone bridging confirmed cessation of longitudinal growth in both genotypes, but cartilage persisted in ob/ob mice.
+- ob/ob mice had lower cancellous bone fraction and more cartilage than WT mice.
+
+**Study 2 (Hypothalamic leptin gene therapy in ob/ob mice):**
+- rAAV-Lep significantly reduced cartilage in all femoral sites (epiphysis, metaphysis, diaphysis) compared to controls.
+- rAAV-GFP had no effect, confirming leptin-specific action.
+- rAAV-Lep-treated mice showed increased osteoblast and osteoclast perimeters, indicating enhanced bone turnover.
+- Cancellous bone fraction tended to be higher in rAAV-Lep mice.
+
+---
+
+Discussion
+- ob/ob mice exhibit a mild osteoclast-rich osteopetrosis due to impaired osteoclast activity, not formation.
+- Cartilage persistence is site-specific: cancellous sites showed age-related reduction, but diaphyseal cartilage persisted indefinitely due to lack of remodeling in cortical bone.
+- Hypothalamic leptin gene therapy enhanced bone turnover, supporting leptin’s role in coordinating osteoclast and osteoblast activity during endochondral ossification.
+- Chondrocytes express leptin receptors and may mediate cartilage remodeling via secretion of RANKL, MMPs, and HMGB1; leptin deficiency disrupts this signaling.
+- Broader systemic effects of leptin deficiency (hypogonadism, obesity, insulin resistance) may contribute, but direct skeletal actions of leptin are primary.
+- Findings confirm leptin’s role as a key regulator of cartilage resorption and skeletal maturation.
+
+---
+
+Conclusion
+- The osteopetrotic phenotype in ob/ob mice is not entirely self-limiting, as cartilage persists into skeletal maturity.
+- Hypothalamic leptin gene therapy restores leptin signaling, increases bone turnover, and markedly reduces cartilage retention.
+- Osteopetrosis in leptin-deficient mice is reversible at cancellous sites, but cortical cartilage may persist due to limited turnover capacity.
+- Leptin is essential for normal skeletal growth, turnover, and replacement of cartilage with bone.
+
+---
+
+Acknowledgments
+Thanks to Dr. S.P. Kalra and Dr. S. Boghossian for contributions to Study 2. Funding provided by NIH, NASA, and USDA grants.

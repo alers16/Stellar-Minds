@@ -20,7 +20,7 @@ from graphrag.settings import settings
 from graphrag.limiter import limiter, rate_limit_test
 from graphrag.factory import make_store, make_chatbot
 
-load_dotenv()
+load_dotenv(override=True)
 
 FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
 ROOT_PATH = os.getenv("FASTAPI_ROOT_PATH", "/api")  # como el proyecto sirve bajo /api

@@ -1,0 +1,81 @@
+Sex-Specific Cardiovascular Adaptations to Simulated Microgravity in Sprague-Dawley Rats
+----------------------------------------------------------------------------------------------------------------
+This study investigates how male and female Sprague-Dawley (SD) rats respond differently to simulated microgravity using hindlimb unloading (HLU) for 14 days. The focus is on arterial stiffness, cardiac function, extracellular matrix changes, and molecular mechanisms, highlighting sex-specific adaptations relevant to astronaut health.
+
+Background
+-----------
+• Astronauts experience cardiovascular adaptations to microgravity, including blood volume shifts, reduced vascular resistance, altered cardiac output, and arterial stiffness.  
+• Sex differences exist: female astronauts lose more plasma volume, males are more prone to spaceflight-associated neuro-ocular syndrome (SANS). Both sexes show vascular stiffness after long flights.  
+• Most rodent HLU studies focus on males; little is known about female-specific responses.  
+• This study explores mechanisms of central arterial stiffening with a focus on estrogen receptor signaling.
+
+Methods
+--------
+• **Animals**: 20-week-old male and female SD rats.  
+• **Groups**: Female control, female HLU, male control, male HLU (n=5–8). Additional groups: female HLU treated with G1 (GPER agonist) vs vehicle.  
+• **Procedures**:  
+  - 14 days of HLU at 30–35° head-down tilt.  
+  - Ultrasound imaging for pulse wave velocity (PWV), systolic/diastolic function.  
+  - Body composition analysis with EchoMRI.  
+  - Histology and immunostaining for collagen, elastin, smooth muscle proteins, oxidative stress, and receptor markers (GPER, PPARγ).  
+  - Discrete correlate summation (DCS) analysis for variable relationships.  
+
+Results
+--------
+1. **Body and organ weight**  
+   - Males heavier than females; HLU reduced lean mass in males but not females.  
+   - HLU lowered heart weight in males; no effect on female organ weights.  
+
+2. **Arterial stiffness (PWV)**  
+   - HLU significantly increased aortic arch PWV in females but not in males.  
+   - Carotid PWV also increased in females under HLU.  
+   - G1 (GPER agonist) prevented PWV increase in HLU females.  
+
+3. **Cardiac function**  
+   - Stroke volume and cardiac output unchanged in females.  
+   - Ejection fraction slightly higher after HLU but within normal limits.  
+   - Diastolic dysfunction observed in HLU females (increased E/E′ ratio).  
+
+4. **Extracellular matrix (ECM)**  
+   - α-smooth muscle actin and myosin higher in male controls than females.  
+   - HLU did not alter collagen, elastin, or their ratio in either sex.  
+   - Collagen bundling greater in female controls; HLU females showed more densely bundled collagen compared to all groups.  
+   - Fiber alignment, length, and width unaffected by HLU.  
+
+5. **GPER and PPARγ**  
+   - Control females had higher aortic GPER than males.  
+   - HLU reduced GPER and PPARγ in females but not in males.  
+   - G1 treatment restored PWV and reduced oxidative stress without changing PPARγ.  
+
+6. **Oxidative stress and inflammation**  
+   - HLU females showed increased oxidative stress (↑ 8-OHdG, ↑ p47phox).  
+   - Lipid peroxidation marker (4-HNE) unchanged.  
+   - eNOS and COX-2 levels unchanged by HLU in either sex.  
+   - Males had generally lower baseline PPARγ and COX-2.  
+
+7. **Multivariate analysis (DCS)**  
+   - Sex differences independent of HLU: males linked oxidative stress with ECM features; females showed stronger associations between GPER, lean mass, and elastin.  
+   - HLU exposure independent of sex: arterial stiffness linked with body composition and collagen content.  
+
+Discussion
+-----------
+• Female SD rats are more vulnerable to HLU-induced arterial stiffening than males.  
+• Mechanism: reduced GPER and PPARγ signaling with increased oxidative stress.  
+• GPER activation (via G1) reversed arterial stiffness and oxidative DNA damage in females.  
+• Structural ECM remodeling was minimal, suggesting functional changes (oxidative stress, receptor signaling) drive stiffness.  
+• Results suggest estrogen receptor pathways play a critical role in female-specific cardiovascular adaptation.  
+• Comparisons with human and rodent studies show that women may have higher risk of arterial stiffness under spaceflight conditions, particularly post-menopause.  
+
+Conclusion
+-----------
+• HLU induces sex-specific cardiovascular adaptations: females develop arterial stiffness, oxidative stress, and diastolic dysfunction; males show resilience.  
+• GPER downregulation and reduced PPARγ appear central to female vulnerability.  
+• G1 agonist offers potential as a countermeasure to prevent arterial stiffening in females.  
+• Findings underscore the importance of studying both sexes for astronaut cardiovascular health.  
+
+Implications for Spaceflight
+-----------------------------
+• Female astronauts may be at greater risk of vascular stiffening during long-duration missions.  
+• Hormonal and receptor-targeted therapies (e.g., GPER agonists, PPARγ activators) could mitigate risks.  
+• Monitoring PWV and oxidative stress markers may help identify early cardiovascular dysfunction.  
+• Personalized, sex-specific countermeasures are necessary to safeguard astronaut cardiovascular health.  
