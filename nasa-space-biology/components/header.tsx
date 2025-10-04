@@ -1,4 +1,6 @@
+import Image from "next/image"
 import Link from "next/link"
+import stellarMindsLogo from "@/resources/stellar minds logo sin fondo.png"
 
 export function Header() {
   return (
@@ -6,12 +8,14 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center px-4">
         <div className="flex flex-1 items-center">
           <Link href="/" className="flex items-center gap-3">
-            <svg className="h-12 w-12" viewBox="0 0 110 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="55" cy="46" r="44" fill="#0B3D91" />
-              <ellipse cx="55" cy="46" rx="28" ry="6" fill="white" transform="rotate(-15 55 46)" />
-              <circle cx="78" cy="28" r="8" fill="#FC3D21" />
-              <path d="M30 46 L80 46 M55 21 L55 71" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            </svg>
+            <Image
+              src={stellarMindsLogo}
+              alt="Stellar Minds logo"
+              width={48}
+              height={48}
+              priority
+              className="h-12 w-12 object-contain"
+            />
             <div className="font-mono text-sm font-bold text-foreground">Stellar Mind AI</div>
           </Link>
         </div>

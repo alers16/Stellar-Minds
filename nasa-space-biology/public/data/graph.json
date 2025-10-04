@@ -1,0 +1,1420 @@
+{
+  "nodes": [
+    {
+      "id": "231d4d47-bce5-42dc-9e2a-ffecfc91e9e3",
+      "label": "NASA RODENT RESEARCH-1",
+      "community": -1,
+      "level": 0,
+      "degree": 3.0
+    },
+    {
+      "id": "edf041ff-80fb-49f1-ba6d-f068b0f0e2c9",
+      "label": "C57BL/6J MICE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "01666805-e11f-4131-b969-f06211da8483",
+      "label": "ISS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "99d9161e-b194-4fa2-9e5b-ea65bba516b8",
+      "label": "GROUND CONTROL",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "5962781c-de42-44a1-b477-da4e5de94589",
+      "label": "VIVARIUM",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "97dc3b79-7589-45b7-bf24-76b6b969722c",
+      "label": "BASELINE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "29a893e8-8dcc-4abc-9e1c-b0d37b6b16bd",
+      "label": "RH",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "8abf9459-7f5c-46c7-950d-a1eac11b62e2",
+      "label": "BONE LOSS",
+      "community": -1,
+      "level": 0,
+      "degree": 4.0
+    },
+    {
+      "id": "430f72fe-0d61-43ec-850f-3a9332bb93d9",
+      "label": "FEMUR",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "c1bd469b-7c39-404e-966b-94695b8f34de",
+      "label": "L2 VERTEBRAE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "70fad8ff-adb7-4e11-a37b-e37b8980c85b",
+      "label": "SKELETAL MATURATION",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "c73713a2-39e1-4ad9-857d-057d3fd5707b",
+      "label": "BONE DEGENERATION",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "00a11e45-793c-447f-97a9-55eee4c93821",
+      "label": "MECHANICAL UNLOADING",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "7a87d5e0-e283-4cfc-9132-75fd9cea7e48",
+      "label": "OSTEOBLAST-OSTEOCLAST BALANCE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "c0ed3eb5-4c89-4b68-a125-d5b2df2e0b46",
+      "label": "ENVIRONMENTAL ENRICHMENT",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "38e9f90a-0b3e-496b-bafb-81e76f4ae8ec",
+      "label": "GROWTH PLATES",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "c475f470-6791-42ba-a80c-2c16fa8dd46d",
+      "label": "MICROGRAVITY",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "label": "COMPACT IMAGING PLATFORM",
+      "community": -1,
+      "level": 0,
+      "degree": 7.0
+    },
+    {
+      "id": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "label": "C. ELEGANS",
+      "community": -1,
+      "level": 0,
+      "degree": 12.0
+    },
+    {
+      "id": "1a764f66-8fd0-460c-9059-3abe5aa89b47",
+      "label": "INTERNATIONAL SPACE STATION",
+      "community": -1,
+      "level": 0,
+      "degree": 4.0
+    },
+    {
+      "id": "4edd75a1-3982-46f8-a570-7bf9d8f037b3",
+      "label": "LIFE",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "9625ebf7-8246-4c78-8d73-f5bead146603",
+      "label": "TASLIM ANUPOM",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "de04f5f1-fd86-4d0c-a08c-cd4a92ac72df",
+      "label": "SIVA A. VANAPALLI",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "c6fa277c-84e0-4bcb-9316-ae733f8d0de6",
+      "label": "MUTANT STRAINS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "6b1ca4e8-202b-428f-8513-efe8f92d6927",
+      "label": "AGAR PLATES",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "9e021b6e-b1e9-4967-9b6e-f96c5f63da11",
+      "label": "LIQUID DROPLETS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "db88c65a-f778-410f-be03-deeb73b59bab",
+      "label": "MICROFLUIDIC CHIPS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "6b237294-965b-4471-a3b8-cd687064056a",
+      "label": "POLYAMIDE 12 NYLON",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "6e05d749-8acb-412b-9891-50a1b2ffd2f1",
+      "label": "IMAGEJ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "20b81c94-9f8d-43e7-a8cd-5b812841280b",
+      "label": "BIO-SERVE SABL INCUBATORS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "dec41002-738f-4ef7-bfa3-98d3348eac11",
+      "label": "TEMPERATURE CONTROL",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "bc457e1b-b7d0-4ef1-be7c-83f9bba81dd7",
+      "label": "USB",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "d50d6afb-fe22-4942-bbb3-bc74d0f72faa",
+      "label": "CIP",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "e5a0aa77-723d-471e-8eb9-fb290cb156c3",
+      "label": "NASA",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "03d073a7-3424-48aa-bac7-a45a86a3f42e",
+      "label": "TEXAS TECH UNIVERSITY",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "bd8762da-d4c9-4260-bde0-66b28d5c1b6b",
+      "label": "NEMALIFE INC.",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "34295249-3ff3-4967-8a94-4abc671c171c",
+      "label": "E. COLI OP50",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "fe7c8444-633b-4300-bbd8-309d6fd66a95",
+      "label": "N2",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "88065faa-83ee-4eb1-b9e8-3052289d0ec1",
+      "label": "UNC-32",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "491c9632-b3b8-4357-9ce3-fa855dd25351",
+      "label": "UNC-79",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "label": "DROSOPHILA MELANOGASTER",
+      "community": 1,
+      "level": 0,
+      "degree": 11.0
+    },
+    {
+      "id": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "label": "EICOSANOIDS",
+      "community": 0,
+      "level": 0,
+      "degree": 12.0
+    },
+    {
+      "id": "fc55f16f-8ea6-425b-8c71-deac3629eaa7",
+      "label": "COX",
+      "community": 1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "261047b7-998c-4813-b3e2-19719b5d4153",
+      "label": "LOX",
+      "community": 0,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "ba6d6037-edd8-4491-b687-26ec33d81b7b",
+      "label": "CYP",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "cdbf6402-3677-4186-a766-08922a081852",
+      "label": "PHOSPHOLIPASE A2",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "0cfeabfa-bec5-403d-aef0-3c00d15f6b68",
+      "label": "PUFA",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "6c7e39c2-b4d5-4695-ac8d-2c8aaddb4c96",
+      "label": "HETE",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2dc48e92-5db4-4030-9303-0a9fc939d7f1",
+      "label": "PROSTAGLANDINS",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "37f591db-04ed-4350-a006-467243b7c0e2",
+      "label": "LEUKOTRIENES",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "0b743c45-eba8-4ade-9fb5-6df5152e34c7",
+      "label": "THROMBOXANES",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "8a95e2b6-3e2f-4bf0-834f-09855333df8f",
+      "label": "PHYLOGENETIC ANALYSIS",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "b294b8c2-17b3-48ee-a21b-32572cf3b481",
+      "label": "PROTEIN STRUCTURE MODELING",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "e95c4a9d-bfe2-4ba1-af2c-3d2a08cb0998",
+      "label": "ARACHIDONIC ACID",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "5f9845ee-5243-4480-852c-6cb5765e0ad2",
+      "label": "HOMALOGY SEARCH",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "912e1bba-1490-4618-a536-0b42f8d596b9",
+      "label": "PUFAS",
+      "community": 0,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "d22ae83a-a474-48aa-b310-0bc5c0d0533b",
+      "label": "CRISPR",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "f5c547ce-6314-4fde-a453-698026772f00",
+      "label": "PROSTAGLANDIN E SYNTHASE",
+      "community": 2,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "67eec760-e14a-45e2-ba8e-c1f3c6842b87",
+      "label": "LEUKOTRIENE A4 HYDROLASE",
+      "community": 2,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2122850e-07b1-47fd-9f82-6f53642e96aa",
+      "label": "LIPIDOMICS",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "8e3fc1c0-8f75-4819-815e-568c7a68cb3f",
+      "label": "ENZYME ASSAYS",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "399cec95-1cc2-4e40-ab81-0545302bfc7e",
+      "label": "EVOLUTIONARY CONTINUITY",
+      "community": 1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "b7aae8eb-662d-428f-8b93-4eed2a95311d",
+      "label": "GENES",
+      "community": 2,
+      "level": 0,
+      "degree": 3.0
+    },
+    {
+      "id": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "label": "UNAMPLIFIED RNASEQ",
+      "community": -1,
+      "level": 0,
+      "degree": 6.0
+    },
+    {
+      "id": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "label": "MASSIVELY MULTIPLEXED PCR AMPLIFICATION",
+      "community": -1,
+      "level": 0,
+      "degree": 7.0
+    },
+    {
+      "id": "4f6160d1-59b2-4939-a89a-4bfd1859c872",
+      "label": "C57BL/6J",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "bd2ca1b7-c9dd-489c-ad0a-69e1c68c8e4f",
+      "label": "ILLUMINA MISEQ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "99cf7002-a5b1-4d34-a735-e0b836fcceef",
+      "label": "KANSAS STATE UNIVERSITY",
+      "community": -1,
+      "level": 0,
+      "degree": 5.0
+    },
+    {
+      "id": "cc438759-d7ea-488b-a833-837c66181992",
+      "label": "TRISHA RETTIG",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "0aba614a-99c9-4005-8efe-4979ce692661",
+      "label": "MICHAEL J. PECAUT",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "51dedadb-032d-4fe7-8715-a3bf61b2829e",
+      "label": "STEPHEN K. CHAPES",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "737c6dad-f5f9-4ee5-b43a-55dbfa1c43bf",
+      "label": "V(D)J GENE USAGE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "f9779276-ad2a-4e2e-a58f-a62cf8b699e8",
+      "label": "CDR3 DIVERSITY",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "df475907-5d27-4e1d-b8af-dce425888a18",
+      "label": "AMV REVERSE TRANSCRIPTASE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "55750552-9700-4af5-9fb5-724d35fcb6da",
+      "label": "MMLV REVERSE TRANSCRIPTASE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "ecd00259-6b76-4205-8e2c-38b35272ac5b",
+      "label": "COM1",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "53aab18d-5085-4380-82ef-81b1ce3b0a8e",
+      "label": "COM2",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "label": "14-3-3 PROTEINS",
+      "community": -1,
+      "level": 0,
+      "degree": 16.0
+    },
+    {
+      "id": "1bf0bb77-f479-4f7d-9061-4cad74f3f426",
+      "label": "ARABIDOPSIS THALIANA",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "a4025eb9-cac3-40b8-b9d2-f96a19995bb1",
+      "label": "MAMMALS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "28a90b7e-ae78-4d3c-ae86-b3a817026048",
+      "label": "YEAST",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "7d67ce51-67b1-458f-8f3c-03adda38815f",
+      "label": "RICE",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "960cec2a-5e33-45db-b3af-b07ccda83b19",
+      "label": "SOYBEAN",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "5d7ec54e-e588-44eb-8e73-b0de5146a872",
+      "label": "COTTON",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2a62e305-ba89-43f3-bc65-7117e8c5788a",
+      "label": "PHOTOMORPHOGENESIS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2cf95ad0-0d3f-4241-bfd5-f967deac32a7",
+      "label": "GUARD CELL FUNCTION",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2efadcf2-15cc-441b-bdf2-1e21f76f44e1",
+      "label": "NITRATE REDUCTASE REGULATION",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "f839cdcb-7945-44f3-8d5d-dd9f8774db1b",
+      "label": "14-3-3Ε",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "9b15fd9f-b4a6-4307-b4f6-8cb281bc1342",
+      "label": "14-3-3Χ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "f20dd687-65a8-435b-a5d5-c4abd4050eb7",
+      "label": "14-3-3Λ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2c7a1a6e-2549-49e5-a8fc-57e27a29e758",
+      "label": "14-3-3Κ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "1e746ac4-bd60-4af7-ac3a-6ec57b1215af",
+      "label": "14-3-3Υ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "80b4f078-7660-4ca0-a625-45c0c5e549d5",
+      "label": "14-3-3Μ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "59a22722-f502-4aab-89ca-c651dffcdb50",
+      "label": "14-3-3Σ",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "06cce819-564d-4daf-a84b-943ec943ae18",
+      "label": "14-3-3 PROTEIN FAMILY",
+      "community": -1,
+      "level": 0,
+      "degree": 4.0
+    },
+    {
+      "id": "f37eb2c8-fd7e-4678-9dd6-335ca16c9ca8",
+      "label": "PLANTS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "efd8ceeb-af2a-4f9e-8fa9-95c301f5aec4",
+      "label": "SIGNALING NETWORKS",
+      "community": -1,
+      "level": 0,
+      "degree": 2.0
+    },
+    {
+      "id": "cdfe3c5f-a38f-45d5-8a13-6488c87eff77",
+      "label": "CELLULAR CONTEXT",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "2ba33936-1f5e-42ad-9169-7a50fa08d26c",
+      "label": "POST-TRANSLATIONAL MODIFICATIONS",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "95277e78-6da5-4503-809d-7c1c00b4dfbd",
+      "label": "DIMERIZATION",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "e06f8597-ed3a-44bd-9625-37fc0e0b77f4",
+      "label": "FUNCTIONAL OVERLAP",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "817664e2-a394-4583-a64f-fc33c0886cc5",
+      "label": "FUNCTIONAL SPECIFICATION",
+      "community": -1,
+      "level": 0,
+      "degree": 1.0
+    },
+    {
+      "id": "25df8e36-d85d-4073-a241-c916a12ae08d",
+      "label": "ISOFORMS",
+      "community": -1,
+      "level": 0,
+      "degree": 4.0
+    }
+  ],
+  "edges": [
+    {
+      "id": "3d20e69e-96ec-4a00-bb3a-024a2b6e195c",
+      "source": "231d4d47-bce5-42dc-9e2a-ffecfc91e9e3",
+      "target": "edf041ff-80fb-49f1-ba6d-f068b0f0e2c9",
+      "weight": 8.0,
+      "description": "C57BL/6J mice were the subjects of the NASA Rodent Research-1 mission to study the effects of microgravity on bone loss"
+    },
+    {
+      "id": "536126a5-8fac-4b3a-9d67-2e68cdcef6ad",
+      "source": "231d4d47-bce5-42dc-9e2a-ffecfc91e9e3",
+      "target": "01666805-e11f-4131-b969-f06211da8483",
+      "weight": 9.0,
+      "description": "The NASA Rodent Research-1 mission took place aboard the ISS, which provided the microgravity environment for the study"
+    },
+    {
+      "id": "0b9be525-0435-414c-a029-36d899478096",
+      "source": "231d4d47-bce5-42dc-9e2a-ffecfc91e9e3",
+      "target": "97dc3b79-7589-45b7-bf24-76b6b969722c",
+      "weight": 5.0,
+      "description": "The Baseline group of mice provided initial data for the NASA Rodent Research-1 mission by being euthanized at launch"
+    },
+    {
+      "id": "c23fbd53-1744-41fe-9cf7-aaab2d9293b9",
+      "source": "99d9161e-b194-4fa2-9e5b-ea65bba516b8",
+      "target": "29a893e8-8dcc-4abc-9e1c-b0d37b6b16bd",
+      "weight": 7.0,
+      "description": "The Ground Control group of mice was housed in the Rodent Habitat (RH) under 1g conditions for comparison with the flight group"
+    },
+    {
+      "id": "8d32d4da-2764-47f3-9642-965a053a2016",
+      "source": "5962781c-de42-44a1-b477-da4e5de94589",
+      "target": "29a893e8-8dcc-4abc-9e1c-b0d37b6b16bd",
+      "weight": 6.0,
+      "description": "The Vivarium group of mice was compared to the mice housed in the Rodent Habitat (RH) to evaluate the effects of different housing conditions"
+    },
+    {
+      "id": "3360fb4e-d4b8-4cc4-b293-483dae4d1483",
+      "source": "8abf9459-7f5c-46c7-950d-a1eac11b62e2",
+      "target": "430f72fe-0d61-43ec-850f-3a9332bb93d9",
+      "weight": 8.0,
+      "description": "Bone loss was specifically observed in the femur of the mice during the study, indicating vulnerability of weight-bearing bones in microgravity"
+    },
+    {
+      "id": "7e84b760-7e97-439d-b24e-ab72d5abfd1a",
+      "source": "8abf9459-7f5c-46c7-950d-a1eac11b62e2",
+      "target": "c1bd469b-7c39-404e-966b-94695b8f34de",
+      "weight": 7.0,
+      "description": "Bone loss was not observed in the L2 vertebrae, indicating its resistance to microgravity effects compared to weight-bearing bones"
+    },
+    {
+      "id": "e0dd70b3-c1a3-4913-a885-d23398f2693c",
+      "source": "8abf9459-7f5c-46c7-950d-a1eac11b62e2",
+      "target": "00a11e45-793c-447f-97a9-55eee4c93821",
+      "weight": 9.0,
+      "description": "Mechanical unloading is identified as the primary cause of bone loss during spaceflight"
+    },
+    {
+      "id": "2afa0112-2bc2-413a-827a-f108f37d034c",
+      "source": "8abf9459-7f5c-46c7-950d-a1eac11b62e2",
+      "target": "c0ed3eb5-4c89-4b68-a125-d5b2df2e0b46",
+      "weight": 7.0,
+      "description": "Environmental enrichment in the Ground Control group helped mitigate bone loss compared to flight mice"
+    },
+    {
+      "id": "86f3b7b7-8288-40be-878a-6ff9f85da533",
+      "source": "430f72fe-0d61-43ec-850f-3a9332bb93d9",
+      "target": "70fad8ff-adb7-4e11-a37b-e37b8980c85b",
+      "weight": 1.0,
+      "description": "Skeletal maturation was accelerated in the femoral head of the mice due to microgravity exposure, suggesting changes in bone development"
+    },
+    {
+      "id": "e73f6d96-976e-45b1-83ee-1d3d03dcdc3e",
+      "source": "70fad8ff-adb7-4e11-a37b-e37b8980c85b",
+      "target": "38e9f90a-0b3e-496b-bafb-81e76f4ae8ec",
+      "weight": 1.0,
+      "description": "Accelerated skeletal maturation in microgravity may lead to premature closure of growth plates"
+    },
+    {
+      "id": "43ec5924-a9c8-452d-a8fe-1431873f96be",
+      "source": "c73713a2-39e1-4ad9-857d-057d3fd5707b",
+      "target": "c475f470-6791-42ba-a80c-2c16fa8dd46d",
+      "weight": 9.0,
+      "description": "Microgravity exposure during spaceflight leads to bone degeneration, as observed in the study"
+    },
+    {
+      "id": "b0c438ca-a0b1-4a64-8e7c-10a4aaf44dad",
+      "source": "c73713a2-39e1-4ad9-857d-057d3fd5707b",
+      "target": "7a87d5e0-e283-4cfc-9132-75fd9cea7e48",
+      "weight": 8.0,
+      "description": "The imbalance between osteoblasts and osteoclasts during microgravity contributes to bone degeneration"
+    },
+    {
+      "id": "fad898e4-72d4-4109-9ac9-d68d10683de0",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "weight": 8.0,
+      "description": "The Compact Imaging Platform is designed specifically for phenotyping C. elegans in various environments, including space"
+    },
+    {
+      "id": "df39f68c-8d6f-4056-880e-4829587868dd",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "1a764f66-8fd0-460c-9059-3abe5aa89b47",
+      "weight": 8.0,
+      "description": "The Compact Imaging Platform is suitable for use on the International Space Station due to its compact design and low power requirements"
+    },
+    {
+      "id": "0c5512a0-2402-49ab-b1be-cbea6f47d587",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "bc457e1b-b7d0-4ef1-be7c-83f9bba81dd7",
+      "weight": 7.0,
+      "description": "The Compact Imaging Platform is powered by USB, allowing for efficient operation with minimal power consumption"
+    },
+    {
+      "id": "060c0a23-b57c-4075-bfc1-a4b157ba925f",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "6b237294-965b-4471-a3b8-cd687064056a",
+      "weight": 7.0,
+      "description": "The Compact Imaging Platform is constructed from Polyamide 12 nylon, which is essential for its lightweight and durable design"
+    },
+    {
+      "id": "e89a18e7-67e3-44c1-82a8-85c55953db21",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "6e05d749-8acb-412b-9891-50a1b2ffd2f1",
+      "weight": 6.0,
+      "description": "The Compact Imaging Platform uses ImageJ software for processing videos to analyze the behavior of C. elegans"
+    },
+    {
+      "id": "d0acbe02-153c-4f97-8195-6743fd52454e",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "20b81c94-9f8d-43e7-a8cd-5b812841280b",
+      "weight": 8.0,
+      "description": "The Compact Imaging Platform is designed to fit inside BioServe SABL incubators for conducting experiments in a controlled environment"
+    },
+    {
+      "id": "6641522f-9323-468c-9968-0b50c26c3b3f",
+      "source": "54bc48f3-49f8-4f3c-a3e4-c0c3ced5e466",
+      "target": "dec41002-738f-4ef7-bfa3-98d3348eac11",
+      "weight": 1.0,
+      "description": "The Compact Imaging Platform integrates temperature control features to maintain stable conditions for C. elegans during experiments"
+    },
+    {
+      "id": "1971ffb6-6b2a-4ff0-8bf2-8de494fdaf24",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "1a764f66-8fd0-460c-9059-3abe5aa89b47",
+      "weight": 14.0,
+      "description": "C. elegans, a nematode worm, has been utilized in several missions aboard the International Space Station (ISS) for biological research. Researchers study C. elegans in the unique environment of microgravity to gain insights into its behavior and physiological responses under these conditions. This research contributes to a better understanding of biological processes in space, which is essential for future long-duration space missions."
+    },
+    {
+      "id": "5ce7e603-e07c-41e5-be46-ccff538a0fb3",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "c6fa277c-84e0-4bcb-9316-ae733f8d0de6",
+      "weight": 5.0,
+      "description": "The study involved analyzing mutant strains of C. elegans to assess phenotyping precision"
+    },
+    {
+      "id": "b95f7ff6-ba3d-4a55-8e15-1ec6245b473c",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "6b1ca4e8-202b-428f-8513-efe8f92d6927",
+      "weight": 6.0,
+      "description": "C. elegans was tested on agar plates for crawling assays"
+    },
+    {
+      "id": "66d848af-387c-42eb-957c-a1938c408166",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "9e021b6e-b1e9-4967-9b6e-f96c5f63da11",
+      "weight": 6.0,
+      "description": "C. elegans was tested in liquid droplets for swimming assays"
+    },
+    {
+      "id": "bffe8bc1-43e9-4766-b6ec-fd948896a8ff",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "db88c65a-f778-410f-be03-deeb73b59bab",
+      "weight": 1.0,
+      "description": "C. elegans was tested in microfluidic chips for confined crawling assays"
+    },
+    {
+      "id": "c19437aa-ba48-4c6f-b793-32a68e5e7d38",
+      "source": "4edd75a1-3982-46f8-a570-7bf9d8f037b3",
+      "target": "9625ebf7-8246-4c78-8d73-f5bead146603",
+      "weight": 6.0,
+      "description": "Taslim Anupom is an author of the study published in the journal Life"
+    },
+    {
+      "id": "c09303c4-88fe-4770-9eb6-1b3e9db1765e",
+      "source": "4edd75a1-3982-46f8-a570-7bf9d8f037b3",
+      "target": "de04f5f1-fd86-4d0c-a08c-cd4a92ac72df",
+      "weight": 6.0,
+      "description": "Siva A. Vanapalli is an author of the study published in the journal Life"
+    },
+    {
+      "id": "c142788f-b2b6-4bbf-93c6-89aa6517271e",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "d50d6afb-fe22-4942-bbb3-bc74d0f72faa",
+      "weight": 8.0,
+      "description": "CIP is designed specifically for imaging C. elegans in microgravity environments"
+    },
+    {
+      "id": "501332da-1d30-4b4c-8575-fb117a452c8b",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "bd8762da-d4c9-4260-bde0-66b28d5c1b6b",
+      "weight": 7.0,
+      "description": "NemaLife Inc. develops tools specifically for studying C. elegans"
+    },
+    {
+      "id": "fd160212-aadd-4daa-a0b8-df143f7d3fb1",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "34295249-3ff3-4967-8a94-4abc671c171c",
+      "weight": 8.0,
+      "description": "E. coli OP50 is used as a food source for C. elegans in laboratory experiments"
+    },
+    {
+      "id": "a34993b7-be21-4c54-9632-0f2bd946a956",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "fe7c8444-633b-4300-bbd8-309d6fd66a95",
+      "weight": 8.0,
+      "description": "N2 is a strain of C. elegans used in various biological assays"
+    },
+    {
+      "id": "9aeb1641-ca54-4eda-b44f-523bf9ecca83",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "88065faa-83ee-4eb1-b9e8-3052289d0ec1",
+      "weight": 8.0,
+      "description": "unc-32(e189) is a mutant strain of C. elegans used for genetic studies"
+    },
+    {
+      "id": "0f9537dc-d89f-477d-85ac-ebeb42e16f14",
+      "source": "94754d80-9bc2-4d7e-a4cf-9853fe78112a",
+      "target": "491c9632-b3b8-4357-9ce3-fa855dd25351",
+      "weight": 1.0,
+      "description": "unc-79(e1068) is a mutant strain of C. elegans utilized in research"
+    },
+    {
+      "id": "f916bb31-eb10-49bf-a93e-2e813011025a",
+      "source": "d50d6afb-fe22-4942-bbb3-bc74d0f72faa",
+      "target": "1a764f66-8fd0-460c-9059-3abe5aa89b47",
+      "weight": 6.0,
+      "description": "CIP is intended for use on the International Space Station for studying organisms"
+    },
+    {
+      "id": "2bdc7030-eee1-4d72-a7b2-51ae5af6ca48",
+      "source": "e5a0aa77-723d-471e-8eb9-fb290cb156c3",
+      "target": "1a764f66-8fd0-460c-9059-3abe5aa89b47",
+      "weight": 9.0,
+      "description": "NASA operates the International Space Station and conducts research there"
+    },
+    {
+      "id": "fb1c0b87-aedd-4bb2-b1a8-475549c9efbb",
+      "source": "03d073a7-3424-48aa-bac7-a45a86a3f42e",
+      "target": "bd8762da-d4c9-4260-bde0-66b28d5c1b6b",
+      "weight": 5.0,
+      "description": "Both institutions are involved in research and development related to C. elegans assays"
+    },
+    {
+      "id": "f2d1f040-b278-4cbe-b66d-c407a132c67f",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "weight": 16.0,
+      "description": "Drosophila melanogaster, commonly known as the fruit fly, is being studied to understand the existence and function of eicosanoid pathways that are similar to those found in mammals. Research indicates that Drosophila melanogaster is capable of producing eicosanoids through its enzymatic pathways, highlighting its significant role in lipid signaling. This suggests that the mechanisms of eicosanoid production and function in Drosophila may provide valuable insights into the broader biological processes involving eicosanoids in other organisms, including humans."
+    },
+    {
+      "id": "9d14a037-c3df-4f15-b7c5-2a1d1175d45a",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "5f9845ee-5243-4480-852c-6cb5765e0ad2",
+      "weight": 6.0,
+      "description": "The study utilized homology search techniques to identify potential eicosanoid-related enzymes in Drosophila melanogaster"
+    },
+    {
+      "id": "c0e4c657-1c20-4875-91c2-84782a4629b3",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "8a95e2b6-3e2f-4bf0-834f-09855333df8f",
+      "weight": 6.0,
+      "description": "Phylogenetic analysis was performed to compare Drosophila proteins with those of mammals to understand evolutionary relationships"
+    },
+    {
+      "id": "9d3eead1-f07d-4049-9d68-eccdf8908963",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "b294b8c2-17b3-48ee-a21b-32572cf3b481",
+      "weight": 1.0,
+      "description": "Protein structure modeling was used to predict the structure of Drosophila enzymes involved in eicosanoid synthesis"
+    },
+    {
+      "id": "1a3f1966-1b46-4b15-8d9a-d014f1141277",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "fc55f16f-8ea6-425b-8c71-deac3629eaa7",
+      "weight": 7.0,
+      "description": "Eicosanoids are produced through the action of cyclooxygenases (COX) on arachidonic acid"
+    },
+    {
+      "id": "7b7792a0-10c1-4e94-92f8-6876f53af8fb",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "261047b7-998c-4813-b3e2-19719b5d4153",
+      "weight": 7.0,
+      "description": "Eicosanoids are also produced through the action of lipoxygenases (LOX) on arachidonic acid"
+    },
+    {
+      "id": "d4202906-1c80-471f-8695-2b5009764167",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "ba6d6037-edd8-4491-b687-26ec33d81b7b",
+      "weight": 7.0,
+      "description": "Eicosanoids can be formed through the action of cytochrome P450 enzymes (CYP) on polyunsaturated fatty acids"
+    },
+    {
+      "id": "7b3cf810-49ed-40a0-b1f9-4277d274fb09",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "cdbf6402-3677-4186-a766-08922a081852",
+      "weight": 9.0,
+      "description": "Phospholipase A2 initiates the eicosanoid biosynthesis pathway by releasing arachidonic acid from membrane phospholipids"
+    },
+    {
+      "id": "f11f6e75-7160-40aa-b946-5bc5b5383a8e",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "0cfeabfa-bec5-403d-aef0-3c00d15f6b68",
+      "weight": 8.0,
+      "description": "Polyunsaturated fatty acids (PUFAs) are the precursors for the synthesis of eicosanoids"
+    },
+    {
+      "id": "bd967d41-97d7-4cab-9381-266d95efccab",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "6c7e39c2-b4d5-4695-ac8d-2c8aaddb4c96",
+      "weight": 1.0,
+      "description": "Eicosanoids include hydroxyeicosatetraenoic acids (HETEs) as one of their metabolic products"
+    },
+    {
+      "id": "fdb28e6f-f8dc-420c-b703-69876326c389",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "e95c4a9d-bfe2-4ba1-af2c-3d2a08cb0998",
+      "weight": 9.0,
+      "description": "Arachidonic acid is the primary substrate for the synthesis of eicosanoids"
+    },
+    {
+      "id": "0b0e009e-2838-4dc1-b7c4-485c1d9a1737",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "2dc48e92-5db4-4030-9303-0a9fc939d7f1",
+      "weight": 8.0,
+      "description": "Prostaglandins are a specific type of eicosanoid produced from arachidonic acid"
+    },
+    {
+      "id": "aa5a0d5b-7dca-4148-8a78-d13e3ac34657",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "37f591db-04ed-4350-a006-467243b7c0e2",
+      "weight": 8.0,
+      "description": "Leukotrienes are another class of eicosanoids derived from arachidonic acid through lipoxygenase activity"
+    },
+    {
+      "id": "08032970-d17d-491c-b063-1a619e8465ff",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "0b743c45-eba8-4ade-9fb5-6df5152e34c7",
+      "weight": 7.0,
+      "description": "Thromboxanes are eicosanoids that play a role in blood clotting and are derived from arachidonic acid"
+    },
+    {
+      "id": "2259770b-2106-48aa-af10-5b3f0f3a54a2",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "fc55f16f-8ea6-425b-8c71-deac3629eaa7",
+      "weight": 7.0,
+      "description": "Drosophila melanogaster possesses enzymes with COX-like features, suggesting evolutionary conservation of this pathway."
+    },
+    {
+      "id": "bdcfa8e9-898a-4f2d-a591-56b82fa022b1",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "261047b7-998c-4813-b3e2-19719b5d4153",
+      "weight": 7.0,
+      "description": "Drosophila melanogaster has multiple LOX-like candidates, indicating a similar enzymatic function to vertebrate systems."
+    },
+    {
+      "id": "e0564879-5b97-4d4f-bf1c-7d1cadfbc942",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "d22ae83a-a474-48aa-b310-0bc5c0d0533b",
+      "weight": 1.0,
+      "description": "CRISPR technology can be used to study the functions of candidate genes in Drosophila melanogaster, aiding in the understanding of eicosanoid biosynthesis."
+    },
+    {
+      "id": "0e6b0e74-2acd-4991-bead-ff74b11f2d89",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "b7aae8eb-662d-428f-8b93-4eed2a95311d",
+      "weight": 8.0,
+      "description": "Drosophila melanogaster has genes that encode enzymes necessary for the production of eicosanoids, indicating a genetic basis for this biochemical pathway."
+    },
+    {
+      "id": "fc31b8de-a509-489a-aa7e-14f75dd8ad78",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "2122850e-07b1-47fd-9f82-6f53642e96aa",
+      "weight": 6.0,
+      "description": "Lipidomics will be used to study Drosophila melanogaster's lipid signaling mechanisms, particularly in relation to eicosanoid production."
+    },
+    {
+      "id": "636d0cd7-0013-4e86-b87a-4cee84feaeb7",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "8e3fc1c0-8f75-4819-815e-568c7a68cb3f",
+      "weight": 6.0,
+      "description": "Enzyme assays will be conducted on Drosophila melanogaster to validate the enzymatic activities of the identified eicosanoid-related enzymes."
+    },
+    {
+      "id": "fc10b48b-56cb-40fc-a751-1616b4aac460",
+      "source": "06d46efb-d3a7-4880-975e-6a5d452f3ecd",
+      "target": "399cec95-1cc2-4e40-ab81-0545302bfc7e",
+      "weight": 1.0,
+      "description": "The study of Drosophila melanogaster provides insights into the evolutionary continuity of eicosanoid biology across different species."
+    },
+    {
+      "id": "a208c0c5-21aa-43ab-b6f5-9320bf2e1349",
+      "source": "f6d94eb0-d97c-4aa3-9842-724dfb4e20c3",
+      "target": "912e1bba-1490-4618-a536-0b42f8d596b9",
+      "weight": 9.0,
+      "description": "Eicosanoids are derived from polyunsaturated fatty acids (PUFAs), linking their production to the availability of these fatty acids."
+    },
+    {
+      "id": "c5736f42-bfc2-4629-852f-f2b465dce715",
+      "source": "f5c547ce-6314-4fde-a453-698026772f00",
+      "target": "b7aae8eb-662d-428f-8b93-4eed2a95311d",
+      "weight": 7.0,
+      "description": "Genes identified in Drosophila include those encoding prostaglandin E synthase, linking genetic information to enzyme function in eicosanoid production."
+    },
+    {
+      "id": "c441f746-0fd2-44e7-b5a0-e292bbbef700",
+      "source": "67eec760-e14a-45e2-ba8e-c1f3c6842b87",
+      "target": "b7aae8eb-662d-428f-8b93-4eed2a95311d",
+      "weight": 7.0,
+      "description": "Genes identified in Drosophila include those encoding leukotriene A4 hydrolase, indicating its role in the eicosanoid biosynthetic pathway."
+    },
+    {
+      "id": "ab03acca-ff06-4aeb-bb25-28944abb99c7",
+      "source": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "target": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "weight": 8.0,
+      "description": "The study compares unamplified RNASeq and massively multiplexed PCR amplification to evaluate their effectiveness in capturing antibody repertoires"
+    },
+    {
+      "id": "7920e9d6-8dc6-4edf-bde6-efbffdcb44fa",
+      "source": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "target": "4f6160d1-59b2-4939-a89a-4bfd1859c872",
+      "weight": 7.0,
+      "description": "C57BL/6J mice were used as samples for the unamplified RNASeq method in the study"
+    },
+    {
+      "id": "c12b5cf1-9f3a-4f36-ac2b-b0668f2fbee1",
+      "source": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "target": "bd2ca1b7-c9dd-489c-ad0a-69e1c68c8e4f",
+      "weight": 9.0,
+      "description": "Illumina MiSeq was the platform used for conducting the unamplified RNASeq in the study"
+    },
+    {
+      "id": "618981e9-7796-47d5-92b6-13945cdf63b7",
+      "source": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "target": "99cf7002-a5b1-4d34-a735-e0b836fcceef",
+      "weight": 8.0,
+      "description": "Kansas State University provided the analysis pipeline for the unamplified RNASeq data"
+    },
+    {
+      "id": "0854fde8-603d-45dd-b0a0-d12b462a69a8",
+      "source": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "target": "737c6dad-f5f9-4ee5-b43a-55dbfa1c43bf",
+      "weight": 8.0,
+      "description": "Unamplified RNASeq was used to analyze V(D)J gene usage, identifying a broader range of V-gene segments"
+    },
+    {
+      "id": "fa16cb42-8771-408f-92d2-ee8fa75b9d13",
+      "source": "52f3df8b-190c-4b2b-ba7c-f959718d6a26",
+      "target": "f9779276-ad2a-4e2e-a58f-a62cf8b699e8",
+      "weight": 8.0,
+      "description": "Unamplified RNASeq captured high-frequency CDR3 clones, indicating its effectiveness in analyzing CDR3 diversity"
+    },
+    {
+      "id": "ecba7cb4-67c3-492f-8a25-f0c453cce595",
+      "source": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "target": "4f6160d1-59b2-4939-a89a-4bfd1859c872",
+      "weight": 7.0,
+      "description": "C57BL/6J mice were also used as samples for the massively multiplexed PCR amplification method in the study"
+    },
+    {
+      "id": "21a4737e-35ed-40b8-9925-938832d249c4",
+      "source": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "target": "99cf7002-a5b1-4d34-a735-e0b836fcceef",
+      "weight": 8.0,
+      "description": "Kansas State University also analyzed the data from the massively multiplexed PCR amplification"
+    },
+    {
+      "id": "986b8c71-0d10-4f15-91ca-86144f529bb6",
+      "source": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "target": "df475907-5d27-4e1d-b8af-dce425888a18",
+      "weight": 7.0,
+      "description": "AMV reverse transcriptase was used in the amplification process for the massively multiplexed PCR method"
+    },
+    {
+      "id": "eb0ee126-e2a4-41a0-a550-3958c0dbf603",
+      "source": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "target": "55750552-9700-4af5-9fb5-724d35fcb6da",
+      "weight": 7.0,
+      "description": "MMLV reverse transcriptase was also used in the amplification process for the massively multiplexed PCR method"
+    },
+    {
+      "id": "bd31d4a6-0675-454c-9ebf-20bbfcc5d335",
+      "source": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "target": "ecd00259-6b76-4205-8e2c-38b35272ac5b",
+      "weight": 6.0,
+      "description": "Com1 provided commercial services for cDNA amplification in the massively multiplexed PCR method"
+    },
+    {
+      "id": "8fc39cfe-d6d0-48aa-bcb5-165465ab3b11",
+      "source": "dacaa743-7bb7-481e-a8d0-c4285c680021",
+      "target": "53aab18d-5085-4380-82ef-81b1ce3b0a8e",
+      "weight": 1.0,
+      "description": "Com2 provided commercial services for cDNA amplification in the massively multiplexed PCR method"
+    },
+    {
+      "id": "6c12c60c-c8c0-43d5-889a-43a933844206",
+      "source": "99cf7002-a5b1-4d34-a735-e0b836fcceef",
+      "target": "cc438759-d7ea-488b-a833-837c66181992",
+      "weight": 6.0,
+      "description": "Trisha Rettig is affiliated with Kansas State University as one of the authors of the study"
+    },
+    {
+      "id": "2861a891-d85c-42be-91eb-52f1b3aafaed",
+      "source": "99cf7002-a5b1-4d34-a735-e0b836fcceef",
+      "target": "0aba614a-99c9-4005-8efe-4979ce692661",
+      "weight": 6.0,
+      "description": "Michael J. Pecaut is affiliated with Kansas State University as one of the authors of the study"
+    },
+    {
+      "id": "57d23e30-f612-4797-a9e5-e1416eec1dcd",
+      "source": "99cf7002-a5b1-4d34-a735-e0b836fcceef",
+      "target": "51dedadb-032d-4fe7-8715-a3bf61b2829e",
+      "weight": 1.0,
+      "description": "Stephen K. Chapes is affiliated with Kansas State University as one of the authors of the study"
+    },
+    {
+      "id": "eed6ef6e-5f50-410e-ac5f-b3450497c021",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "1bf0bb77-f479-4f7d-9061-4cad74f3f426",
+      "weight": 8.0,
+      "description": "14-3-3 proteins are studied extensively in Arabidopsis thaliana to understand their roles in plant biology and development"
+    },
+    {
+      "id": "23c7941f-ed30-487e-ba26-35c080172c86",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "a4025eb9-cac3-40b8-b9d2-f96a19995bb1",
+      "weight": 7.0,
+      "description": "14-3-3 proteins in mammals exhibit specific phosphorylation patterns that influence their function"
+    },
+    {
+      "id": "c3d10a2e-62f7-433a-98c4-8f38efd9981d",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "28a90b7e-ae78-4d3c-ae86-b3a817026048",
+      "weight": 6.0,
+      "description": "Studies in yeast demonstrate the functional redundancy of 14-3-3 proteins, showing that some deletions do not affect viability"
+    },
+    {
+      "id": "727565a1-88fc-4959-b5a4-a7271aae7022",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "7d67ce51-67b1-458f-8f3c-03adda38815f",
+      "weight": 6.0,
+      "description": "14-3-3 isoforms in rice show distinct expression profiles, indicating their roles in developmental and stress responses"
+    },
+    {
+      "id": "37b09273-812f-48c7-832c-43b4f1d78537",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "960cec2a-5e33-45db-b3af-b07ccda83b19",
+      "weight": 6.0,
+      "description": "Soybean exhibits unique expression patterns of 14-3-3 proteins, suggesting functional specialization"
+    },
+    {
+      "id": "f5a491f4-4f90-48e9-9701-69dd0a82d667",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "5d7ec54e-e588-44eb-8e73-b0de5146a872",
+      "weight": 6.0,
+      "description": "Cotton displays distinct expression profiles of 14-3-3 isoforms, indicating specialized roles in development"
+    },
+    {
+      "id": "ee2c645b-2e21-4bee-a6e2-838597bcaad1",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "2a62e305-ba89-43f3-bc65-7117e8c5788a",
+      "weight": 7.0,
+      "description": "Photomorphogenesis is influenced by specific 14-3-3 isoforms that affect flowering and growth"
+    },
+    {
+      "id": "cdc9e936-713b-4d98-bd42-534b93dec49e",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "2cf95ad0-0d3f-4241-bfd5-f967deac32a7",
+      "weight": 7.0,
+      "description": "Guard cell function is regulated by specific 14-3-3 isoforms that mediate stomatal opening"
+    },
+    {
+      "id": "6df21b2f-3131-46c1-a7be-160576ee62a8",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "2efadcf2-15cc-441b-bdf2-1e21f76f44e1",
+      "weight": 1.0,
+      "description": "Nitrate reductase regulation involves different 14-3-3 isoforms showing varying affinities, indicating their specific binding preferences"
+    },
+    {
+      "id": "cb068a41-9f28-4c2b-b508-72006ab48f60",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "59a22722-f502-4aab-89ca-c651dffcdb50",
+      "weight": 8.0,
+      "description": "14-3-3σ is a specific isoform of the 14-3-3 protein family that plays a role in DNA damage checkpoints"
+    },
+    {
+      "id": "eeae7e5c-2cd0-43ac-9253-ce6e0f85cbaf",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "f839cdcb-7945-44f3-8d5d-dd9f8774db1b",
+      "weight": 8.0,
+      "description": "14-3-3ε is a specific isoform of the 14-3-3 protein family that is involved in heterodimerization and is found at the plasma membrane"
+    },
+    {
+      "id": "ba7c8fd0-32d2-4356-a99b-115d5b01f599",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "9b15fd9f-b4a6-4307-b4f6-8cb281bc1342",
+      "weight": 8.0,
+      "description": "14-3-3χ is a specific isoform of the 14-3-3 protein family that localizes to the nucleus, indicating its role in nuclear functions"
+    },
+    {
+      "id": "20dd4ac0-d46d-4a76-8cc5-726a0b1eff5a",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "f20dd687-65a8-435b-a5d5-c4abd4050eb7",
+      "weight": 8.0,
+      "description": "14-3-3λ is a specific isoform of the 14-3-3 protein family that is required for guard cell function"
+    },
+    {
+      "id": "44e2b056-4f32-4bab-9d33-21ed98cdcb24",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "2c7a1a6e-2549-49e5-a8fc-57e27a29e758",
+      "weight": 8.0,
+      "description": "14-3-3κ is a specific isoform of the 14-3-3 protein family that is involved in nuclear signaling"
+    },
+    {
+      "id": "ae0ab9d9-6cd3-4119-86d9-203d0dd5cf38",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "1e746ac4-bd60-4af7-ac3a-6ec57b1215af",
+      "weight": 8.0,
+      "description": "14-3-3υ is a specific isoform of the 14-3-3 protein family that affects flowering and hypocotyl elongation under red light"
+    },
+    {
+      "id": "ca577b90-26cd-41c4-a8d0-0e47342211fd",
+      "source": "2e69b603-a9f7-4639-a5c4-682023fe22fd",
+      "target": "80b4f078-7660-4ca0-a625-45c0c5e549d5",
+      "weight": 1.0,
+      "description": "14-3-3μ is a specific isoform of the 14-3-3 protein family that is implicated in phytochrome B signaling"
+    },
+    {
+      "id": "8bdb03e6-d3c0-4a6c-aef3-938770b4473f",
+      "source": "06cce819-564d-4daf-a84b-943ec943ae18",
+      "target": "f37eb2c8-fd7e-4678-9dd6-335ca16c9ca8",
+      "weight": 1.0,
+      "description": "The 14-3-3 protein family regulates complex signaling networks in plants, affecting their development and stress responses."
+    },
+    {
+      "id": "f0559e34-4075-4653-b8a3-41f78d1bd19a",
+      "source": "06cce819-564d-4daf-a84b-943ec943ae18",
+      "target": "25df8e36-d85d-4073-a241-c916a12ae08d",
+      "weight": 7.0,
+      "description": "The 14-3-3 protein family consists of various isoforms that exhibit both overlapping and specialized functions in signaling networks."
+    },
+    {
+      "id": "cbb61aeb-438f-4190-aa9e-25a0f1f609ee",
+      "source": "06cce819-564d-4daf-a84b-943ec943ae18",
+      "target": "2ba33936-1f5e-42ad-9169-7a50fa08d26c",
+      "weight": 6.0,
+      "description": "Post-translational modifications can significantly alter the behavior of the 14-3-3 protein family, affecting their regulatory roles."
+    },
+    {
+      "id": "5002c4f7-5be3-4548-b798-9698aa8b0c96",
+      "source": "06cce819-564d-4daf-a84b-943ec943ae18",
+      "target": "95277e78-6da5-4503-809d-7c1c00b4dfbd",
+      "weight": 6.0,
+      "description": "Dimerization is a key process that can affect the function of the 14-3-3 protein family in signaling pathways."
+    },
+    {
+      "id": "8d45c98a-8e85-4df8-b6e1-0c78875aa679",
+      "source": "efd8ceeb-af2a-4f9e-8fa9-95c301f5aec4",
+      "target": "25df8e36-d85d-4073-a241-c916a12ae08d",
+      "weight": 6.0,
+      "description": "Isoforms play a critical role in the regulation of signaling networks, influencing how cells respond to different signals."
+    },
+    {
+      "id": "7b527524-977a-477a-94a7-501778865185",
+      "source": "efd8ceeb-af2a-4f9e-8fa9-95c301f5aec4",
+      "target": "cdfe3c5f-a38f-45d5-8a13-6488c87eff77",
+      "weight": 5.0,
+      "description": "The behavior of signaling networks is heavily influenced by the cellular context in which they operate."
+    },
+    {
+      "id": "30e46d83-514c-4745-9f4b-384db2d9c338",
+      "source": "e06f8597-ed3a-44bd-9625-37fc0e0b77f4",
+      "target": "25df8e36-d85d-4073-a241-c916a12ae08d",
+      "weight": 5.0,
+      "description": "Functional overlap among isoforms ensures robustness in cellular signaling mechanisms."
+    },
+    {
+      "id": "81858b34-ddf8-418a-b3fe-4d723248a153",
+      "source": "817664e2-a394-4583-a64f-fc33c0886cc5",
+      "target": "25df8e36-d85d-4073-a241-c916a12ae08d",
+      "weight": 1.0,
+      "description": "Functional specification of isoforms allows for distinct roles in cellular signaling and responses to stress."
+    }
+  ]
+}
