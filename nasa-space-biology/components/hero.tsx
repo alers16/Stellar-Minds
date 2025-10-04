@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link"
 import { useEffect, useRef } from "react"
 
 export function Hero() {
@@ -76,7 +77,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a1628] to-black" />
         <div
@@ -113,41 +114,34 @@ export function Hero() {
           </div>
 
           <h1 className="mb-6 font-mono text-5xl font-bold leading-tight text-balance md:text-7xl">
-            Space Biology
-            <br />
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Knowledge Graph
+              Stellar Mind AI
             </span>
           </h1>
 
           <p className="mb-8 text-lg text-muted-foreground text-balance md:text-xl">
-            Advanced AI chatbot connecting decades of NASA space biology research.
+            Advanced Space Biology Knowledge Graph connecting decades of NASA space biology research.
             <br />
             Explore interconnected knowledge through intelligent conversation.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="group font-mono text-base">
-              Access Research Chat
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button size="lg" variant="outline" className="font-mono text-base bg-transparent">
-              View Documentation
+            <Button asChild size="lg" className="group font-mono text-base">
+              <Link href="/chat">
+                Access Research Chat
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-8 border-t border-border/50 pt-8">
+          <div className="mt-12 grid grid-cols-2 gap-8 border-t border-border/50 pt-8">
             <div>
-              <div className="mb-2 font-mono text-3xl font-bold text-primary">10K+</div>
+              <div className="mb-2 font-mono text-3xl font-bold text-primary">600+</div>
               <div className="font-mono text-sm text-muted-foreground">Research Papers</div>
             </div>
             <div>
-              <div className="mb-2 font-mono text-3xl font-bold text-accent">50+</div>
+              <div className="mb-2 font-mono text-3xl font-bold text-accent">100+</div>
               <div className="font-mono text-sm text-muted-foreground">Years of Data</div>
-            </div>
-            <div>
-              <div className="mb-2 font-mono text-3xl font-bold text-primary">1M+</div>
-              <div className="font-mono text-sm text-muted-foreground">Connections</div>
             </div>
           </div>
         </div>

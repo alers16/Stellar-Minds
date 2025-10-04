@@ -1,0 +1,95 @@
+# ====================================
+# Node & Dependencies
+# ====================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-store/
+
+# ====================================
+# Next.js Build
+# ====================================
+.next/
+out/
+dist/
+.next-static/
+.next/cache/
+.next/server/
+.next/types/
+
+# ====================================
+# Logs
+# ====================================
+logs
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ====================================
+# Local Environment Variables
+# ====================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ====================================
+# Editor / OS Files
+# ====================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ====================================
+# Testing
+# ====================================
+coverage/
+jest-html-reporters-*
+.cypress/
+playwright-report/
+test-output/
+*.lcov
+
+# ====================================
+# Build Tools & Temporary Files
+# ====================================
+.cache/
+temp/
+tmp/
+*.tmp
+*.bak
+*.old
+*.pid
+
+# ====================================
+# TypeScript
+# ====================================
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# ====================================
+# Deployment (Vercel / Docker / Others)
+# ====================================
+.vercel/
+.vercel_build_output/
+docker-compose.override.yml
+Dockerfile.local
+
+# ====================================
+# Misc
+# ====================================
+public/static/temp/
+scripts/local/

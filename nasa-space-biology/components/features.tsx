@@ -10,7 +10,7 @@ const features = [
   {
     icon: Network,
     title: "Knowledge Graph Navigation",
-    description: "Explore interconnected research topics through an intelligent graph database.",
+    description: "Explore interconnected research topics through an intelligent graphrag pipeline.",
   },
   {
     icon: Database,
@@ -31,7 +31,7 @@ export function Features() {
         <div className="mb-12 text-center">
           <h2 className="mb-4 font-mono text-4xl font-bold text-foreground">Advanced Research Capabilities</h2>
           <p className="text-lg text-muted-foreground text-balance">
-            Cutting-edge AI technology designed for space biology researchers
+            Cutting-edge AI technology designed for space biology researchers, investors and mission architects.
           </p>
         </div>
 
