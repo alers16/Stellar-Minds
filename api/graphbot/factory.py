@@ -15,5 +15,8 @@ def make_chatbot(settings: AppSettings):
     chatbot = settings.chatbot.lower()
     if chatbot in "dummy":
         return DummyBot()
+    elif chatbot == "graphrag":
+        from .chats.chatbot.graphrag_bot import GraphRAGBot
+        return GraphRAGBot()
 
     raise RuntimeError(f"Unknown chatbot: {settings.chatbot}")
