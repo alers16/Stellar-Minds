@@ -6,10 +6,6 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse, StreamingResponse, JSONResponse
 
-from slowapi import _rate_limit_exceeded_handler
-from slowapi.errors import RateLimitExceeded
-from slowapi.middleware import SlowAPIMiddleware
-
 from graphrag.store.base_store import ObjectNotFoundError
 from graphrag.chats.router import router as graphrag_router
 from assay_finder.router import router as assay_router
@@ -17,7 +13,6 @@ from gap_finder.router import router as gap_router
 
 from graphrag.chats.service import ChatService
 from graphrag.settings import settings
-from graphrag.limiter import limiter, rate_limit_test
 from graphrag.factory import make_store, make_chatbot
 
 load_dotenv()
@@ -32,7 +27,6 @@ def key_func(request: Request) -> str:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.settings = settings
-    app.state.limiter = limiter
 
     store = make_store(settings)
     chatbot = make_chatbot(settings)
@@ -49,9 +43,6 @@ app = FastAPI(
     openapi_url="/api/openapi.json",
     lifespan=lifespan,  # ⬅️ moderno, reemplaza on_event('startup'|'shutdown')
 )
-
-app.add_middleware(SlowAPIMiddleware)
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(CORSMiddleware,
     allow_origins=[o.strip() for o in FRONTEND_URLS.split(",") if o.strip()] or ["*"],
