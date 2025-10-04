@@ -4,3 +4,4 @@ asyncio
 uvicorn
 dotenv
 pydantic-settings
+graphrag==1.0.1
