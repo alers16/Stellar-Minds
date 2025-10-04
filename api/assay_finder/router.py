@@ -1,17 +1,11 @@
-import os
 import httpx
 from typing import Optional, List, Tuple, Any, Dict
 from urllib.parse import quote
-from fastapi import APIRouter, HTTPException, Query
-from dotenv import load_dotenv
+from fastapi import APIRouter, HTTPException, Query, Request
 
-from .providers import OpenAIProvider
-from .prompts import GetFilterPrompt
-
-load_dotenv()
+from ai import GetFilterPrompt
 
 router = APIRouter()
-provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 
 ASSAYS_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/assays/"
 META_BASE = "https://visualization.osdr.nasa.gov/biodata/api/v2/query/metadata/"
@@ -20,13 +14,14 @@ DEFAULT_FORMAT = "json.records"
 
 @router.get("/assays/search")
 async def search_assays(
+    request: Request,
     q: Optional[str] = Query(None, description="User input in natural language"),
     group_by_technology: bool = Query(True, description="Group results by technology"),
     limit_per_tech: int = Query(3, ge=1, le=50, description="Max assays per technology group"),
     exclude_na: bool = Query(True, description="Hide 'Not Applicable' conditions in groups")
 ):
     # 1) NL -> filtros
-    params = _get_filter_from_natural_language(q)
+    params = _get_filter_from_natural_language(request, q)
 
     # 2) Fetch OSDR
     osdr_query_params = _build_params(**params)
@@ -63,9 +58,9 @@ async def search_assays(
 
 # ----------------- AI -----------------
 
-def _get_filter_from_natural_language(user_input) -> Dict[str, Optional[str]]:
+def _get_filter_from_natural_language(request: Request, user_input) -> Dict[str, Optional[str]]:
     prompt = GetFilterPrompt(user_input)
-    response_text, _ = provider.prompt(
+    response_text, _ = request.app.state.provider.prompt(
         model="gpt-3.5-turbo",
         prompt_system=prompt.get_prompt_system(),
         messages_json=[],
