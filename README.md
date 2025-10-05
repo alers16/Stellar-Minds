@@ -1,146 +1,147 @@
 # Stellar-Minds 🚀🧠
 
-> Ecosistema NASA Space Apps que combina un backend inteligente basado en GraphRAG con un frontend inmersivo (nasa-space-biology) para descubrir, conversar y accionar conocimiento en biología espacial.
+> A NASA Space Apps ecosystem that combines an intelligent backend based on GraphRAG with an immersive frontend (nasa-space-biology) to discover, converse with, and act on knowledge in space biology.
 
-## 📡 Qué es Stellar-Minds
-Stellar-Minds nació como respuesta a un reto recurrente en la comunidad científica: extraer significado de décadas de experimentos de biología espacial dispersos en el Open Science Data Repository (OSDR) de la NASA. Nuestro proyecto crea una **plataforma cognitiva** que actúa como copiloto científico: entiende preguntas en lenguaje natural, identifica vacíos de investigación, genera respuestas apoyadas en grafos de conocimiento y ofrece una interfaz visual que muestra cómo se interconectan los hallazgos.
+## 📡 What is Stellar-Minds
+Stellar-Minds was born as a response to a recurring challenge in the scientific community: extracting meaning from decades of dispersed space biology experiments in NASA’s Open Science Data Repository (OSDR). Our project creates a cognitive platform that acts as a scientific copilot — it understands natural language questions, identifies research gaps, generates graph-backed responses, and provides a visual interface showing how findings interconnect.
 
-El corazón técnico está en `api/`, un backend FastAPI que orquesta proveedores de IA, conectores NASA y un chatbot GraphRAG. La experiencia de usuario vive en `nasa-space-biology/`, un frontend Next.js 15 animado con gráficos interactivos y componentes Radix/Tailwind que permiten navegar resultados, iniciar chats y visualizar el grafo de relaciones.
+The technical core lies in api/, a FastAPI backend that orchestrates AI providers, NASA connectors, and a GraphRAG chatbot. The user experience lives in nasa-space-biology/, a Next.js 15 frontend animated with interactive graphics and Radix/Tailwind components that allow navigation through results, chat initiation, and visualization of the knowledge graph.
 
-## 🧭 Experiencia End-to-End
-1. **Exploración visual**. El sitio web nasa-space-biology despliega un hero animado con partículas y un canvas de grafo que introduce el universo de conceptos (microgravedad, radiación, tejidos, fases de vuelo).
-2. **Descubrimiento guiado**. El módulo "Advanced Research Capabilities" resume lo que el motor ofrece: insights con LLM, navegación basada en grafos, base de datos integral y análisis en tiempo real.
-3. **Interacción conversacional**. El visitante accede a `/chat`, donde el componente `ChatInterface` abre una sesión con el backend, mantiene historial en memoria, sugiere preguntas y refleja latencia en vivo.
-4. **Búsqueda especializada**. A través de `/assay-finder` y futuros paneles, el frontend llama a `GET /api/v1/assays/search` para traducir preguntas como "experimentos de microgravedad en ratones" en filtros OSDR válidos.
-5. **Detección de brechas**. El módulo gap finder expone combinaciones organismo/tejido/condición ausentes, ayudando a planificar nuevas misiones científicas.
+## 🧭 End-to-End Experience
+1. **Visual Exploration**. The nasa-space-biology site displays an animated hero with particles and a graph canvas introducing the universe of concepts (microgravity, radiation, tissues, flight phases).
+2. **Guided Discovery**. The “Advanced Research Capabilities” module summarizes what the engine offers: LLM-driven insights, graph-based navigation, an integrated database, and real-time analysis.
+3. **Conversational Interaction**. The visitor enters /chat, where the ChatInterface component opens a session with the backend, maintains in-memory history, suggests questions, and reflects live latency.
+4. **Specialized Search**. Through /assay-finder and future panels, the frontend calls GET /api/v1/assays/search to translate questions like “microgravity experiments on mice” into valid OSDR filters.
+5. **Gap detection**. The gap finder module exposes missing organism/tissue/condition combinations, helping plan new scientific missions.
 
-Cada interacción está respaldada por respuestas JSON consistentes que sirven por igual al frontend, notebooks científicos o integraciones de terceros.
+Each interaction is backed by consistent JSON responses that serve the frontend, scientific notebooks, or third-party integrations alike.
 
-## 🖥️ nasa-space-biology: Frontend inmersivo
-- **Framework principal**: Next.js 15 con React 19 y TypeScript (`nasa-space-biology/app`).
-- **Estilo y UI**: Tailwind CSS v4, variaciones de Shadcn UI (Radix + tailwind-merge + class-variance-authority) y animaciones personalizadas (`animate-pulse-glow`).
-- **Componentes destacados**:
-  - `Hero`: escena con partículas generativas en canvas, estadísticas de corpus y CTA hacia el chat y el grafo.
-  - `KnowledgeGraph`: simulación canvas que muestra nodos dinámicos (microgravedad, radiación, crecimiento vegetal) y cómo orbitan alrededor de "Space Biology".
-  - `ChatInterface`: experiencia tipo copiloto (estilo Dora AI) que crea chats on-demand, gestiona errores y mantiene conversaciones con scroll inteligente.
-  - `SpaceBackground`: capa visual para el área de chat con nebulosas animadas (ver `components/space-background.tsx`).
-- **Contexto de datos**: `APIContext.tsx` centraliza llamadas HTTP con Axios, soporta múltiples endpoints (`chat`, `assays`, `wikis`, etc.) y permite configurar el backend mediante `NEXT_PUBLIC_BACKEND_URL`.
-- **Graph Explorer**: ruta `/graph` preparada para integrarse con `react-force-graph`, `three.js` y renders 3D de comunidades GraphRAG.
-- **Acceso controlado**: sección CTA enfatiza acceso para personal autorizado, con botones para solicitar credenciales o contactar al equipo.
+## 🖥️ nasa-space-biology: Immersive Frontend
+- **Main framework**: Next.js 15 with React 19 and TypeScript (nasa-space-biology/app).
+- **Style and UI:**: Tailwind CSS v4, Shadcn UI variations (Radix + tailwind-merge + class-variance-authority), and custom animations (animate-pulse-glow).
+- **Key components**:
+  - `Hero: generative`: particle canvas scene, corpus statistics, and CTAs to chat and graph.
+  - `KnowledgeGraph`: canvas simulation showing dynamic nodes (microgravity, radiation, plant growth) orbiting around “Space Biology.”
+  - `ChatInterface`: copilot-style chat experience (Dora AI-like) that creates chats on demand, manages errors, and maintains conversations with intelligent scrolling.
+  - `SpaceBackground`: animated nebula layer for the chat area (components/space-background.tsx).
+- **Data context**: APIContext.tsx centralizes HTTP calls with Axios, supports multiple endpoints (chat, assays, wikis, etc.), and allows backend configuration via NEXT_PUBLIC_BACKEND_URL.
+- **Graph Explorer**: /graph route prepared for integration with react-force-graph, three.js, and 3D GraphRAG community renders.
+- **Controlled access**: CTA section highlights access for authorized personnel with buttons to request credentials or contact the team.
 
-> ✨ Resultado: un portal que no solo informa, sino que inspira a explorar, formando puente entre científicos, inversores y arquitectos de misión.
+> ✨ Result: a portal that not only informs but inspires exploration — bridging scientists, investors, and mission architects.
 
 ## ⚙️ Backend API (FastAPI + GraphRAG)
-- **`api/app.py`**: inicia la aplicación, configura CORS con el dominio Vercel (`vercel-app-frontend-tawny.vercel.app`) e inyecta en el `lifespan` el `ChatService` y el `OpenAIProvider`.
-- **Chat conversacional** (`api/graphbot/`):
-  - `GraphRAGBot` envía consultas a `run_local_search`, `run_global_search` o `run_drift_search` (GraphRAG CLI) y opera en hilos (`asyncio.to_thread`) para no bloquear el loop asíncrono.
-  - `ChatService` crea y gestiona historiales en `MemoryStore` (concurrencia protegida por `threading.RLock`).
-  - Excepciones como `ChatBusyError` responden con `409 Conflict`, asegurando UX consistente en el frontend.
+- **`api/app.py`**: launches the app, configures CORS with the Vercel domain (vercel-app-frontend-tawny.vercel.app), and injects ChatService and OpenAIProvider in the lifespan.
+- **Conversational Chat** (`api/graphbot/`):
+  - `GraphRAGBot sends queries to run_local_search, run_global_search, or run_drift_search (GraphRAG CLI) and operates in threads (asyncio.to_thread) to avoid blocking the async loop.
+  - `ChatService` creates and manages chat histories in MemoryStore (concurrency protected by threading.RLock).
+  - Exceptions like ChatBusyError return 409 Conflict, ensuring consistent frontend UX.
 - **Assay Finder** (`api/assay_finder/router.py`):
-  - `GetFilterPrompt` convierte texto libre en JSON de filtros (organismo, condición, regex de assay/tecnología, dataset).
-  - Usa `httpx.AsyncClient` para consultar OSDR (`visualization.osdr.nasa.gov`).
-  - Deduplica resultados, calcula flags `has_flight`/`has_ground` y genera enlaces HTML a datasets.
+  - `GetFilterPrompt` converts free text into JSON filters (organism, condition, assay/technology regex, dataset).
+  - Uses `httpx.AsyncClient` to query OSDR (`visualization.osdr.nasa.gov`).
+  - Deduplicates results, calculates `has_flight`/`has_ground flags, and generates HTML dataset links.
 - **Gap Finder** (`api/gap_finder/router.py`):
-  - Normaliza tejidos, condiciones y presencia de datos para identificar zonas sin cobertura experimental.
-  - Devuelve listas únicas para poblar componentes UI (selectores y filtros avanzados).
-- **Proveedor de IA** (`api/ai/providers/openai_provider.py`):
-  - Encapsula llamadas a `gpt-3.5-turbo`, `gpt-4` y `gpt-4o`, aplicando formateadores personalizados (`OpenAIFormatter`).
-  - Expone `get_active_models` para UI dinámicas en el frontend.
+  - Normalizes tissues, conditions, and data presence to identify untested experimental areas.
+  - Returns unique lists to populate UI components (selectors and advanced filters).
+- **AI Provider** (`api/ai/providers/openai_provider.py`):
+  - Wraps calls to `gpt-3.5-turbo`, `gpt-4`, and `gpt-4o` with custom formatters (`OpenAIFormatter`).
+  - Exposes `get_active_models` for dynamic UI rendering in the frontend.
 
-## 🔄 Flujo de Inteligencia
-1. Usuario lanza consulta desde la web o API REST.
-2. FastAPI crea el contexto con claves OpenAI (`OPENAI_API_KEY`) y ruta GraphRAG (`APP_BACK_GRAPHRAG_ROOT`).
-3. Los prompts especializados (`GetFilterPrompt`, `GetGapFilterPrompt`) producen filtros reproducibles.
-4. GraphRAG o APIs NASA suministran contenido bruto.
-5. Los datos se enriquecen (condiciones, enlaces, flags de vuelo) y se devuelven al frontend.
-6. El frontend renderiza chat, tarjetas, gráficos o visualizaciones 3D según corresponda.
+## 🔄 Intelligence Flow
+1. User launches a query from the web or REST API.
+2. FastAPI creates context with OpenAI keys (OPENAI_API_KEY) and GraphRAG path (APP_BACK_GRAPHRAG_ROOT).
+3. Specialized prompts (`GetFilterPrompt`, `GetGapFilterPrompt`) produce reproducible filters.
+4. GraphRAG or NASA APIs provide raw content.
+5. Data is enriched (conditions, links, flight flags) and returned to the frontend.
+6. The frontend renders chat, cards, charts, or 3D visualizations as needed.
 
-## 💡 Innovación que aporta valor
-- **Traducción semántica→estructurada** 🧬: investigadores escriben como hablan; el sistema responde con filtros precisos listos para pipelines científicos.
-- **Grafo + narrativa** 🌐: GraphRAG crea narrativas respaldadas por grafos de conocimiento, permitiendo citar contextos y relaciones.
-- **Visual-first** 🎨: nasa-space-biology utiliza canvases animados, datos en vivo y grafos interactivos para mantener a la audiencia inmersa.
-- **Orquestación híbrida** 🤝: combina APIs públicas de la NASA, infraestructura propia y servicios IA externos con un diseño extensible (futuros LLMs open source, bases persistentes, dashboards adicionales).
-- **Descubrimiento de brechas** 🕳️: el gap finder prioriza misiones mostrando qué combinaciones (organismo, tejido, condición) aún no se han estudiado.
+## 💡 Innovation that Adds Value
+- **Semantic→Structured translation** 🧬: researchers write as they speak; the system responds with precise filters ready for scientific pipelines.
+- **Graph + narrative** 🌐: GraphRAG builds narratives supported by knowledge graphs, enabling citation of contexts and relationships.
+- **Visual-first** 🎨: nasa-space-biology uses animated canvases, live data, and interactive graphs to keep the audience immersed.
+- **Hybrid orchestration** 🤝: combines NASA public APIs, proprietary infrastructure, and external AI services with an extensible design (future open-source LLMs, persistent databases, additional dashboards).
+- **Gap discovery** 🕳️: the gap finder prioritizes missions by showing which (organism, tissue, condition) combinations remain unexplored.
 
-## 🧪 Casos de uso en detalle
-- **Planificación de experimentos**: seleccionar tecnologías de secuenciación con historial de vuelo y condiciones comparables para nuevas misiones ISS.
-- **Revisión rápida de literatura**: chat GraphRAG resume hallazgos y enlaza con datasets relacionados sin salir del navegador.
-- **Auditoría de cobertura**: gap finder refleja dónde faltan datos ground-control, orientando a agencias y universidades.
-- **Onboarding científico**: nuevos investigadores exploran el grafo, leen tarjetas y reciben guías conversacionales en español o inglés.
-- **Presentaciones ejecutivas**: la UI estilizada comunica valor a stakeholders no técnicos con métricas y visualizaciones claras.
+## 🧪  Detailed Use Cases
+- **Experiment planning**: select sequencing technologies with flight history and comparable conditions for new ISS missions.
+- **Rapid literature review**: GraphRAG chat summarizes findings and links to related datasets without leaving the browser.
+- **Coverage auditing**: gap finder reflects missing ground-control data, guiding agencies and universities.
+- **Scientific onboarding**: new researchers explore the graph, read cards, and receive conversational guides in English or Spanish.
+- **Executive presentations**: stylized UI communicates value to non-technical stakeholders with clear metrics and visuals.
 
-## 6. Funcionalidades del Sistema
-El proyecto Stellar Mind AI está diseñado para ofrecer una experiencia de exploración científica accesible, visual e inteligente. Su arquitectura modular permite que distintos perfiles de usuario —desde investigadores hasta arquitectos de misiones— interactúen con la misma base de conocimiento desde perspectivas diferentes, adaptando las funcionalidades a sus necesidades específicas.
+## 6. System Features
+The Stellar Mind AI project is designed to deliver an accessible, visual, and intelligent scientific exploration experience. Its modular architecture allows different user profiles — from researchers to mission architects — to interact with the same knowledge base from different perspectives, adapting functionalities to their specific needs.
 
-### Funcionalidades Generales
-Estas herramientas constituyen el núcleo común de la aplicación y son compartidas por todos los usuarios del sistema.
-- **Chatbot de consulta en lenguaje natural**: un asistente virtual impulsado por modelos de lenguaje (LLMs) que responde preguntas, resume estudios, identifica conexiones entre investigaciones y sugiere fuentes relevantes. Gracias a la integración con el grafo semántico, las respuestas reflejan relaciones conceptuales y contextuales, ofreciendo una comprensión científica más profunda que una búsqueda textual tradicional.
-- **Visualización interactiva del grafo de conocimiento**: módulo web que representa conceptos, entidades y relaciones extraídas de los 608 documentos biológicos de la NASA. A través de la interfaz interactiva desarrollada en React, es posible navegar el grafo, filtrar por temática o entidad y descubrir conexiones emergentes entre experimentos, resultados y organismos.
+### General Features
+These tools form the common core of the application and are shared by all users.
+- **Natural language chatbot**: a virtual assistant powered by LLMs that answers questions, summarizes studies, identifies research links, and suggests relevant sources. Through graph integration, responses reflect conceptual and contextual relations, offering deeper scientific understanding than standard text search.
+- **Interactive knowledge graph visualization**: web module representing concepts, entities, and relationships extracted from NASA’s 608 biological documents. The React-based interface allows navigation, filtering, and discovery of emerging connections among experiments, results, and organisms.
 
-### Funcionalidades específicas por perfil
-Para maximizar el impacto y la aplicabilidad del sistema, Stellar Mind AI ofrece tres conjuntos de herramientas adaptadas a perfiles clave dentro del ecosistema científico y tecnológico de la exploración espacial.
+### Role-specific Features
+To maximize impact and usability, Stellar Mind AI provides three sets of tools tailored to key profiles in the scientific and technological ecosystem of space exploration.
 
-#### Investigador – “Assay Finder”
-El módulo Assay Finder facilita el acceso a información experimental de forma sencilla y rápida. Permite buscar experimentos, metodologías, resultados o condiciones de misión sin conocer la estructura interna de las APIs de la NASA. El sistema interpreta consultas complejas, localiza experimentos relevantes y ofrece resúmenes estructurados con tipo de ensayo, resultados clave, condiciones de microgravedad, organismos estudiados y conclusiones principales, acelerando la revisión de literatura y la formulación de nuevas hipótesis.
+#### Researcher – “Assay Finder”
+The Assay Finder module provides easy and quick access to experimental data. It allows users to search experiments, methodologies, results, or mission conditions without knowing NASA API structures. The system interprets complex queries, locates relevant experiments, and provides structured summaries with assay types, key findings, microgravity conditions, studied organisms, and main conclusions — accelerating literature review and hypothesis generation.
 
-#### Inversor – “Investment Radar” y “Gap Finder”
-Conjunto orientado a usuarios interesados en la gestión estratégica de la investigación y la innovación.
-- **Investment Radar** identifica áreas emergentes y tendencias de investigación biocientífica espacial mediante el análisis de co-ocurrencias, evolución temporal de conceptos y densidad de publicaciones. Ayuda a detectar campos de alto potencial científico o tecnológico, apoyando decisiones de inversión y asignación de recursos.
-- **Gap Finder** analiza las relaciones del grafo para detectar vacíos de conocimiento, combinaciones de variables biológicas sin estudio o lagunas en resultados experimentales. Ofrece recomendaciones proactivas sobre líneas de investigación futuras, promoviendo la innovación científica y la colaboración interdisciplinaria.
+#### Investor – “Investment Radar” and “Gap Finder”
+A set designed for users focused on strategic research and innovation management.
+- **Investment Radar** identifies emerging areas and research trends in space bioscience through analysis of co-occurrences, temporal evolution of concepts, and publication density. It helps detect high-potential scientific or technological fields, supporting investment and resource allocation decisions.
+- **Gap Finder** analyzes graph relations to detect knowledge gaps, unstudied variable combinations, or missing experimental results. It offers proactive recommendations for future research lines, promoting innovation and interdisciplinary collaboration.
+  
+#### Mission Architect – “Risk Lens”
+Module designed to support safe and efficient mission planning. From natural language queries, it identifies biological or experimental risks related to radiation, microgravity, isolation, or environmental stress. Using graph-based inferences, Stellar Mind AI links previous studies with relevant risk factors, helping anticipate problems and design informed countermeasures — directly contributing to the safety and sustainability of future lunar and Martian missions.
 
-#### Arquitecto de Misiones – “Risk Lens”
-Módulo diseñado para apoyar la planificación segura y eficiente de misiones espaciales. A partir de consultas en lenguaje natural, identifica riesgos biológicos o experimentales asociados a radiación, microgravedad, aislamiento o estrés ambiental. Mediante inferencias del grafo, Stellar Mind AI enlaza estudios previos con factores de riesgo relevantes, ayudando a anticipar problemas y diseñar contramedidas informadas. Contribuye directamente a la seguridad y sostenibilidad de futuras misiones lunares y marcianas.
+Together, these functionalities make Stellar Mind AI a versatile, interactive, and scientifically robust platform that integrates the power of artificial intelligence with the exploration of space biological knowledge — aligning with NASA’s vision of open, collaborative, and future-oriented science.
 
-En conjunto, estas funcionalidades hacen de Stellar Mind AI una plataforma versátil, interactiva y científicamente sólida que integra la potencia de la inteligencia artificial con la exploración del conocimiento biológico espacial, alineándose con la visión de la NASA de una ciencia abierta, colaborativa y orientada al futuro.
+## 7. Results and Demonstration
+The Stellar Mind AI project, developed by the Stellar Minds team, culminates in a functional web application combining a GraphRAG-processed knowledge base, an intelligent chatbot, and an interactive knowledge graph visualization. The results demonstrate the system’s ability to integrate complex information, generate useful answers, and offer an intuitive visual exploration of space biology data.
 
-## 7. Resultados y demostración
-El proyecto Stellar Mind AI, desarrollado por el equipo Stellar Minds, culmina en una aplicación web funcional que combina una base de conocimiento procesada mediante GraphRAG, un chatbot inteligente y una visualización interactiva del grafo de conocimiento. Los resultados demuestran la capacidad del sistema para integrar información compleja, generar respuestas útiles y ofrecer una exploración visual intuitiva de los datos biológicos espaciales.
+### General Interface and Knowledge Visualization
+Public access URL: https://vercel-app-frontend-tawny.vercel.app
+The main interface presents a dynamic dashboard where the user can switch between conversational chat and graph visualization modes.
+- Conversational chat: natural language interaction with the knowledge base.
+- Graph visualization: exploration of nodes, relationships, and information clusters.
+  
+![Landing page of Stellar Mind AI](images/landing_page.png)
 
-### Interfaz general y visualización del conocimiento
-La URL pública para acceder a esta funcionalidad es: LINK
-La interfaz principal presenta un dashboard dinámico donde el usuario puede alternar entre los modos de chat conversacional y visualización del grafo.
-- Chat conversacional: interacción en lenguaje natural con la base de conocimiento.
-- Visualización del grafo: exploración de nodos, relaciones y clústeres de información.
+![NASA's Graph Visualization](images/graph.png)
 
-![Landing page de Stellar Mind AI](images/landing_page.png)
+### Example Chat Queries and Responses
+Public access: https://vercel-app-frontend-tawny.vercel.app/chat
+The chatbot demonstrates its inference capability using the graph, offering grounded responses and references to original studies.
+![Stellar Mind AI Chatbot Answer](images/chatbot.png)
+These responses go beyond literal extraction — they combine information from multiple documents and reason about scientific relationships in the graph.
 
-![Visualización del grafo NASA](images/graph.png)
-
-### Ejemplos de consultas y respuestas del chatbot
-La URL pública para acceder a esta funcionalidad es: LINK
-El chatbot demuestra la capacidad de realizar inferencias basadas en el grafo, ofreciendo respuestas fundamentadas y referencias a estudios originales.
-![Respuesta del chatbot Stellar Mind AI](images/chatbot.png)
-Estas respuestas no se limitan a extraer texto literal, sino que combinan información de diferentes documentos y razonan sobre relaciones científicas presentes en el grafo.
-
-### Casos de uso por perfil de usuario
-La URL pública para acceder a esta funcionalidad es: LINK
+###Use Cases by User Profile
 
 Investigador – Assay Finder
-![Módulo Assay Finder en acción](images/assay_finder.png)
+Link: https://vercel-app-frontend-tawny.vercel.app/assay-finder
+![Assay Finder Module Working](images/assay_finder.png)
 
-Inversor – Investment Radar / Gap Finder
-![Panel de inversión y brechas](images/gap_finder.png)
+Inverstor – Gap Finder
+Link: https://vercel-app-frontend-tawny.vercel.app/gap-finder
+![Invertor Gap Finder Working](images/gap_finder.png)
 
-Arquitecto de Misiones – Risk Lens
-![Risk Lens para planificación de misiones](images/mission%20planner.png)
+Mission Architect – Mission Planner
+Link: https://vercel-app-frontend-tawny.vercel.app/mission-planner
+![Mission Planner Working](images/mission%20planner.png)
 
-### Evaluación cualitativa de rendimiento y utilidad
-Durante las pruebas internas, Stellar Mind AI mostró un alto grado de coherencia semántica y relevancia contextual en las respuestas generadas. El sistema responde con fluidez a consultas complejas e integra resultados de múltiples documentos, evidenciando la eficacia del enfoque GraphRAG para representar conocimiento científico. La visualización del grafo identifica zonas densas de investigación y vacíos de conocimiento, aportando valor a científicos y gestores de innovación.
+### Qualitative Evaluation of Performance and Utility
+During internal testing, Stellar Mind AI showed high semantic coherence and contextual relevance in its generated responses. The system fluently handled complex queries and integrated results from multiple documents, demonstrating the effectiveness of the GraphRAG approach for representing scientific knowledge. The graph visualization identifies dense research areas and knowledge gaps, adding value for scientists and innovation managers.
 
-Desde la perspectiva del usuario, las principales fortalezas observadas son:
-- Facilidad de uso: interacción natural sin requerir conocimientos técnicos.
-- Interpretabilidad: las relaciones y fuentes se visualizan de manera transparente.
-- Versatilidad: la herramienta se adapta a distintos perfiles y casos de uso.
+From the user’s perspective, key strengths include:
+- Ease of use: natural interaction with no technical expertise required.
+- Interpretability: relationships and sources are transparently visualized.
+- Versatility: the tool adapts to various roles and use cases.
 
-Los resultados confirman que Stellar Mind AI constituye una solución innovadora, práctica y escalable para transformar el conocimiento biológico espacial en una red de información accesible, comprensible y útil para la comunidad científica y tecnológica.
+The results confirm that Stellar Mind AI is an innovative, practical, and scalable solution for transforming space biology knowledge into an accessible, comprehensible, and useful information network for the scientific and technological community.
 
-
-## 🛠️ Puesta en Marcha Técnica
-### 1. Requisitos previos
+## 🛠️ Technical Setup
+### 1. Prerequisites
 - Python 3.10+
 - Node.js 20+ y npm/pnpm
-- Clave de OpenAI (`OPENAI_API_KEY`)
-- Datos GraphRAG preparados (`APP_BACK_GRAPHRAG_ROOT` apuntando al repositorio de conocimiento)
+- OpenAI key (`OPENAI_API_KEY`)
+- Prepared GraphRAG data (APP_BACK_GRAPHRAG_ROOT pointing to the knowledge repository)
 
 ### 2. Backend (`api/`)
 ```bash
@@ -148,7 +149,7 @@ cd api
 pip install -r requirements.txt
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ```
-Variables sugeridas (`api/.env`):
+Suggested variables (api/.env):
 ```env
 OPENAI_API_KEY="sk-..."
 APP_BACK_STORE=memory
@@ -162,45 +163,45 @@ cd nasa-space-biology
 npm install   # o pnpm install
 npm run dev   # Levanta en http://localhost:3000
 ```
-Variables `.env.local`:
+.env.local variables:
 ```env
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 NEXT_PUBLIC_GRAPH_BASE=http://localhost:8000/api/v1
 ```
-> Consejo: el `APIContext` soporta dominios externos, por lo que basta con cambiar las variables para apuntar a entornos de staging o producción.
+> Tip: APIContext supports external domains, so just change the variables to point to staging or production environments.
 
-### 4. Pruebas manuales recomendadas
-- Visitar `http://localhost:3000` y explorar la landing animada.
-- Abrir `/chat`, enviar preguntas y observar el streaming de respuestas (metodo por defecto `local`).
-- Consumir `GET /api/v1/assays/search?q=spaceflight+mouse` desde el navegador o Postman.
-- Verificar el grafo en `/graph` y futuros paneles de gap analysis.
+### 4. Recommended Manual Tests
+- Visit `http://localhost:3000 and explore the animated landing page.
+- Open `/chat`, send questions, and observe response streaming (default method `local`).
+- Access `GET /api/v1/assays/search?q=spaceflight+mouse` via browser or Postman.
+- Check the graph at `/graph` and future gap analysis panels.
 
-## 📂 Estructura del Repositorio
-- `api/`: backend FastAPI con módulos `graphbot`, `assay_finder`, `gap_finder`, `ai`.
-- `nasa-space-biology/`: frontend Next.js con rutas `app/`, componentes UI y gráficas interactivas.
-- `AzuriteConfig/`, `api/.env`, `resources/`: configuraciones adicionales y datasets de soporte.
+## 📂 Repository Structure
+- `api/`: FastAPI backend with `graphbot`, `assay_finder`, `gap_finder, and ai modules.
+- `nasa-space-biology/`:  Next.js frontend with `app/ routes, UI components, and interactive graphics.
+- `AzuriteConfig/`, `api/.env`, `resources/`: additional configurations and supporting datasets.
 
-## 🔒 Configuración y Seguridad
-- Claves API gestionadas vía dotenv; no se exponen en el frontend.
-- `withCredentials` habilitado en Axios para soportar flujos autenticados.
-- CORS restringido al dominio Vercel de producción, mitigando orígenes no autorizados.
-- Preparado para incluir OAuth/cookies en `APIContext` con `Authorization: Bearer`.
+## 🔒 Configuration and Security
+- API keys managed via dotenv; never exposed to the frontend.
+- `withCredentials` enabled in Axios to support authenticated flows.
+- CORS restricted to the production Vercel domain, mitigating unauthorized origins.
+- Prepared to include OAuth/cookies in `APIContext` using `Authorization: Bearer`.
 
 ## 🛤️ Roadmap
-- Persistencia (PostgreSQL o vector store) para historiales y seguimiento de métricas.
-- Integración de LLMs open source para despliegues soberanos y modo offline.
-- Paneles visuales de brechas con gráficos de barras/heatmaps en React (`recharts`).
-- Incorporación de citaciones y confianza con enlaces a papers específicos (GraphRAG context data).
-- Automatización de pipelines ETL para mantener actualizado el grafo NASA.
+- Persistence (PostgreSQL or vector store) for histories and metric tracking.
+- Integration of open-source LLMs for sovereign and offline deployments.
+- Visual gap panels with bar charts/heatmaps in React (`recharts`).
+- Incorporation of citations and confidence scores linking to specific papers (GraphRAG context data).
+- Automated ETL pipelines to keep the NASA graph up to date.
 
-## 🤝 Cómo contribuir
-- Crea una rama descriptiva (`feature/frontend-graph-3d`).
-- Respeta el tipado estático y los comentarios concisos existentes.
-- Valida endpoints manualmente o con scripts antes de abrir un PR.
-- Documenta nuevos prompts, endpoints o componentes UI en este README.
+## 🤝 How to Contribute
+- Create a descriptive branch (`feature/frontend-graph-3d`).
+- Follow existing static typing and concise commenting practices.
+- Validate endpoints manually or via scripts before opening a PR.
+- Document new prompts, endpoints, or UI components in this README.
 
-## 📄 Licencia y Créditos
-- Proyecto desarrollado para NASA Space Apps; revisa condiciones oficiales antes de redistribuir.
-- Datos provenientes del NASA OSDR; infraestructura basada en FastAPI, GraphRAG, Next.js y bibliotecas open-source.
+## 📄 License and Credits
+- Project developed for NASA Space Apps; review official conditions before redistribution.
+- Data sourced from NASA OSDR; infrastructure based on FastAPI, GraphRAG, Next.js, and open-source libraries.
 
-¡Stellar-Minds está listo para impulsar la próxima ola de descubrimientos en biología espacial! 🌠
+Stellar-Minds is ready to power the next wave of discoveries in space biology! 🌠
