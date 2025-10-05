@@ -30,6 +30,10 @@ We have included several deliverables of great value and effort to describe our 
    The video we presented in person at the Hackathon event.
    [https://drive.google.com/file/d/1034W1aXGArxB3f8jvD_Uppk0WxbcxgjS/view?usp=share_link](https://drive.google.com/file/d/1034W1aXGArxB3f8jvD_Uppk0WxbcxgjS/view?usp=share_link)
 
+7. **NASA SPACE APPS TECHNICAL BACKGROUND PAPER:**
+   A paper in LaTeX format detailing the technical aspects of our project.
+   [https://github.com/alers16/Stellar-Minds/blob/main/docs%20(IMPORTANT%20FOR%20REVIEWERS)/NASA%20Space%20Apps%20Paper.pdf](https://github.com/alers16/Stellar-Minds/blob/main/docs%20(IMPORTANT%20FOR%20REVIEWERS)/NASA%20Space%20Apps%20Paper.pdf)
+
 ## 📡 What is Stellar-Minds
 Stellar-Minds was born as a response to a recurring challenge in the scientific community: extracting meaning from decades of dispersed space biology experiments in NASA’s Open Science Data Repository (OSDR). Our project creates a cognitive platform that acts as a scientific copilot — it understands natural language questions, identifies research gaps, generates graph-backed responses, and provides a visual interface showing how findings interconnect.
 
