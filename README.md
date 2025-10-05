@@ -2,6 +2,34 @@
 
 > A NASA Space Apps ecosystem that combines an intelligent backend based on GraphRAG with an immersive frontend (nasa-space-biology) to discover, converse with, and act on knowledge in space biology.
 
+## IMPORTANT INFORMATION FOR REVIEWERS:
+
+We have included several deliverables of great value and effort to describe our project as professionally as possible. Below is a list of all the ESSENTIAL DOCUMENTS FOR REVIEWERS that should be consulted for the evaluation. Thank you!
+
+1. **STELLAR MIND AI WEBSITE:**
+   The website of the system showcased in the videos. It is a real, end-to-end system that uses a GraphRAG architecture based on data from over 600 NASA PDFs (and their API). There are no mock-up data or empty promises. Try it out!
+   [https://vercel-app-frontend-tawny.vercel.app/](https://vercel-app-frontend-tawny.vercel.app/)
+
+2. **STELLAR MINDS PROJECT REPORT:**
+   A detailed and thorough report describing the team roles, workflow methodology, developed functionalities, and advanced technical details of Stellar Mind AI, our project. Reading this report is essential.
+   [https://github.com/alers16/Stellar-Minds/blob/main/docs%20(IMPORTANT%20FOR%20REVIEWERS)/STELLAR%20MINDS%20PROJECT%20REPORT.pdf](https://github.com/alers16/Stellar-Minds/blob/main/docs%20%28IMPORTANT%20FOR%20REVIEWERS%29/STELLAR%20MINDS%20PROJECT%20REPORT.pdf)
+
+3. **WEBSITE EXPLANATION VIDEO:**
+   A completely new, modern-looking video explaining all the details and functionalities of the website. We highly recommend watching this video to fully understand everything that was implemented.
+   [https://drive.google.com/file/d/1kYEYFQdjPqO-gdAIxiJlb5hJToZRerxE/view](https://drive.google.com/file/d/1kYEYFQdjPqO-gdAIxiJlb5hJToZRerxE/view)
+
+4. **SYSTEM ARCHITECTURE WORKFLOW DIAGRAM:**
+   A highly visual and descriptive diagram showing how the Stellar Mind AI system architecture works at a high level.
+   [https://github.com/alers16/Stellar-Minds/blob/main/docs%20(IMPORTANT%20FOR%20REVIEWERS)/System%20Architecture%20Workflow%20Diagram.jpg](https://github.com/alers16/Stellar-Minds/blob/main/docs%20%28IMPORTANT%20FOR%20REVIEWERS%29/System%20Architecture%20Workflow%20Diagram.jpg)
+
+5. **KANBAN BOARD AND ROLES:**
+   A 3-day progress record of the Kanban board we physically used in our workspace to track the project following the Agile Scrum methodology. The document also includes the roles of each team member.
+   [https://github.com/alers16/Stellar-Minds/blob/main/docs%20(IMPORTANT%20FOR%20REVIEWERS)/Kanban%20Board%20and%20Roles.pdf](https://github.com/alers16/Stellar-Minds/blob/main/docs%20%28IMPORTANT%20FOR%20REVIEWERS%29/Kanban%20Board%20and%20Roles.pdf)
+
+6. **30-SECOND PRESENTATION VIDEO:**
+   The video we presented in person at the Hackathon event.
+   [https://drive.google.com/file/d/1034W1aXGArxB3f8jvD_Uppk0WxbcxgjS/view?usp=share_link](https://drive.google.com/file/d/1034W1aXGArxB3f8jvD_Uppk0WxbcxgjS/view?usp=share_link)
+
 ## 📡 What is Stellar-Minds
 Stellar-Minds was born as a response to a recurring challenge in the scientific community: extracting meaning from decades of dispersed space biology experiments in NASA’s Open Science Data Repository (OSDR). Our project creates a cognitive platform that acts as a scientific copilot — it understands natural language questions, identifies research gaps, generates graph-backed responses, and provides a visual interface showing how findings interconnect.
 
@@ -69,7 +97,7 @@ Each interaction is backed by consistent JSON responses that serve the frontend,
 - **Scientific onboarding**: new researchers explore the graph, read cards, and receive conversational guides in English or Spanish.
 - **Executive presentations**: stylized UI communicates value to non-technical stakeholders with clear metrics and visuals.
 
-## 6. System Features
+## System Features
 The Stellar Mind AI project is designed to deliver an accessible, visual, and intelligent scientific exploration experience. Its modular architecture allows different user profiles — from researchers to mission architects — to interact with the same knowledge base from different perspectives, adapting functionalities to their specific needs.
 
 ### General Features
@@ -93,11 +121,12 @@ Module designed to support safe and efficient mission planning. From natural lan
 
 Together, these functionalities make Stellar Mind AI a versatile, interactive, and scientifically robust platform that integrates the power of artificial intelligence with the exploration of space biological knowledge — aligning with NASA’s vision of open, collaborative, and future-oriented science.
 
-## 7. Results and Demonstration
+## Results and Demonstration
 The Stellar Mind AI project, developed by the Stellar Minds team, culminates in a functional web application combining a GraphRAG-processed knowledge base, an intelligent chatbot, and an interactive knowledge graph visualization. The results demonstrate the system’s ability to integrate complex information, generate useful answers, and offer an intuitive visual exploration of space biology data.
 
 ### General Interface and Knowledge Visualization
 Public access URL: https://vercel-app-frontend-tawny.vercel.app
+
 The main interface presents a dynamic dashboard where the user can switch between conversational chat and graph visualization modes.
 - Conversational chat: natural language interaction with the knowledge base.
 - Graph visualization: exploration of nodes, relationships, and information clusters.
@@ -108,21 +137,25 @@ The main interface presents a dynamic dashboard where the user can switch betwee
 
 ### Example Chat Queries and Responses
 Public access: https://vercel-app-frontend-tawny.vercel.app/chat
+
 The chatbot demonstrates its inference capability using the graph, offering grounded responses and references to original studies.
 ![Stellar Mind AI Chatbot Answer](images/chatbot.png)
 These responses go beyond literal extraction — they combine information from multiple documents and reason about scientific relationships in the graph.
 
-###Use Cases by User Profile
+### Use Cases by User Profile
 
 Investigador – Assay Finder
+
 Link: https://vercel-app-frontend-tawny.vercel.app/assay-finder
 ![Assay Finder Module Working](images/assay_finder.png)
 
 Inverstor – Gap Finder
+
 Link: https://vercel-app-frontend-tawny.vercel.app/gap-finder
 ![Invertor Gap Finder Working](images/gap_finder.png)
 
 Mission Architect – Mission Planner
+
 Link: https://vercel-app-frontend-tawny.vercel.app/mission-planner
 ![Mission Planner Working](images/mission%20planner.png)
 
