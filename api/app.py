@@ -6,20 +6,26 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse, StreamingResponse, JSONResponse
 
-from graphbot.store.base_store import ObjectNotFoundError
-from assay_finder.router import router as assay_router
-from gap_finder.router import router as gap_router
-from graphbot.chats.router import router as graph_chat_router
+from .graphbot.store.base_store import ObjectNotFoundError
+from .assay_finder.router import router as assay_router
+from .gap_finder.router import router as gap_router
+from .graphbot.chats.router import router as graph_chat_router
 
-from graphbot.chats.service import ChatService
-from graphbot.settings import settings
-from graphbot.factory import make_store, make_chatbot
+from .graphbot.chats.service import ChatService
+from .graphbot.settings import settings
+from .graphbot.factory import make_store, make_chatbot
 
-from ai import OpenAIProvider
+from .ai import OpenAIProvider
+
+# crea un logger
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 load_dotenv(override=True)
 
-FRONTEND_URLS = os.getenv("FRONTEND_URLS", "")  # "https://midominio.com,https://preview.vercel.app"
+logger.info("OpenAI API Key: %s", os.getenv("OPENAI_API_KEY"))
 
 def key_func(request: Request) -> str:
     fwd = request.headers.get("x-forwarded-for")
@@ -33,6 +39,7 @@ async def lifespan(app: FastAPI):
     chatbot = make_chatbot(settings)
 
     app.state.chat_service = ChatService(store, chatbot)
+    
     app.state.provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 
     yield
@@ -48,7 +55,7 @@ app = FastAPI(
 
 
 app.add_middleware(CORSMiddleware,
-    allow_origins=[o.strip() for o in FRONTEND_URLS.split(",") if o.strip()] or ["*"],
+    allow_origins=["https://vercel-app-frontend-tawny.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -59,8 +66,8 @@ async def object_not_found_handler(request: Request, exc: ObjectNotFoundError):
     return JSONResponse(status_code=404, content={"detail": f"Object not found: {exc}"})
 
 
-app.include_router(assay_router)
-app.include_router(gap_router)
+app.include_router(assay_router, prefix="/api/v1")
+app.include_router(gap_router, prefix="/api/v1")
 app.include_router(graph_chat_router, prefix="/api/v1/chats")
 
 @app.get("/")

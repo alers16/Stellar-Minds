@@ -11,7 +11,7 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_BACKEND_URL ??
   process.env.NEXT_PUBLIC_API_URL ??
   process.env.VITE_BACKEND_URL ??
-  'https://stellar-minds-api-v2.vercel.app'
+  'https://chatbot.topocal.com'
 console.log('BASE_URL:', BASE_URL)
 
 const apiClient = axios.create({
@@ -205,7 +205,7 @@ export const APIProvider = ({ children }: PropsWithChildren) => {
   }
 
   const assaysAPI: AssaysAPI = {
-    search: (query) => apiMethods.get(`/assays/search?q=${encodeURIComponent(query)}`),
+    search: (query) => apiMethods.get(`${BASE_URL}/api/v1/assays/search?q=${encodeURIComponent(query)}`),
   }
 
   const chatAPI: ChatAPI = {
