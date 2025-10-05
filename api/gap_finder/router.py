@@ -6,7 +6,7 @@ from collections import defaultdict, Counter
 import itertools
 
 # ⬇️ Asegúrate de tener este prompt en tu proyecto (como ya lo tienes)
-from ai import GetGapFilterPrompt
+from ..ai import GetGapFilterPrompt
 
 router = APIRouter()
 
@@ -144,7 +144,7 @@ def _nl_to_filters(request: Request, user_input: Optional[str]):
     response_text, _ = request.app.state.provider.prompt(
         model="gpt-3.5-turbo",
         prompt_system=prompt.get_prompt_system(),
-        messages_json=[],
+        messages_json="",
         user_input=prompt.get_user_prompt(),
         parameters_json=prompt.get_parameters(),
     )

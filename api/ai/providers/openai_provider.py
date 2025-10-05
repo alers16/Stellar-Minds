@@ -5,6 +5,10 @@ from enum import Enum
 
 from .api_provider import APIProvider
 from ..prompt_formatters import OpenAIFormatter
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 class MODELS(str, Enum):
     GPT_3_5_TURBO = "gpt-3.5-turbo"
@@ -22,6 +26,8 @@ class OpenAIProvider(APIProvider):
         if not model:
             model = MODELS.GPT_3_5_TURBO
 
+        logger.info("Im here 0")
+
         messages = self.formatter.format(prompt_system, messages_json, user_input)
         parameters = json.loads(parameters_json) if parameters_json else {}
         final_parameters = {
@@ -29,7 +35,9 @@ class OpenAIProvider(APIProvider):
             "max_tokens": parameters.get("max_tokens", 60)
         }
 
+
         response = self.client.chat.completions.create(model=model, messages=messages, **final_parameters)
+
 
         return response.choices[0].message.content, model
         

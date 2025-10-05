@@ -164,10 +164,10 @@ class GetFilterPrompt(Prompt):
         self.user_input = (user_input or "").strip()
 
     def get_prompt_system(self):
-        return f"{GET_FILTER_PROMPT}\nUser: {self.user_input}\n"
+        return GET_FILTER_PROMPT.strip()
 
     def get_user_prompt(self):
-        return ""
+        return self.user_input or "No specific filters provided. Return null for every field."
 
     def get_parameters(self):
         return json.dumps({
